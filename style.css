@@ -16,12 +16,12 @@ body{
 header > h1{
 
     top:0 ;
+    font-size:4vw;
     margin: auto;
     position: absolute;
     text-align: center;
     width: 100%;
     color:white;
-    font-size:250px;
     
     font-family: "Lucida Console", Courier, monospace;
 
@@ -49,7 +49,7 @@ body>p{
     margin-top:20%;
     width: 100%;
     color:white;
-    font-size:200px;
+    font-size:4vw;
     font-family: "Lucida Console", Courier, monospace;
     text-align:center;
 }
