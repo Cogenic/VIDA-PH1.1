@@ -43,7 +43,8 @@ header > h1{
 body>p{
 
     bottom:5% ;
-    margin: auto;
+    display: block;
+    margin: 20px;
     position: absolute;
     margin-top:20%;
     width: 100%;
