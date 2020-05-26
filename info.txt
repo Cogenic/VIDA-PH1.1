@@ -1,0 +1,5 @@
+//Setting up a vim environment
+npm install -D eslint
+npm i -D prettier eslint-plugin-prettier eslint-config-prettier
+./node_modules/.bin/eslint --init
+

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cogenic",
+  "private_key_id": "40f6f640d9ea29947a7a851ffcb183d37d8869ae",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQClJltOvSUZgC2p\na8kEf4MiDygDiFipd1R0PkKGpmGripehC/99rmi6/mtJrSxjOdzciea4PvbVfZJK\nZyyZzmz5c+MeEVIqclLYRvklPcXb0ul5QL4NEIiNrSwS+j9lIHOrGfaxBbde5nOm\n2uBNcARm6w/VxAlZ2w7tziTAAZm2ThXMfh5Zx3njfpVCcWyxHwi3DmASQoxNFKeM\nImYXt70DV1Si2foc5l8Se4kR5ZWp84utr/XFEi2TAo3G4+5fuUbYaFsdLW61yV2I\ntBTM8RDNzzTsQvnrg1sYzQb7G+eYSXBgxMnXngpA3BkcGPAH2IwlHo5LK5AVODUf\nOSH6DrsTAgMBAAECggEAPrhh/fXclKI29Txvo+svaKx75FeQYI/mvZz1lAC1YDoq\n2uldFyS5NqcwJNOFY4vSotkmi/uxr6PYfrRPXnxkq5pE+6LVYzR23RebQHcE4Tbp\nH3kklH6edbv6XJy4ndXkx+r84v8KRJrd+lTu0coEifek1Gj2qi8FLPBYyajx8Sd6\n7mw1U4kVjyitJizY/8Z3bFLDxcO4gs77HR8B4vJuu63LhxZmCkWAmUwsfxHJymQN\nRRrZ2o2J4SjPw1+NfUq3+raA4CvrRC+coSLhxydyWkA3BgWpu2IxxkM3eCIN8OJk\nrDt5xa8fxCYOyX9bH4rnHN001sONZ8C1DH5Ysmo0sQKBgQDfUWKJjnP28XIFF1cE\nrFxHJcA/iRf9WUzh8TH8OdMQIxfcFdXX31wbF9AsLnb4KNef5AZ9Tkwk8J+1ZYKZ\nkIgbgQPeDl63EMHDQNmVNSHPfAzIkR27lU+IrYX5fj/FOq8q4h3/cK7FgkrRQ9pq\nJW3qQYVhjF0oEmYMp0sQqu/wYwKBgQC9UbPB2OIk6H3QLnTMXhCMVQu+ZZLPG4dS\n8R1XIdyIUf6b0NWHbVDNUA510rCH9Fa2ChljGM6DyQbRHfC46gj0m6WkDvq0KsXW\n3VjxkNqz6v8pRubau1m08k4gb2K9Q+vpZw4eSzdlVhL8clGoaJxV1JlOcNlGurFm\nowrkAlsRkQKBgCWXdZbiO/MdwavJugQ3X3E6kZogYcFr/t0p1Ng4g6b7wVBy/IRS\nPRbyc0B8sdokRefMYqtFOtwdBUVryQhApCi9FwGSOa9nSrare/T59K8QmrZId1DU\nWYcQbrUI44M31bTKS3JsbX8h56ZCXcnwcwgz71f0YNoV/seygZhUrf8xAoGBAJjR\n6M6jafjtCxIPTgziKW1+ARrSFy3DRPs40rxRAxmvRl00uAi3vy/cXa/SQNmd7JjJ\nkjCiB6HtlekbyAMcN9psActqpAjnNgf5aSCmE0SEfzAsoZETBpi/tz0LbKLmvvoL\nTCQ8Bx1v26eYCD5vIzNNh+r/wQQNE8KL/fCLzkNhAoGAdc0EMRzzRVWw2BVny5Jy\naApmNJbLcXJjFbuFMOb3uf1t82cSYdoXRi6yLxQSEGymLpy5S7h0oRHDdojphUMD\n/7oRNM4FWOrnzJAUAFMwtXlMFzgqTQ4wkJEGxbJDse8Ed8szT+rJ8H20hrcQp5r4\nyPEKbLQcGHMYld4cxWKXYzA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "cogenic-sql-login@cogenic.iam.gserviceaccount.com",
+  "client_id": "101379538933682768032",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cogenic-sql-login%40cogenic.iam.gserviceaccount.com"
+}

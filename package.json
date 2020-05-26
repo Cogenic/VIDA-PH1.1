@@ -1,18 +1,21 @@
 {
-  "name": "cc-express",
+  "name": "cogenic-intel",
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "lint": "eslint .",
     "start": "node ./bin/www",
     "build": "webpack-dev-server --open --config webpack.dev.js",
     "build:prod": "webpack --config webpack.prod.js"
   },
   "dependencies": {
     "@babel/core": "^7.9.6",
+    "bcrypt": "^4.0.1",
     "body-parser": "~1.19.0",
     "cookie-parser": "~1.4.5",
     "debug": "~4.1.1",
     "express": "~4.17.1",
+    "express-validator": "^5.3.1",
     "hbs": "~4.1.1",
     "morgan": "~1.10.0",
     "mysql": "^2.18.1",
@@ -28,6 +31,8 @@
     "chai": "^4.2.0",
     "css-loader": "^3.5.3",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
     "mocha": "^7.2.0",
     "node-sass": "^4.14.1",
     "postcss-loader": "^3.0.0",

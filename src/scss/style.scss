@@ -1,3 +1,18 @@
 body {
-	margin: 0;	
+	background-image: url('../images/Cogenic.png');
+	background-repeat: no-repeat;
+	background-color: #18191D;
 }
+.box {
+	position: absolute;
+	background-size: contain;
+	background-color: white;
+	margin: auto;
+	height: auto;
+	bottom: 40%;
+	right: 40%;
+	padding: 20px 10px;
+	border: 15px;
+	width: 30%;
+}
+

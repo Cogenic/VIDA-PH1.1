@@ -1,0 +1,6 @@
+./cloud_sql_proxy -dir=/cloudsql -instances=cogenic:us-west2:cogenic-sql-1 &
+mysql -u root -S /cloudsql/cogenic:us-west2:cogenic-sql-1
+ //this is how I logged in the first two didn't work. I think its cause I didn't specify
+// my database name;
+ mysql -u Kirubel -p login_info -S /cloudsql/cogenic:us-west2:cogenic-sql-1
+
