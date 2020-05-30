@@ -1,10 +1,7 @@
+//const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const DotenvPlugin = require('webpack-dotenv-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-
-var extractPlugin = new ExtractTextPlugin({
-   filename: 'main.css'
-});
 
 module.exports = {
 	entry: {
@@ -20,18 +17,19 @@ module.exports = {
 				test: /\.scss$/,
 				use: ExtractTextPlugin.extract({
 					fallback: "style-loader",
-					use: "css-loader!postcss-loader!sass-loader"
+					use: ['css-loader','postcss-loader','sass-loader']
+//                    use: ['style-loader', 'css-loader', 'sass-loader']
 				}),
 			},
-			{
-		        test: /\.js$/,
-		        exclude: /(node_modules|bower_components)/,
-		        use: {
-			        loader: 'babel-loader',
-			        options: {
-				        presets: ['env']
-					}
-				}
+            {
+                test: /\.js$/,
+                    exclude: /(node_modules|bower_components)/,
+                    use: {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['env']
+                        }
+                    }
 			},
             {
                 test: /\.(jpg|png)$/,
@@ -40,8 +38,8 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: 'images/',
-                            publicPath: 'images/'
+                            outputPath: '../images/',
+                            publicPath: '../images/'
                         }
                     }
                 ]
@@ -49,17 +47,24 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new ExtractTextPlugin("../css/style.css"),
-	    new DotenvPlugin({
-			sample: './.env.default',
-			path: './.env'
-	    }),
-	    new BrowserSyncPlugin({
-	        host: 'localhost',
-	        port: 3001,
-	        proxy: 'http://localhost:3000/',
-	        files: ['./views/*.hbs']
-		}),
+//        extractPlugin
+        new ExtractTextPlugin("../css/style.css"),
+        new DotenvPlugin({
+            sample: './.env.default',
+            path: './.env'
+        }),
+        new BrowserSyncPlugin({
+            host: 'localhost',
+            port: 3001,
+            proxy: 'http://localhost:3000/',
+            files: ['./views/*.hbs']
+        }),
+        /*
+        new MiniCssExtractPlugin({
+          filename: "[name].css",
+          chunkFilename: "[name].css"
+        })
+        */
 	],
 	watch: true,
 	devtool: 'source-map'

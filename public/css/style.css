@@ -1,3 +1,242 @@
-body{margin:0}
+.class-for-home {
+  background-color: #18191D; }
 
-/*# sourceMappingURL=style.css.map*/
+.home-image {
+  background-image: url(../images/Cogenic.png);
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 70px 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.Error-Login {
+  background-color: white;
+  font-size: 24px;
+  color: red;
+  width: 50%;
+  text-align: center; }
+
+.box {
+  position: absolute;
+  padding: 5% 3%;
+  width: 300px;
+  height: 200px;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -100px;
+  display: block;
+  margin-top: 2%;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid white; }
+
+.Login-text {
+  width: 30%;
+  margin: -7% 0%; }
+
+.form-control {
+  height: 40px;
+  width: 300px; }
+
+.box .form-group {
+  margin: 4% 0%;
+  font-size: 20px; }
+
+.welcome {
+  background-color: black; }
+
+.welcome-hello {
+  position: absolute;
+  top: 0;
+  font-size: relative;
+  font-size: 6vw;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: white;
+  font-family: "Lucida Console", Courier, monospace; }
+
+.highlight {
+  position: absolute;
+  margin-left: 35%;
+  height: 300px;
+  bottom: 25%;
+  background-color: white; }
+
+#center {
+  height: auto;
+  width: 400px; }
+
+.highlight input:hover {
+  opacity: .5; }
+
+.vida-welcome {
+  width: 100px; }
+.opening-screen {
+  background-color: #18191D;
+  margin: 0px 40px;
+  height: 535px;
+  width: auto; }
+
+.opening-header {
+  position: absolute;
+  right: 0px;
+  width: 200px;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  font-family: "Lucida Console", Courier, monospace; }
+
+.opening-vida {
+  position: absolute;
+  right: 0px;
+  bottom: 20%;
+  width: 450px;
+  padding: 10px;
+  margin: 0px 0px; }
+
+.opening-screen > p {
+  color: black;
+  position: absolute;
+  top: 20%;
+  font-size: 50px;
+  color: white;
+  width: 350px;
+  padding: 10px;
+  margin: 10px 10px; }
+
+.opening-screen > p1 {
+  position: absolute;
+  color: white;
+  top: 33%;
+  font-size: 40px;
+  width: 400px;
+  padding: 10px;
+  margin: 0px 0px; }
+
+.example {
+  position: absolute;
+  top: 42%;
+  font-size: 22px;
+  color: white;
+  line-height: 1.2;
+  left: 5%;
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  margin: 10px 10px; }
+
+.example > p2 {
+  border-radius: 15px;
+  background: #73AD21;
+  color: white;
+  margin: 30px;
+  padding: 7px;
+  width: 200px;
+  height: 50px; }
+
+.example > p3 {
+  border-radius: 15px;
+  color: white;
+  margin: 30px;
+  background: #73AD21;
+  padding: 7px;
+  width: 200px;
+  height: 50px; }
+
+.example > p4 {
+  border-radius: 15px;
+  margin: 30px;
+  background: #73AD21;
+  padding: 7px;
+  color: white;
+  width: 200px;
+  height: 50px; }
+
+.example > p6 {
+  width: 200px;
+  color: white;
+  height: 50px; }
+
+.example > p7 {
+  width: 200px;
+  color: white;
+  height: 50px; }
+input[type='image']:focus {
+  outline: 0; }
+
+.home-screen {
+  background-color: #18191D; }
+
+.home-time {
+  margin-left: 80%;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  font-family: "Lucida Console", Courier, monospace; }
+
+.menu-button {
+  position: absolute;
+  top: 0%;
+  background-color: white;
+  width: 120px;
+  height: 90px; }
+
+.menu-button input:hover {
+  opacity: .5; }
+
+.Bars > p {
+  font-size: 50px;
+  color: white;
+  margin-top: 0px;
+  line-height: 1.2; }
+
+.images::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+.images-highlight {
+  float: left;
+  width: auto;
+  height: 500px;
+  margin-left: 200px;
+  background-color: white; }
+
+.images input:hover {
+  opacity: .5; }
+
+.line {
+  margin-left: 60%; }
+
+.line > p1 {
+  color: white;
+  font-size: 40px;
+  right: 40px; }
+
+.line > p2 {
+  color: white;
+  font-size: 40px;
+  margin-top: 100px; }
+
+.logo {
+  width: 150px; }
+
+.vida-highlight {
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 90%;
+  height: 124px;
+  background-color: white; }
+
+.vida-highlight input:hover {
+  opacity: .5; }
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9jc3Mvc3R5bGUuY3NzIiwic291cmNlUm9vdCI6IiJ9*/

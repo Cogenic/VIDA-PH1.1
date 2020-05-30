@@ -1,0 +1,16 @@
+*{
+   	background-color: #18191D; 
+}
+
+.check{
+    background-image:url("/images/Cogenic.png");
+    border: 15px solid white;
+    background-repeat: no-repeat;
+    right:40%;
+    top:30%;
+    padding:50% 39%;
+}
+
+
+
+

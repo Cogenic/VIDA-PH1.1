@@ -5,6 +5,7 @@
    mode: 'development',
    devtool: 'inline-source-map',
    devServer: {
-     contentBase: './dist',
+     contentBase: './public',
+     writeToDisk: true
    },
  });
