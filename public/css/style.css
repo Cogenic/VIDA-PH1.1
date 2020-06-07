@@ -97,6 +97,75 @@ main canvas {
   padding: 20px;
   margin: 0 auto;
   display: block; }
+input[type='image']:focus {
+  outline: 0; }
+
+.home-screen {
+  background-color: #18191D; }
+
+.home-time {
+  margin-left: 80%;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  font-family: "Lucida Console", Courier, monospace; }
+
+.menu-button {
+  position: absolute;
+  top: 0%;
+  background-color: white;
+  width: 120px;
+  height: 90px; }
+
+.menu-button input:hover {
+  opacity: .5; }
+
+.Bars > p {
+  font-size: 50px;
+  color: white;
+  margin-top: 0px;
+  line-height: 1.2; }
+
+.images::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+.images-highlight {
+  float: left;
+  width: auto;
+  height: 500px;
+  margin-left: 200px;
+  background-color: white; }
+
+.images input:hover {
+  opacity: .5; }
+
+.line {
+  margin-left: 60%; }
+
+.line > p1 {
+  color: white;
+  font-size: 40px;
+  right: 40px; }
+
+.line > p2 {
+  color: white;
+  font-size: 40px;
+  margin-top: 100px; }
+
+.logo {
+  width: 150px; }
+
+.vida-highlight {
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 90%;
+  height: 124px;
+  background-color: white; }
+
+.vida-highlight input:hover {
+  opacity: .5; }
 .opening-screen {
   position: relative;
   background-color: black;
@@ -206,74 +275,5 @@ main canvas {
     opacity: .4; }
   to {
     opacity: 1; } }
-input[type='image']:focus {
-  outline: 0; }
-
-.home-screen {
-  background-color: #18191D; }
-
-.home-time {
-  margin-left: 80%;
-  font-size: 20px;
-  color: white;
-  padding: 10px;
-  font-family: "Lucida Console", Courier, monospace; }
-
-.menu-button {
-  position: absolute;
-  top: 0%;
-  background-color: white;
-  width: 120px;
-  height: 90px; }
-
-.menu-button input:hover {
-  opacity: .5; }
-
-.Bars > p {
-  font-size: 50px;
-  color: white;
-  margin-top: 0px;
-  line-height: 1.2; }
-
-.images::after {
-  content: "";
-  clear: both;
-  display: table; }
-
-.images-highlight {
-  float: left;
-  width: auto;
-  height: 500px;
-  margin-left: 200px;
-  background-color: white; }
-
-.images input:hover {
-  opacity: .5; }
-
-.line {
-  margin-left: 60%; }
-
-.line > p1 {
-  color: white;
-  font-size: 40px;
-  right: 40px; }
-
-.line > p2 {
-  color: white;
-  font-size: 40px;
-  margin-top: 100px; }
-
-.logo {
-  width: 150px; }
-
-.vida-highlight {
-  width: 150px;
-  margin-top: 10px;
-  margin-left: 90%;
-  height: 124px;
-  background-color: white; }
-
-.vida-highlight input:hover {
-  opacity: .5; }
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9jc3Mvc3R5bGUuY3NzIiwic291cmNlUm9vdCI6IiJ9*/
