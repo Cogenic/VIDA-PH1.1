@@ -1,0 +1,442 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.005  000.005: --- VIM STARTING ---
+000.097  000.092: Allocated generic buffers
+000.131  000.034: locale set
+000.142  000.011: GUI prepared
+000.143  000.001: clipboard setup
+000.147  000.004: window checked
+000.626  000.479: inits 1
+000.660  000.034: parsing arguments
+000.662  000.002: expanding arguments
+000.700  000.038: shell init
+001.368  000.668: xsmp init
+001.925  000.557: Termcap init
+001.987  000.062: inits 2
+003.320  001.333: init highlight
+003.940  000.489  000.489: sourcing /usr/share/vim/vim80/debian.vim
+004.690  000.439  000.439: sourcing /usr/share/vim/vim80/syntax/syncolor.vim
+004.893  000.750  000.311: sourcing /usr/share/vim/vim80/syntax/synload.vim
+016.463  011.480  011.480: sourcing /usr/share/vim/vim80/filetype.vim
+016.545  012.513  000.283: sourcing /usr/share/vim/vim80/syntax/syntax.vim
+016.591  013.225  000.223: sourcing $VIM/vimrc
+017.270  000.078  000.078: sourcing /home/kay/.vimrc.before
+017.772  000.194  000.194: sourcing /usr/share/vim/vim80/syntax/syncolor.vim
+018.203  000.344  000.344: sourcing /usr/share/vim/vim80/ftoff.vim
+018.683  000.197  000.197: sourcing /home/kay/.vim/bundle/vundle/autoload/vundle.vim
+018.915  000.160  000.160: sourcing /home/kay/.vim/bundle/vundle/autoload/vundle/config.vim
+196.408  179.095  178.200: sourcing /home/kay/.vimrc.bundles
+198.091  000.456  000.456: sourcing /usr/share/vim/vim80/syntax/syncolor.vim
+213.791  000.047  000.047: sourcing /home/kay/.vim/bundle/vim-fugitive/ftdetect/fugitive.vim
+214.075  000.046  000.046: sourcing /home/kay/.vim/bundle/neosnippet/ftdetect/neosnippet.vim
+214.344  000.063  000.063: sourcing /home/kay/.vim/bundle/vim-twig/ftdetect/twig.vim
+214.616  000.095  000.095: sourcing /home/kay/.vim/bundle/vim-json/ftdetect/json.vim
+214.751  000.036  000.036: sourcing /home/kay/.vim/bundle/vim-less/ftdetect/less.vim
+214.894  000.034  000.034: sourcing /home/kay/.vim/bundle/vim-javascript/ftdetect/flow.vim
+215.023  000.090  000.090: sourcing /home/kay/.vim/bundle/vim-javascript/ftdetect/javascript.vim
+215.208  000.080  000.080: sourcing /home/kay/.vim/bundle/vim-jst/ftdetect/jst.vim
+215.445  000.115  000.115: sourcing /home/kay/.vim/bundle/vim-coffee-script/ftdetect/coffee.vim
+215.550  000.060  000.060: sourcing /home/kay/.vim/bundle/vim-coffee-script/ftdetect/vim-literate-coffeescript.vim
+215.803  000.074  000.074: sourcing /home/kay/.vim/bundle/vim-haml/ftdetect/haml.vim
+216.043  000.093  000.093: sourcing /home/kay/.vim/bundle/rust.vim/ftdetect/rust.vim
+216.220  000.076  000.076: sourcing /home/kay/.vim/bundle/vim-markdown/ftdetect/markdown.vim
+216.394  000.046  000.046: sourcing /home/kay/.vim/bundle/vim-cucumber/ftdetect/cucumber.vim
+216.575  000.080  000.080: sourcing /home/kay/.vim/bundle/vim-toml/ftdetect/toml.vim
+216.763  000.064  000.064: sourcing /home/kay/.vim/bundle/salt-vim/ftdetect/sls.vim
+218.346  018.425  017.326: sourcing /usr/share/vim/vim80/filetype.vim
+220.113  000.112  000.112: sourcing /usr/share/vim/vim80/ftplugin.vim
+221.816  000.096  000.096: sourcing /usr/share/vim/vim80/indent.vim
+223.362  000.589  000.589: sourcing /usr/share/vim/vim80/syntax/nosyntax.vim
+225.699  000.462  000.462: sourcing /usr/share/vim/vim80/syntax/syncolor.vim
+226.821  002.538  002.076: sourcing /usr/share/vim/vim80/syntax/synload.vim
+226.899  004.225  001.098: sourcing /usr/share/vim/vim80/syntax/syntax.vim
+246.956  000.454  000.454: sourcing /usr/share/vim/vim80/syntax/syncolor.vim
+249.387  000.445  000.445: sourcing /usr/share/vim/vim80/syntax/syncolor.vim
+255.940  011.931  011.032: sourcing /home/kay/.vim/bundle/vim-colors-solarized/colors/solarized.vim
+268.985  000.043  000.043: sourcing /home/kay/.vimrc.local
+272.663  256.017  041.556: sourcing $HOME/.vimrc
+272.675  000.113: sourcing vimrc file(s)
+273.416  000.408  000.408: sourcing /home/kay/.vim/bundle/tlib_vim/plugin/02tlib.vim
+274.965  000.384  000.384: sourcing /home/kay/.vim/bundle/nerdtree/autoload/nerdtree.vim
+277.917  001.099  001.099: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/path.vim
+278.399  000.296  000.296: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/menu_controller.vim
+278.687  000.168  000.168: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/menu_item.vim
+279.067  000.235  000.235: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/key_map.vim
+279.763  000.578  000.578: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/bookmark.vim
+280.558  000.676  000.676: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/tree_file_node.vim
+281.809  001.134  001.134: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/tree_dir_node.vim
+282.386  000.447  000.447: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/opener.vim
+283.081  000.568  000.568: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/creator.vim
+283.351  000.136  000.136: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/flag_set.vim
+283.838  000.359  000.359: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/nerdtree.vim
+284.288  000.343  000.343: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/ui.vim
+284.377  000.032  000.032: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/event.vim
+284.477  000.046  000.046: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/notifier.vim
+285.033  000.495  000.495: sourcing /home/kay/.vim/bundle/nerdtree/autoload/nerdtree/ui_glue.vim
+289.085  000.234  000.234: sourcing /home/kay/.vim/bundle/nerdtree/nerdtree_plugin/exec_menuitem.vim
+290.424  001.290  001.290: sourcing /home/kay/.vim/bundle/nerdtree/nerdtree_plugin/fs_menu.vim
+290.488  000.045  000.045: sourcing /home/kay/.vim/bundle/nerdtree/nerdtree_plugin/vcs.vim
+291.359  000.668  000.668: sourcing /home/kay/.vim/bundle/vim-nerdtree-tabs/nerdtree_plugin/vim-nerdtree-tabs.vim
+293.681  020.120  010.887: sourcing /home/kay/.vim/bundle/nerdtree/plugin/NERD_tree.vim
+295.090  001.207  001.207: sourcing /home/kay/.vim/bundle/vim-surround/plugin/surround.vim
+296.095  000.810  000.810: sourcing /home/kay/.vim/bundle/conflict-marker.vim/plugin/conflict_marker.vim
+296.597  000.435  000.435: sourcing /home/kay/.vim/bundle/auto-pairs/plugin/auto-pairs.vim
+297.088  000.194  000.194: sourcing /home/kay/.vim/bundle/ctrlp.vim/autoload/ctrlp/mrufiles.vim
+297.263  000.590  000.396: sourcing /home/kay/.vim/bundle/ctrlp.vim/plugin/ctrlp.vim
+297.375  000.044  000.044: sourcing /home/kay/.vim/bundle/ctrlp-funky/plugin/funky.vim
+297.905  000.463  000.463: sourcing /home/kay/.vim/bundle/vim-multiple-cursors/plugin/multiple_cursors.vim
+298.247  000.279  000.279: sourcing /home/kay/.vim/bundle/sessionman.vim/plugin/sessionman.vim
+298.788  000.478  000.478: sourcing /home/kay/.vim/bundle/matchit.zip/plugin/matchit.vim
+299.273  000.090  000.090: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/init.vim
+299.785  000.135  000.135: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/parts.vim
+301.826  000.276  000.276: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/util.vim
+301.969  003.103  002.602: sourcing /home/kay/.vim/bundle/vim-airline/plugin/airline.vim
+302.171  000.079  000.079: sourcing /home/kay/.vim/bundle/vim-airline-themes/plugin/airline-themes.vim
+302.888  000.128  000.128: sourcing /home/kay/.vim/bundle/vim-bufferline/autoload/bufferline.vim
+303.005  000.712  000.584: sourcing /home/kay/.vim/bundle/vim-bufferline/plugin/bufferline.vim
+314.608  011.492  011.492: sourcing /home/kay/.vim/bundle/vim-easymotion/plugin/EasyMotion.vim
+315.219  000.363  000.363: sourcing /home/kay/.vim/bundle/undotree/plugin/undotree.vim
+316.093  000.327  000.327: sourcing /home/kay/.vim/bundle/vim-indent-guides/autoload/indent_guides.vim
+316.900  001.526  001.199: sourcing /home/kay/.vim/bundle/vim-indent-guides/plugin/indent_guides.vim
+317.270  000.215  000.215: sourcing /home/kay/.vim/bundle/restore_view.vim/plugin/restore_view.vim
+318.287  000.882  000.882: sourcing /home/kay/.vim/bundle/vim-signify/plugin/signify.vim
+320.004  001.557  001.557: sourcing /home/kay/.vim/bundle/vim-abolish/plugin/abolish.vim
+320.581  000.409  000.409: sourcing /home/kay/.vim/bundle/vim-over/plugin/over.vim
+323.746  002.477  002.477: sourcing /home/kay/.vim/bundle/vim-textobj-user/autoload/textobj/user.vim
+331.280  010.443  007.966: sourcing /home/kay/.vim/bundle/vim-textobj-indent/plugin/textobj/indent.vim
+332.560  000.203  000.203: sourcing /home/kay/.vim/bundle/wildfire.vim/autoload/wildfire/triggers.vim
+333.464  001.986  001.783: sourcing /home/kay/.vim/bundle/wildfire.vim/plugin/wildfire.vim
+333.766  000.119  000.119: sourcing /home/kay/.vim/bundle/vim-litecorrect/plugin/litecorrect.vim
+334.319  000.239  000.239: sourcing /home/kay/.vim/bundle/vim-textobj-sentence/plugin/textobj/sentence.vim
+335.176  000.628  000.628: sourcing /home/kay/.vim/bundle/vim-textobj-quote/plugin/textobj/quote.vim
+336.025  000.680  000.680: sourcing /home/kay/.vim/bundle/vim-wordy/plugin/wordy.vim
+336.283  000.018  000.018: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/autoloclist.vim
+336.322  000.017  000.017: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/balloons.vim
+336.361  000.015  000.015: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/checker.vim
+336.395  000.014  000.014: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/cursor.vim
+336.431  000.015  000.015: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/highlighting.vim
+336.465  000.015  000.015: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/loclist.vim
+336.499  000.014  000.014: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/modemap.vim
+336.532  000.014  000.014: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/notifiers.vim
+336.566  000.013  000.013: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/registry.vim
+336.600  000.014  000.014: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/signs.vim
+337.924  001.007  001.007: sourcing /home/kay/.vim/bundle/syntastic/autoload/syntastic/util.vim
+344.136  000.296  000.296: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/autoloclist.vim
+344.486  000.284  000.284: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/balloons.vim
+345.557  001.011  001.011: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/checker.vim
+346.029  000.415  000.415: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/cursor.vim
+346.548  000.463  000.463: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/highlighting.vim
+347.290  000.684  000.684: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/loclist.vim
+347.537  000.182  000.182: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/modemap.vim
+347.775  000.186  000.186: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/notifiers.vim
+348.435  000.610  000.610: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/registry.vim
+348.679  000.188  000.188: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/signs.vim
+352.223  015.603  010.277: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic.vim
+357.187  004.715  004.715: sourcing /home/kay/.vim/bundle/vim-fugitive/plugin/fugitive.vim
+357.558  000.147  000.147: sourcing /home/kay/.vim/bundle/gist-vim/plugin/gist.vim
+370.101  012.365  012.365: sourcing /home/kay/.vim/bundle/nerdcommenter/plugin/NERD_commenter.vim
+371.014  000.668  000.668: sourcing /home/kay/.vim/bundle/vim-commentary/plugin/commentary.vim
+371.872  000.671  000.671: sourcing /home/kay/.vim/bundle/tabular/plugin/Tabular.vim
+372.234  000.163  000.163: sourcing /home/kay/.vim/bundle/rainbow/plugin/rainbow_main.vim
+372.816  000.149  000.149: sourcing /home/kay/.vim/bundle/neocomplete.vim/plugin/neocomplete/buffer.vim
+373.022  000.141  000.141: sourcing /home/kay/.vim/bundle/neocomplete.vim/plugin/neocomplete/dictionary.vim
+373.219  000.134  000.134: sourcing /home/kay/.vim/bundle/neocomplete.vim/plugin/neocomplete/member.vim
+373.413  000.132  000.132: sourcing /home/kay/.vim/bundle/neocomplete.vim/plugin/neocomplete/tag.vim
+373.807  000.332  000.332: sourcing /home/kay/.vim/bundle/neocomplete.vim/plugin/neocomplete.vim
+374.983  001.006  001.006: sourcing /home/kay/.vim/bundle/neosnippet/plugin/neosnippet.vim
+375.301  000.113  000.113: sourcing /home/kay/.vim/bundle/vim-snippets/plugin/vimsnippets.vim
+376.636  001.063  001.063: sourcing /home/kay/.vim/bundle/PIV/plugin/phpfolding.vim
+376.811  000.076  000.076: sourcing /home/kay/.vim/bundle/PIV/plugin/piv.vim
+377.295  000.304  000.304: sourcing /home/kay/.vim/bundle/vim-php-namespace/plugin/phpns.vim
+378.467  000.258  000.258: sourcing /home/kay/.vim/bundle/python-mode/autoload/pymode.vim
+379.483  000.043  000.043: sourcing /usr/share/vim/vim80/filetype.vim
+381.219  000.037  000.037: sourcing /usr/share/vim/vim80/ftplugin.vim
+384.599  000.041  000.041: sourcing /usr/share/vim/vim80/filetype.vim
+386.428  000.042  000.042: sourcing /usr/share/vim/vim80/ftplugin.vim
+387.442  009.948  009.527: sourcing /home/kay/.vim/bundle/python-mode/plugin/pymode.vim
+395.167  007.236  007.236: sourcing /home/kay/.vim/bundle/emmet-vim/plugin/emmet.vim
+397.982  002.599  002.599: sourcing /home/kay/.vim/bundle/vim-rails/plugin/rails.vim
+398.485  000.293  000.293: sourcing /home/kay/.vim/bundle/rust.vim/plugin/cargo.vim
+398.712  000.136  000.136: sourcing /home/kay/.vim/bundle/rust.vim/plugin/rust.vim
+403.504  004.604  004.604: sourcing /home/kay/.vim/bundle/vim-preview/plugin/preview.vim
+404.138  000.300  000.300: sourcing /home/kay/.vim/bundle/vim-cucumber-align-pipes/plugin/cucumber-align-pipes.vim
+405.058  000.236  000.236: sourcing /usr/share/vim/vim80/plugin/getscriptPlugin.vim
+405.697  000.570  000.570: sourcing /usr/share/vim/vim80/plugin/gzip.vim
+406.379  000.614  000.614: sourcing /usr/share/vim/vim80/plugin/logiPat.vim
+406.485  000.043  000.043: sourcing /usr/share/vim/vim80/plugin/manpager.vim
+407.008  000.472  000.472: sourcing /usr/share/vim/vim80/plugin/matchparen.vim
+408.749  001.666  001.666: sourcing /usr/share/vim/vim80/plugin/netrwPlugin.vim
+408.985  000.115  000.115: sourcing /usr/share/vim/vim80/plugin/rrhelper.vim
+409.151  000.087  000.087: sourcing /usr/share/vim/vim80/plugin/spellfile.vim
+409.706  000.489  000.489: sourcing /usr/share/vim/vim80/plugin/tarPlugin.vim
+410.037  000.244  000.244: sourcing /usr/share/vim/vim80/plugin/tohtml.vim
+410.656  000.538  000.538: sourcing /usr/share/vim/vim80/plugin/vimballPlugin.vim
+411.261  000.503  000.503: sourcing /usr/share/vim/vim80/plugin/zipPlugin.vim
+411.342  010.776: loading plugins
+411.479  000.137: loading packages
+412.846  000.228  000.228: sourcing /home/kay/.vim/bundle/tabular/autoload/tabular.vim
+414.883  002.601  002.373: sourcing /home/kay/.vim/bundle/tabular/after/plugin/TabularMaps.vim
+415.170  001.090: loading after plugins
+415.706  000.536: inits 3
+416.228  000.522: reading viminfo
+417.852  001.624: setup clipboard
+417.872  000.020: setting raw mode
+417.876  000.004: start termcap
+417.934  000.058: clearing screen
+419.026  000.322  000.322: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions.vim
+419.245  000.059  000.059: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/quickfix.vim
+419.549  000.177  000.177: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline.vim
+419.877  000.081  000.081: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/netrw.vim
+420.583  000.123  000.123: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/section.vim
+421.289  000.349  000.349: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/highlighter.vim
+421.578  001.433  000.961: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/term.vim
+422.034  000.123  000.123: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/ctrlp.vim
+422.425  000.081  000.081: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/undotree.vim
+422.863  000.176  000.176: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/hunks.vim
+423.664  000.429  000.429: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/branch.vim
+424.183  000.062  000.062: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/bufferline.vim
+424.727  000.092  000.092: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/syntastic.vim
+425.356  000.230  000.230: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/whitespace.vim
+425.932  000.103  000.103: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/po.vim
+426.388  000.167  000.167: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/wordcount.vim
+426.858  000.058  000.058: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/keymap.vim
+444.321  000.160  000.160: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/themes.vim
+445.176  002.314  002.154: sourcing /home/kay/.vim/bundle/vim-airline-themes/autoload/airline/themes/solarized.vim
+452.844  000.877  000.877: sourcing /home/kay/.vim/bundle/vim-airline-themes/autoload/airline/themes/solarized.vim
+514.168  000.480  000.480: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/builder.vim
+515.623  000.240  000.240: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/default.vim
+567.566  000.515  000.515: sourcing /home/kay/.vim/bundle/syntastic/autoload/syntastic/log.vim
+567.706  141.753: opening buffers
+572.208  000.293  000.293: sourcing /home/kay/.vim/bundle/vim-signify/autoload/sy.vim
+573.273  005.274: BufEnter autocommands
+573.278  000.005: editing files in windows
+579.661  006.383: VimEnter autocommands
+579.666  000.005: before starting main loop
+597.453  012.801  012.801: sourcing /home/kay/.vim/bundle/vim-fugitive/autoload/fugitive.vim
+605.410  012.943: first screen update
+605.413  000.003: --- VIM STARTED ---
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.003  000.003: --- VIM STARTING ---
+000.072  000.069: Allocated generic buffers
+000.095  000.023: locale set
+000.104  000.009: GUI prepared
+000.108  000.004: clipboard setup
+000.111  000.003: window checked
+000.400  000.289: inits 1
+000.417  000.017: parsing arguments
+000.417  000.000: expanding arguments
+000.432  000.015: shell init
+000.736  000.304: xsmp init
+000.979  000.243: Termcap init
+001.006  000.027: inits 2
+001.608  000.602: init highlight
+001.871  000.192  000.192: sourcing /usr/share/vim/vim80/debian.vim
+002.172  000.176  000.176: sourcing /usr/share/vim/vim80/syntax/syncolor.vim
+002.251  000.298  000.122: sourcing /usr/share/vim/vim80/syntax/synload.vim
+010.536  008.249  008.249: sourcing /usr/share/vim/vim80/filetype.vim
+010.664  008.756  000.209: sourcing /usr/share/vim/vim80/syntax/syntax.vim
+010.712  009.078  000.130: sourcing $VIM/vimrc
+011.313  000.121  000.121: sourcing /home/kay/.vimrc.before
+012.434  000.375  000.375: sourcing /usr/share/vim/vim80/syntax/syncolor.vim
+013.114  000.551  000.551: sourcing /usr/share/vim/vim80/ftoff.vim
+013.897  000.326  000.326: sourcing /home/kay/.vim/bundle/vundle/autoload/vundle.vim
+014.627  000.541  000.541: sourcing /home/kay/.vim/bundle/vundle/autoload/vundle/config.vim
+200.453  189.074  187.281: sourcing /home/kay/.vimrc.bundles
+202.254  000.426  000.426: sourcing /usr/share/vim/vim80/syntax/syncolor.vim
+216.650  000.043  000.043: sourcing /home/kay/.vim/bundle/vim-fugitive/ftdetect/fugitive.vim
+216.912  000.043  000.043: sourcing /home/kay/.vim/bundle/neosnippet/ftdetect/neosnippet.vim
+217.158  000.057  000.057: sourcing /home/kay/.vim/bundle/vim-twig/ftdetect/twig.vim
+217.406  000.086  000.086: sourcing /home/kay/.vim/bundle/vim-json/ftdetect/json.vim
+217.533  000.033  000.033: sourcing /home/kay/.vim/bundle/vim-less/ftdetect/less.vim
+217.668  000.031  000.031: sourcing /home/kay/.vim/bundle/vim-javascript/ftdetect/flow.vim
+217.787  000.082  000.082: sourcing /home/kay/.vim/bundle/vim-javascript/ftdetect/javascript.vim
+217.957  000.072  000.072: sourcing /home/kay/.vim/bundle/vim-jst/ftdetect/jst.vim
+218.178  000.105  000.105: sourcing /home/kay/.vim/bundle/vim-coffee-script/ftdetect/coffee.vim
+218.274  000.055  000.055: sourcing /home/kay/.vim/bundle/vim-coffee-script/ftdetect/vim-literate-coffeescript.vim
+218.488  000.066  000.066: sourcing /home/kay/.vim/bundle/vim-haml/ftdetect/haml.vim
+218.721  000.086  000.086: sourcing /home/kay/.vim/bundle/rust.vim/ftdetect/rust.vim
+218.882  000.069  000.069: sourcing /home/kay/.vim/bundle/vim-markdown/ftdetect/markdown.vim
+219.041  000.042  000.042: sourcing /home/kay/.vim/bundle/vim-cucumber/ftdetect/cucumber.vim
+219.208  000.073  000.073: sourcing /home/kay/.vim/bundle/vim-toml/ftdetect/toml.vim
+219.382  000.058  000.058: sourcing /home/kay/.vim/bundle/salt-vim/ftdetect/sls.vim
+221.221  017.276  016.275: sourcing /usr/share/vim/vim80/filetype.vim
+222.999  000.111  000.111: sourcing /usr/share/vim/vim80/ftplugin.vim
+224.703  000.095  000.095: sourcing /usr/share/vim/vim80/indent.vim
+226.230  000.570  000.570: sourcing /usr/share/vim/vim80/syntax/nosyntax.vim
+228.566  000.461  000.461: sourcing /usr/share/vim/vim80/syntax/syncolor.vim
+229.682  002.530  002.069: sourcing /usr/share/vim/vim80/syntax/synload.vim
+229.759  004.198  001.098: sourcing /usr/share/vim/vim80/syntax/syntax.vim
+250.019  000.450  000.450: sourcing /usr/share/vim/vim80/syntax/syncolor.vim
+252.451  000.445  000.445: sourcing /usr/share/vim/vim80/syntax/syncolor.vim
+259.169  012.098  011.203: sourcing /home/kay/.vim/bundle/vim-colors-solarized/colors/solarized.vim
+273.609  000.067  000.067: sourcing /home/kay/.vimrc.local
+277.028  266.264  042.798: sourcing $HOME/.vimrc
+277.035  000.085: sourcing vimrc file(s)
+277.961  000.415  000.415: sourcing /home/kay/.vim/bundle/tlib_vim/plugin/02tlib.vim
+279.570  000.410  000.410: sourcing /home/kay/.vim/bundle/nerdtree/autoload/nerdtree.vim
+282.515  001.103  001.103: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/path.vim
+283.095  000.381  000.381: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/menu_controller.vim
+283.463  000.222  000.222: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/menu_item.vim
+283.890  000.264  000.264: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/key_map.vim
+284.635  000.610  000.610: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/bookmark.vim
+285.496  000.742  000.742: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/tree_file_node.vim
+286.526  000.912  000.912: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/tree_dir_node.vim
+287.012  000.320  000.320: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/opener.vim
+287.247  000.194  000.194: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/creator.vim
+287.323  000.037  000.037: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/flag_set.vim
+287.469  000.108  000.108: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/nerdtree.vim
+287.740  000.233  000.233: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/ui.vim
+287.799  000.021  000.021: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/event.vim
+287.867  000.031  000.031: sourcing /home/kay/.vim/bundle/nerdtree/lib/nerdtree/notifier.vim
+288.249  000.339  000.339: sourcing /home/kay/.vim/bundle/nerdtree/autoload/nerdtree/ui_glue.vim
+290.526  000.078  000.078: sourcing /home/kay/.vim/bundle/nerdtree/nerdtree_plugin/exec_menuitem.vim
+292.110  001.556  001.556: sourcing /home/kay/.vim/bundle/nerdtree/nerdtree_plugin/fs_menu.vim
+292.285  000.125  000.125: sourcing /home/kay/.vim/bundle/nerdtree/nerdtree_plugin/vcs.vim
+294.471  001.620  001.620: sourcing /home/kay/.vim/bundle/vim-nerdtree-tabs/nerdtree_plugin/vim-nerdtree-tabs.vim
+297.760  019.653  010.347: sourcing /home/kay/.vim/bundle/nerdtree/plugin/NERD_tree.vim
+299.174  001.223  001.223: sourcing /home/kay/.vim/bundle/vim-surround/plugin/surround.vim
+300.361  000.979  000.979: sourcing /home/kay/.vim/bundle/conflict-marker.vim/plugin/conflict_marker.vim
+301.627  001.097  001.097: sourcing /home/kay/.vim/bundle/auto-pairs/plugin/auto-pairs.vim
+302.891  000.523  000.523: sourcing /home/kay/.vim/bundle/ctrlp.vim/autoload/ctrlp/mrufiles.vim
+303.333  001.518  000.995: sourcing /home/kay/.vim/bundle/ctrlp.vim/plugin/ctrlp.vim
+303.621  000.111  000.111: sourcing /home/kay/.vim/bundle/ctrlp-funky/plugin/funky.vim
+304.946  001.164  001.164: sourcing /home/kay/.vim/bundle/vim-multiple-cursors/plugin/multiple_cursors.vim
+305.805  000.699  000.699: sourcing /home/kay/.vim/bundle/sessionman.vim/plugin/sessionman.vim
+307.210  001.248  001.248: sourcing /home/kay/.vim/bundle/matchit.zip/plugin/matchit.vim
+308.436  000.226  000.226: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/init.vim
+309.616  000.216  000.216: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/parts.vim
+312.747  000.420  000.420: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/util.vim
+312.964  005.554  004.692: sourcing /home/kay/.vim/bundle/vim-airline/plugin/airline.vim
+313.271  000.120  000.120: sourcing /home/kay/.vim/bundle/vim-airline-themes/plugin/airline-themes.vim
+314.362  000.194  000.194: sourcing /home/kay/.vim/bundle/vim-bufferline/autoload/bufferline.vim
+314.537  001.081  000.887: sourcing /home/kay/.vim/bundle/vim-bufferline/plugin/bufferline.vim
+331.555  016.455  016.455: sourcing /home/kay/.vim/bundle/vim-easymotion/plugin/EasyMotion.vim
+332.316  000.448  000.448: sourcing /home/kay/.vim/bundle/undotree/plugin/undotree.vim
+333.362  000.403  000.403: sourcing /home/kay/.vim/bundle/vim-indent-guides/autoload/indent_guides.vim
+334.705  002.196  001.793: sourcing /home/kay/.vim/bundle/vim-indent-guides/plugin/indent_guides.vim
+335.170  000.265  000.265: sourcing /home/kay/.vim/bundle/restore_view.vim/plugin/restore_view.vim
+336.452  001.113  001.113: sourcing /home/kay/.vim/bundle/vim-signify/plugin/signify.vim
+338.586  001.937  001.937: sourcing /home/kay/.vim/bundle/vim-abolish/plugin/abolish.vim
+339.302  000.507  000.507: sourcing /home/kay/.vim/bundle/vim-over/plugin/over.vim
+343.136  002.995  002.995: sourcing /home/kay/.vim/bundle/vim-textobj-user/autoload/textobj/user.vim
+350.853  011.236  008.241: sourcing /home/kay/.vim/bundle/vim-textobj-indent/plugin/textobj/indent.vim
+352.096  000.203  000.203: sourcing /home/kay/.vim/bundle/wildfire.vim/autoload/wildfire/triggers.vim
+353.292  002.244  002.041: sourcing /home/kay/.vim/bundle/wildfire.vim/plugin/wildfire.vim
+353.600  000.120  000.120: sourcing /home/kay/.vim/bundle/vim-litecorrect/plugin/litecorrect.vim
+354.011  000.192  000.192: sourcing /home/kay/.vim/bundle/vim-textobj-sentence/plugin/textobj/sentence.vim
+354.880  000.655  000.655: sourcing /home/kay/.vim/bundle/vim-textobj-quote/plugin/textobj/quote.vim
+355.704  000.655  000.655: sourcing /home/kay/.vim/bundle/vim-wordy/plugin/wordy.vim
+356.404  000.047  000.047: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/autoloclist.vim
+356.510  000.045  000.045: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/balloons.vim
+356.614  000.039  000.039: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/checker.vim
+356.706  000.037  000.037: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/cursor.vim
+356.799  000.038  000.038: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/highlighting.vim
+356.892  000.039  000.039: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/loclist.vim
+356.982  000.036  000.036: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/modemap.vim
+357.075  000.039  000.039: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/notifiers.vim
+357.166  000.037  000.037: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/registry.vim
+357.259  000.039  000.039: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/signs.vim
+360.903  002.783  002.783: sourcing /home/kay/.vim/bundle/syntastic/autoload/syntastic/util.vim
+370.955  000.181  000.181: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/autoloclist.vim
+371.167  000.173  000.173: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/balloons.vim
+371.990  000.788  000.788: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/checker.vim
+372.286  000.258  000.258: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/cursor.vim
+372.599  000.279  000.279: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/highlighting.vim
+372.998  000.364  000.364: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/loclist.vim
+373.138  000.107  000.107: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/modemap.vim
+373.258  000.089  000.089: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/notifiers.vim
+373.684  000.396  000.396: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/registry.vim
+373.839  000.120  000.120: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic/signs.vim
+377.270  019.957  014.419: sourcing /home/kay/.vim/bundle/syntastic/plugin/syntastic.vim
+381.764  004.249  004.249: sourcing /home/kay/.vim/bundle/vim-fugitive/plugin/fugitive.vim
+382.081  000.125  000.125: sourcing /home/kay/.vim/bundle/gist-vim/plugin/gist.vim
+388.554  006.319  006.319: sourcing /home/kay/.vim/bundle/nerdcommenter/plugin/NERD_commenter.vim
+389.285  000.537  000.537: sourcing /home/kay/.vim/bundle/vim-commentary/plugin/commentary.vim
+389.945  000.515  000.515: sourcing /home/kay/.vim/bundle/tabular/plugin/Tabular.vim
+390.537  000.297  000.297: sourcing /home/kay/.vim/bundle/rainbow/plugin/rainbow_main.vim
+391.149  000.140  000.140: sourcing /home/kay/.vim/bundle/neocomplete.vim/plugin/neocomplete/buffer.vim
+391.341  000.130  000.130: sourcing /home/kay/.vim/bundle/neocomplete.vim/plugin/neocomplete/dictionary.vim
+391.521  000.122  000.122: sourcing /home/kay/.vim/bundle/neocomplete.vim/plugin/neocomplete/member.vim
+391.700  000.122  000.122: sourcing /home/kay/.vim/bundle/neocomplete.vim/plugin/neocomplete/tag.vim
+392.062  000.307  000.307: sourcing /home/kay/.vim/bundle/neocomplete.vim/plugin/neocomplete.vim
+393.153  000.936  000.936: sourcing /home/kay/.vim/bundle/neosnippet/plugin/neosnippet.vim
+393.444  000.104  000.104: sourcing /home/kay/.vim/bundle/vim-snippets/plugin/vimsnippets.vim
+394.714  001.023  001.023: sourcing /home/kay/.vim/bundle/PIV/plugin/phpfolding.vim
+394.890  000.085  000.085: sourcing /home/kay/.vim/bundle/PIV/plugin/piv.vim
+395.387  000.306  000.306: sourcing /home/kay/.vim/bundle/vim-php-namespace/plugin/phpns.vim
+396.518  000.267  000.267: sourcing /home/kay/.vim/bundle/python-mode/autoload/pymode.vim
+397.496  000.040  000.040: sourcing /usr/share/vim/vim80/filetype.vim
+399.181  000.040  000.040: sourcing /usr/share/vim/vim80/ftplugin.vim
+401.430  000.015  000.015: sourcing /usr/share/vim/vim80/filetype.vim
+402.066  000.014  000.014: sourcing /usr/share/vim/vim80/ftplugin.vim
+402.443  006.855  006.479: sourcing /home/kay/.vim/bundle/python-mode/plugin/pymode.vim
+410.592  007.852  007.852: sourcing /home/kay/.vim/bundle/emmet-vim/plugin/emmet.vim
+413.343  002.536  002.536: sourcing /home/kay/.vim/bundle/vim-rails/plugin/rails.vim
+413.842  000.290  000.290: sourcing /home/kay/.vim/bundle/rust.vim/plugin/cargo.vim
+414.060  000.132  000.132: sourcing /home/kay/.vim/bundle/rust.vim/plugin/rust.vim
+421.858  007.611  007.611: sourcing /home/kay/.vim/bundle/vim-preview/plugin/preview.vim
+422.090  000.114  000.114: sourcing /home/kay/.vim/bundle/vim-cucumber-align-pipes/plugin/cucumber-align-pipes.vim
+422.430  000.090  000.090: sourcing /usr/share/vim/vim80/plugin/getscriptPlugin.vim
+422.684  000.228  000.228: sourcing /usr/share/vim/vim80/plugin/gzip.vim
+422.945  000.235  000.235: sourcing /usr/share/vim/vim80/plugin/logiPat.vim
+422.985  000.016  000.016: sourcing /usr/share/vim/vim80/plugin/manpager.vim
+423.183  000.178  000.178: sourcing /usr/share/vim/vim80/plugin/matchparen.vim
+423.842  000.629  000.629: sourcing /usr/share/vim/vim80/plugin/netrwPlugin.vim
+423.929  000.043  000.043: sourcing /usr/share/vim/vim80/plugin/rrhelper.vim
+423.991  000.032  000.032: sourcing /usr/share/vim/vim80/plugin/spellfile.vim
+424.201  000.184  000.184: sourcing /usr/share/vim/vim80/plugin/tarPlugin.vim
+424.326  000.094  000.094: sourcing /usr/share/vim/vim80/plugin/tohtml.vim
+424.560  000.203  000.203: sourcing /usr/share/vim/vim80/plugin/vimballPlugin.vim
+424.789  000.190  000.190: sourcing /usr/share/vim/vim80/plugin/zipPlugin.vim
+424.820  011.718: loading plugins
+424.872  000.052: loading packages
+425.907  000.226  000.226: sourcing /home/kay/.vim/bundle/tabular/autoload/tabular.vim
+430.698  005.349  005.123: sourcing /home/kay/.vim/bundle/tabular/after/plugin/TabularMaps.vim
+431.450  001.229: loading after plugins
+433.251  001.801: inits 3
+434.687  001.436: reading viminfo
+439.702  005.015: setup clipboard
+439.746  000.044: setting raw mode
+439.762  000.016: start termcap
+439.924  000.162: clearing screen
+442.792  000.854  000.854: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions.vim
+443.069  000.069  000.069: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/quickfix.vim
+443.420  000.206  000.206: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline.vim
+443.699  000.053  000.053: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/netrw.vim
+444.181  000.084  000.084: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/section.vim
+444.665  000.238  000.238: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/highlighter.vim
+444.865  000.983  000.661: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/term.vim
+445.176  000.083  000.083: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/ctrlp.vim
+445.443  000.054  000.054: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/undotree.vim
+445.744  000.121  000.121: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/hunks.vim
+446.251  000.252  000.252: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/branch.vim
+446.802  000.097  000.097: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/bufferline.vim
+447.629  000.140  000.140: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/syntastic.vim
+449.355  000.656  000.656: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/whitespace.vim
+450.887  000.221  000.221: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/po.vim
+451.877  000.363  000.363: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/wordcount.vim
+452.906  000.123  000.123: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/keymap.vim
+469.419  000.059  000.059: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/themes.vim
+469.758  000.842  000.783: sourcing /home/kay/.vim/bundle/vim-airline-themes/autoload/airline/themes/solarized.vim
+473.199  000.924  000.924: sourcing /home/kay/.vim/bundle/vim-airline-themes/autoload/airline/themes/solarized.vim
+517.217  000.438  000.438: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/builder.vim
+518.545  000.221  000.221: sourcing /home/kay/.vim/bundle/vim-airline/autoload/airline/extensions/default.vim
+573.754  000.516  000.516: sourcing /home/kay/.vim/bundle/syntastic/autoload/syntastic/log.vim
+573.873  126.733: opening buffers
+578.455  000.290  000.290: sourcing /home/kay/.vim/bundle/vim-signify/autoload/sy.vim
+579.548  005.385: BufEnter autocommands
+579.553  000.005: editing files in windows
+586.595  007.042: VimEnter autocommands
+586.601  000.006: before starting main loop
+605.020  012.940  012.940: sourcing /home/kay/.vim/bundle/vim-fugitive/autoload/fugitive.vim
+613.443  013.902: first screen update
+613.444  000.001: --- VIM STARTED ---

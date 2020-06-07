@@ -8,9 +8,9 @@ var bcrypt = require('bcrypt');
 const saltRounds = 10;
 
 /* GET home page. */
-router.get('/', function(req, res){
-    console.log(req.user);
-    console.log(req.isAuthenticated());//Test wheter or not data is being passed through
+router.get('/',authenticationMiddleware(), function(req, res){
+ //   console.log(req.user);
+//    console.log(req.isAuthenticated());//Test wheter or not data is being passed through
     res.render('home', {title: 'Home'});
 });
 //do the authencitcation middleware
@@ -37,6 +37,7 @@ router.get('/home-screen', authenticationMiddleware(),function(req, res) {
   res.render('home-screen', { title: 'home' });
 });
 
+var variable1="Sucker";
 router.get('/opening-screen', authenticationMiddleware(),function(req, res) {
   res.render('opening-screen', { title: 'Opening-screen' });
 });
@@ -65,7 +66,7 @@ router.get('/login', function(req, res, next) {
     if (!user) {
       // *** Display message without using flash option
       // re-render the login form with a message
-        console.log(info);
+//        console.log(info);
         var message = req.flash('message')[0];
 //      req.session.message = message;
         return res.render('login',{message: message});
@@ -76,12 +77,6 @@ router.get('/login', function(req, res, next) {
     });
 
   })(req, res, next);
-
-     /*
-    console.log(message);
-    res.render('login',{message:`${message}`});
-
-*/
 
 });
 
@@ -141,7 +136,7 @@ router.post('/register', function(req, res, next) {
                        if(error) throw error;
 
                        const user_id = results[0];
-                       console.log(user_id);
+//                       console.log(user_id);
                        req.login(user_id, function(err){
                            res.redirect('/');
                        })

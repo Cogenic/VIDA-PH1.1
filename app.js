@@ -16,6 +16,7 @@ var bcrypt = require('bcrypt');
 
 require('dotenv').config();
 var index = require('./routes/index');
+var trainer = require('./routes/trainer');
 var users = require('./routes/users');
 
 var app = express();
@@ -65,7 +66,8 @@ app.use(function(req, res, next){
 });
 
 
-app.use('/', index);
+app.use('/', index); //creating a route
+app.use('/training',trainer); //creating a route
 app.use('/users', users);
 
 //app.use(express.cookieParser('keyboard cat'));
@@ -101,6 +103,16 @@ passport.use(new LocalStrategy({
     }
 ));
 
+    var myVar = "hello";
+function preception(){
+        const db = require('./db');
+        db.query('SELECT username FROM entries', function(err, result, fields){
+                if(err) {throw(err)}
+            console.log(result.length);
+        });
+}
+
+preception();
 
 
 // catch 404 and forward to error handler
@@ -141,6 +153,7 @@ filenames.forEach(function (filename) {
 hbs.registerHelper('json', function(context) {
     return JSON.stringify(context, null, 2);
 });
+
 
 
 module.exports = app;

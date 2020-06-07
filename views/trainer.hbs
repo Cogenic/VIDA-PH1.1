@@ -1,0 +1,27 @@
+{{> header }}
+
+<div class="box">
+<h1>{{title}}</h1>
+
+{{#if errors}}
+    {{#each errors}}
+        <div class="alert alert-danger" role="alert">
+            {{this.msg}}
+        </div>
+    {{/each}}
+{{/if}}
+
+
+<form method="POST" action="/training">
+<div class="form-group">
+    <label for="trigger">Trigger</label>
+    <input type="text" name="trigger"  placeholder="Enter trigger">
+  </div>
+  <div class="form-group">
+    <label for="response">Response</label>
+ <input type="response" name="response"  placeholder="Enter response">
+  </div>
+ <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+
