@@ -115,8 +115,15 @@
 
 
 .audio{
-    position: relative;
+    position: absolute;
+    left:50%;
 }
+
+.listening{
+    font-size:20vw;
+    width:20%;
+}
+
 
 /* return Fading animation */
 .fade {

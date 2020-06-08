@@ -18,8 +18,8 @@ class AudioVisualiser extends Component {
     let x = 0;
     const sliceWidth = (width * 1.0) / audioData.length;
 
-    context.lineWidth = 2;
-    context.strokeStyle = '#000000';
+    context.lineWidth = 5;
+    context.strokeStyle = '#0000FF';
     context.clearRect(0, 0, width, height);
 
     context.beginPath();
@@ -34,7 +34,7 @@ class AudioVisualiser extends Component {
   }
 
   render() {
-    return <canvas width="300" height="300" ref={this.canvas} />;
+    return <canvas width="800" height="200" right="100%"  ref={this.canvas} />;
   }
 }
 
