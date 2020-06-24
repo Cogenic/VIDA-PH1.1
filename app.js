@@ -18,8 +18,11 @@ require('dotenv').config();
 var index = require('./routes/index');
 var trainer = require('./routes/trainer');
 var users = require('./routes/users');
-
+var recognize = require('./src/recognize.js');
 var app = express();
+const {Storage} = require('@google-cloud/storage');
+// Instantiate a storage client
+const storage = new Storage();
 app.use(flash());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -31,7 +34,9 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator())
+const bucket=storage.bucket(process.env.GSB_NAME);
 
+const {format} = require('util');
 
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -73,6 +78,14 @@ app.use('/users', users);
 //app.use(express.cookieParser('keyboard cat'));
 //app.use(express.session({ cookie: { maxAge: 60000 }}));
 
+/*
+if(navigator.userAgent.indexOf("Chrome") != -1){
+
+
+}
+*/
+
+
 
 
 
@@ -102,17 +115,6 @@ passport.use(new LocalStrategy({
 //        return done(null, false, {message: 'Invalid username or password'}); //Tell user authentication was unsuccessful
     }
 ));
-
-    var myVar = "hello";
-function preception(){
-        const db = require('./db');
-        db.query('SELECT username FROM entries', function(err, result, fields){
-                if(err) {throw(err)}
-            console.log(result.length);
-        });
-}
-
-preception();
 
 
 // catch 404 and forward to error handler
@@ -156,4 +158,18 @@ hbs.registerHelper('json', function(context) {
 
 
 
-module.exports = app;
+
+
+
+
+
+const gc = new Storage({
+  keyFilename: path.join(__dirname, "./.cogenic-sql.json"),
+  projectId: "cogenic"
+});
+
+
+
+
+
+  module.exports = app;

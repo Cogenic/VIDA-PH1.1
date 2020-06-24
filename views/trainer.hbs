@@ -1,19 +1,45 @@
-{{> header }}
+<!doctype html>
+<html lang="en">
+<title>{{title}}</title>
+<head>
+    <meta charset="UTF-g">
+    <link rel="stylesheet" href="/css/style.css">
+    <h1>{{title}}</h1>
+    </br>
+    {{#if errors}}
+        {{#each errors}}
+            <div class="alert alert-danger" role="alert">
+                {{this.msg}}
+            </div>
+        {{/each}}
+    {{/if}}
+</head>
 
-<div class="box">
-<h1>{{title}}</h1>
 
-{{#if errors}}
-    {{#each errors}}
-        <div class="alert alert-danger" role="alert">
-            {{this.msg}}
+<body>
+    <form method="POST" action="/training">
+    <label for "triggers" class='trainingM'>Triggers</label>
+    </br>
+        <div class="triggers">
+            <input type="text"> </input>
+            <div class="verbal triggers">
+                <input type="text"> </input>
+            </div>
         </div>
-    {{/each}}
-{{/if}}
 
 
-<form method="POST" action="/training">
-<div class="form-group">
+        <div class="responses">
+
+
+
+        </div>
+
+    </form>
+</body>
+
+</html>
+
+<!--div class="form-group">
     <label for="trigger">Trigger</label>
     <input type="text" name="trigger"  placeholder="Enter trigger">
   </div>
@@ -23,5 +49,5 @@
   </div>
  <button type="submit" class="btn btn-primary">Submit</button>
   </div>
-</form>
+</form-->
 

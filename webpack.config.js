@@ -1,6 +1,8 @@
 //const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const DotenvPlugin = require('webpack-dotenv-plugin');
+var path = require('path');
+var SRC = path.resolve(__dirname, 'src/main/js');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
@@ -40,12 +42,20 @@ module.exports = {
                             name: '[name].[ext]',
                             outputPath: '../images/',
                             publicPath: '../images/'
+
                         }
                     }
                 ]
             },
-		]
-	},
+            {
+                test: /\.mp3$/,
+                loader: 'file-loader',
+                query: {
+                    name: '../audio/[name].[ext]'
+                }
+            }
+        ]
+    },
 	plugins: [
 //        extractPlugin
         new ExtractTextPlugin("../css/style.css"),

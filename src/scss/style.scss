@@ -86,15 +86,28 @@
 
 .highlight {
     position: absolute;
-    margin-left:35%;
-    height:300px;
+    margin-left:30%;
     bottom:25%;
-    background-color:white;
+}
+.Begin{
+
+    position:absolute;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 15px solid blue;
+    bottom:20%;
+    margin-left:37%;
+    text-align: center;
+    font-style: italic;
+    font-size: 40px;
+    cursor: pointer
+
 }
 
 #center{
-    height:auto;
-    width:400px;
+    width: 40vw;
+    height:50vh;
 }
 
 .highlight input:hover{

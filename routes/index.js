@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var stream = require('../stream.js');
 var flash = require('connect-flash');
 var expressValidator = require('express-validator');
 var passport = require('passport')
@@ -22,28 +23,29 @@ router.get('/welcome-screen', authenticationMiddleware(),function(req, res) {
   res.render('welcome-screen', { title: 'Welcome' });
 });
 
-router.post('/welcome-screen',function(req, res, next) {
-    res.redirect('/home-screen');
 
+router.post('/welcome-screen',function(req, res, next) {
+    res.redirect('/opening-screen');
 });
+
 
 router.post('/home-screen',function(req, res, next) {
     res.redirect('/home-screen');
-
 });
 
 
 router.get('/home-screen', authenticationMiddleware(),function(req, res) {
-  res.render('home-screen', { title: 'home' });
+    res.render('home-screen', { title: 'home' });
 });
 
-var variable1="Sucker";
+
 router.get('/opening-screen', authenticationMiddleware(),function(req, res) {
-  res.render('opening-screen', { title: 'Opening-screen' });
+    res.render('opening-screen', { title: 'Opening-screen' });
 });
+
+
 router.post('/opening-screen',function(req, res, next) {
     res.redirect('/opening-screen');
-
 });
 
 

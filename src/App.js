@@ -1,6 +1,7 @@
 require("babel-polyfill");
 import React, { Component } from 'react';
 import AudioAnalyser from './AudioAnalyser';
+import ReactPlayer from 'react-player';
 //const React = require('react');
 //const { Component } = require('react');
 //import React, { Component } from 'react';
@@ -12,7 +13,6 @@ class App extends Component {
     this.state = {
       audio: null
     };
-    this.toggleMicrophone = this.toggleMicrophone.bind(this);
   }
 
   async getMicrophone() {
@@ -28,7 +28,7 @@ class App extends Component {
     this.setState({ audio: null });
   }
 
-  toggleMicrophone() {
+    componentDidMount(){
     if (this.state.audio) {
       this.stopMicrophone();
     } else {
@@ -36,15 +36,11 @@ class App extends Component {
     }
   }
 
+
   render() {
     return (
       <div className="App">
-        <div className="controls">
-          <button onClick={this.toggleMicrophone} style={{width: 500, height:50, fontSize:35, borderRadius:45,color:"white", backgroundColor:'#1f4bd7'}}>
             {this.state.audio ? 'Listening......' : 'Hello, Shall we begin?........'}
-
-          </button>
-        </div>
         {this.state.audio ? <AudioAnalyser audio={this.state.audio} /> : ''}
       </div>
     );

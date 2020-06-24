@@ -1,77 +1,80 @@
-<!DOCTYPE html>
+<!DOCTYPE html
+      PUBLIC "-//W3C//DTD HTML 4.01//EN"
+      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
 <html>
     <head>
-<title>{{title}}</title>
-        <meta charset="UTF-g">
-        <title>Opening Screen</title>
-        <link rel="stylesheet" href="/css/style.css">
-    </head>
-    <header class= "opening-header">
-        <h1 id="time"></h1>
-   </header>
-    <form method="POST" action="/home-screen">
-         <div class="menu-button">
-           <input type="image" src="/images/homebutton.png" name="saveForm" class="vida" id="saveForm" >
+        <link rel="shortcut icon" href="">
+        <link rel="icon"
+      type="image/png"
+      href="images/Cogenic.png">
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0"/>
+    <link rel="shortcut icon" href="">
+    <title>{{title}}</title>
+            <meta charset="UTF-g">
+            <link rel="stylesheet" href="/css/style.css">
+        </head>
+        <header class= "opening-header">
+            <h1 id="time"></h1>
+       </header>
+        <form method="POST" action="/home-screen">
+             <div class="menu-button">
+               <input type="image" src="/images/homebutton.png" name="saveForm" class="vida" id="saveForm" >
+            </div>
+        </form>
+        <body class="opening-screen">
+
+            <p>___</p>
+            
+            </br>
+            <p1>How may I help you?</p1>
+    <div class="slideshow-container">
+        <div class="aSlides fade">
+          <div class="text">Where is the conceirge worker?</div>
         </div>
-    </form>
-    <body class="opening-screen">
 
-        <p>___</p>
-        
-        </br>
-        <p1>How may I help you?</p1>
-<div class="slideshow-container">
-
-    <div class="aSlides fade">
-      <div class="text">Where is the conceirge worker?</div>
+          <div class="bSlides fade">
+          <div class="text">Where is the nearest bathroom?</div>
+        </div>
+        <div class="cSlides fade">
+          <div class="text">I would like to reserve a room</div>
+        </div>
     </div>
-
-    <div class="aSlides fade">
-      <div class="text">Where is the nearest bathroom?</div>
-    </div>
-    <div class="aSlides fade">
-      <div class="text">I would like to reserve a room</div>
-    </div>
-
-      <div class="bSlides fade">
-      <div class="text">Where is the nearest bathroom?</div>
-    </div>
-      <div class="bSlides fade">
-      <div class="text">I would like to reserve a room</div>
-    </div>
-      <div class="bSlides fade">
-      <div class="text">Where is the conceirge worker?</div>
-    </div>
-
-    <div class="cSlides fade">
-      <div class="text">I would like to reserve a room</div>
-    </div>
-    <div class="cSlides fade">
-      <div class="text">Where is the conceirge worker?</div>
-    </div>
-    <div class="cSlides fade">
-      <div class="text">Where is the nearest bathroom?</div>
-    </div>
-</div>
-</br>
+    </br>
 
 
-</br>
+    </br>
 
-    <form method="POST" action="/opening-screen">
-       <input type="image" src="/images/vida.gif" class="opening-vida">
-       </form>
+        <form method="POST" action="/opening-screen">
+           <input type="image" src="/images/vida.gif" class="opening-vida">
+           </form>
+        </body>
+
+    <div class="audio">
+
+        <div id="root">
+        </div>
+
+    </div>
+
+        <div id="music">
+        </div>
+
+    <!--audio controls id="music">
+    <source src="/images/vida.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio-->
+
+
+
+    <!--button onclick="play()" type="button">Play </button-->
+    <!--button onclick="pause()" type="button">Pause</button-->
+
     </body>
+    <script src="http://localhost:5000/socket.io/socket.io.js"></script>
+    <script src="js/home.bundle.js"></script>
 
-<div class="audio">
-
-    <div id="root">
-
-    </div>
-</div>
-
-</body>
-
-<script src="js/home.bundle.js"></script>
 
 </html>
