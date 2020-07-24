@@ -10,10 +10,11 @@ require('./images/staff_info.png');
 require('./images/vida-logo.png');
 require('./images/homebutton.png');
 require('./images/vida.gif');
+require('./images/vida2.gif');
+require('./images/J4o.gif');
+require('./images/AIbac.gif');
 require('./audio/hello.mp3');
-require('./audio/role.mp3');
 const moment = require('moment');
-const api = require('./api.js')
 
 import App from './App';
 
@@ -24,33 +25,15 @@ const {Howl, Howler} = require('howler');
 const ReactDOM = require('react-dom');
 
 const registerServiceWorker = require('./registerServiceWorker.js');
-//vida.showSlides();
+var socket = new WebSocket('ws://localhost:8443/training');
+socket.addEventListener('message', (e) =>{
+    require(`./audio/${e.data}.mp3`);
+})
 
-//const myelement = <App brand="ford"/>;
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('visualizer'));
 
-/*
-function GetFormattedDate() {
-    var todayTime = new Date();
-    var month = format(todayTime .getMonth() + 1);
-    var day = format(todayTime .getDate());
-    var year = format(todayTime .getFullYear());
-    return month + "/" + day + "/" + year;
-}
-
-var dates=GetFormattedDate();
-console.log(dates);
-*/
 var time_openingScreen = document.getElementById("time");
 var date = moment().format('LLLL');
 time_openingScreen.innerHTML = date;
 
-//window.location.reload(true);e
-//var audioUrl = document.getElementById("myAudio").src;
-//audioUrl = "?" + new Date().getTime();
-//console.log(audioUrl);
-
 ReactDOM.render(<Music url="hello"/>, document.getElementById('music'));
-
-
-

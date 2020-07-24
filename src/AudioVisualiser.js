@@ -16,25 +16,31 @@ class AudioVisualiser extends Component {
     const width = canvas.width;
     const context = canvas.getContext('2d');
     let x = 0;
-    const sliceWidth = (width * 1.0) / audioData.length;
+    const sliceWidth = (width ) / audioData.length;
 
-    context.lineWidth = 5;
-    context.strokeStyle = '#0000FF';
+    context.lineWidth = 3;
+      context.strokeStyle = '#2C2CFF';
     context.clearRect(0, 0, width, height);
 
     context.beginPath();
     context.moveTo(0, height / 2);
     for (const item of audioData) {
-      const y = (item / 255.0) * height;
-      context.lineTo(x, y);
-      x += sliceWidth;
+        const y = (item /255.0) * height;
+//        console.log(y)
+        if( y < 100 ){
+            context.lineTo(x, y);
+
+        }else if (y > 105){
+        }
+//        console.log(y);
+        x += sliceWidth;
     }
     context.lineTo(x, height / 2);
     context.stroke();
   }
 
   render() {
-    return <canvas width="800" height="200" right="100%"  ref={this.canvas} />;
+    return <canvas  width="500%" height="200" right="100%"  ref={this.canvas} />;
   }
 }
 

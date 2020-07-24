@@ -39,8 +39,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-            {this.state.audio ? 'Listening......' : 'Hello, Shall we begin?........'}
+      <div className="App" >
         {this.state.audio ? <AudioAnalyser audio={this.state.audio} /> : ''}
       </div>
     );
