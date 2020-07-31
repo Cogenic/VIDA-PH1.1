@@ -3,7 +3,8 @@ var connection = mysql.createConnection({
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database : process.env.DB_NAME,
-    socketPath: '/cloudsql/cogenicintel:us-west4:reason'
+//    socketPath: '/cloudsql/cogenicintel:us-west4:reason'
+    socketPath: '127.0.0.1:3306'
 })
 
 connection.connect()
