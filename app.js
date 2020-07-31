@@ -34,7 +34,6 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator())
-const bucket=storage.bucket(process.env.GSB_NAME);
 
 const {format} = require('util');
 
@@ -45,8 +44,7 @@ var options = {
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database : process.env.DB_NAME,
-    socketPath: '/cloudsql/cogenic:us-west2:cogenic-sql-1'
-
+    socketPath: '/cloudsql/cogenicintel:us-west4:reason'
 };
 var sessionStore = new MySQLStore(options);
 
@@ -162,11 +160,6 @@ hbs.registerHelper('json', function(context) {
 
 
 
-
-const gc = new Storage({
-  keyFilename: path.join(__dirname, "./.cogenic-sql.json"),
-  projectId: "cogenic"
-});
 
 
 

@@ -1,1 +1,1 @@
-export GOOGLE_APPLICATION_CREDENTIALS="/home/kay/cogenic/ui/speech-to-text.json"
+export GOOGLE_APPLICATION_CREDENTIALS="/home/kay/cogenic/ui/cogenic-sql.json"

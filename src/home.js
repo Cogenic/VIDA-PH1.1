@@ -24,8 +24,9 @@ import Music from './Music.js';
 const {Howl, Howler} = require('howler');
 const ReactDOM = require('react-dom');
 
-const registerServiceWorker = require('./registerServiceWorker.js');
 var socket = new WebSocket('ws://localhost:8443/training');
+
+//requires the mp3 files inorder for VIDA to speak
 socket.addEventListener('message', (e) =>{
     require(`./audio/${e.data}.mp3`);
 })

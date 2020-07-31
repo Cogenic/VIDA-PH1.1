@@ -1,4 +1,5 @@
-
+//Style css is the main css. its possible for you to put all css files in here
+//But its best to separate each html page with its own css
 .class-for-home{
     background-color: #18191D; 
 }
@@ -6,7 +7,7 @@
 
 .home-image{
    background-image:url('../images/Cogenic.png');
-    //    position:absolute;
+    position:absolute;
     display: block;
     width:auto;
     height:auto;
@@ -16,7 +17,6 @@
     background-repeat:no-repeat;
     background-size: cover;
     background-position: center;
-
 }
 
 .Error-Login{
@@ -25,10 +25,6 @@
     color:red;
     width:50%;
     text-align:center;
-
-
-
-
 }
 
 .box{

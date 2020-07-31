@@ -50,12 +50,6 @@ function infiniteStream() {
     let recognizeStream = null;
 
 
-    const options = {
-      key: fs.readFileSync('snakeoil.key'),
-      cert: fs.readFileSync('snakeoil.pem')
-    };
-
-
     let server = http.createServer(function(req, res){
       res.writeHead(200);
     //  res.end(index);
@@ -73,6 +67,7 @@ function infiniteStream() {
             if(data!=='{"sampleRate":44100}'){
                 var buffer = new Int16Array(data, 0, Math.floor(data.byteLength / 2));
                 if(recognizeStream !== null){
+                    console.log(buffer);
                     audioInputStreamTransform(buffer,encoding);
                 }
             }
