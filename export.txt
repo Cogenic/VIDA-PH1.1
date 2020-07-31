@@ -1,1 +1,1 @@
-export GOOGLE_APPLICATION_CREDENTIALS="/home/kay/cogenic/ui/cogenic-sql.json"
+export GOOGLE_APPLICATION_CREDENTIALS="./cogenic-sql.json"
