@@ -6,6 +6,7 @@ times in msec
 
 000.005  000.005: --- VIM STARTING ---
 000.097  000.092: Allocated generic buffers
+fsdfsd
 000.131  000.034: locale set
 000.142  000.011: GUI prepared
 000.143  000.001: clipboard setup
