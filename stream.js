@@ -19,7 +19,7 @@ function preception(verbal,done){
     verbal = verbal.trim();
     var trigger = "";
     db.query('SELECT Triggers FROM verbalTriggers WHERE verbalTriggers = ?',[verbal],function(err, result, fields){
-        if(result.length === 0){
+        if(!result){
         /*
 
             if(verbal !== "I do not understand"){
@@ -30,10 +30,10 @@ function preception(verbal,done){
 
             }
             */
-            return err;
-        }
+           return err;
+       }
             console.log(result);
-            trigger = result[0].Triggers;
+//            trigger = result[0].Triggers;
              db.query('SELECT Utterance FROM trainingData WHERE triggers = ?',result[0].Triggers,function(err, result, fields){
                    if(result.length === 0)
                        return err;

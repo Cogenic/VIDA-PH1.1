@@ -56,7 +56,7 @@ function infiniteStream() {
     });
     server.addListener('upgrade', (req, res, head) => console.log('UPGRADE:', req.url));
     server.on('error', (err) => console.error(err));
-    server.listen(5000, () => console.log('Https running on port 5000'));
+    server.listen(5000, () => console.log('Http running on port 5000'));
 
 
     const wss = new ws.Server({server, path: '/echo'});
@@ -67,7 +67,6 @@ function infiniteStream() {
             if(data!=='{"sampleRate":44100}'){
                 var buffer = new Int16Array(data, 0, Math.floor(data.byteLength / 2));
                 if(recognizeStream !== null){
-                    console.log(buffer);
                     audioInputStreamTransform(buffer,encoding);
                 }
             }
