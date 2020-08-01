@@ -11,8 +11,14 @@ module.exports = {
 	},
 	output: {
 		path: __dirname + '/public/js/',
+        pathinfo: false,
 		filename: '[name].bundle.js'
 	},
+    optimization: {
+        removeAvailableModules: false,
+        removeEmptyChunks: false,
+        splitChunks: false,
+    },
 	module: {
 		rules: [
 			{
