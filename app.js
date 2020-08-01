@@ -45,6 +45,7 @@ var options = {
     password: process.env.DB_PASSWORD,
     database : process.env.DB_NAME,
     socketPath: '/cloudsql/cogenicintel:us-west4:reason'
+//    socketPath: '127.0.0.1:3303'
 };
 var sessionStore = new MySQLStore(options);
 
