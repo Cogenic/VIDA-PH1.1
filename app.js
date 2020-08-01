@@ -41,10 +41,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 var options = {
+    host: 'localhost',
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database : process.env.DB_NAME,
-    socketPath: '/cloudsql/cogenicintel:us-west4:reason'
+    database : process.env.DB_NAME
 };
 var sessionStore = new MySQLStore(options);
 

@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node ./bin/www",
-    "build": "rm -rf public && webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack-dev-server --open --config webpack.dev.js",
     "build:prod": "webpack --config webpack.prod.js"
   },
   "dependencies": {
@@ -25,6 +25,7 @@
     "morgan": "~1.10.0",
     "mysql": "^2.18.1",
     "net": "^1.0.2",
+    "nodemon": "^2.0.4",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "react-audio-player": "^0.13.0",

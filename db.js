@@ -1,10 +1,14 @@
 var mysql = require('mysql')
 var connection = mysql.createConnection({
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database : process.env.DB_NAME,
+    host: 'localhost',
+    user: 'Kirubel',
+    password: 'aiAdvantage',
+    database : 'login_info'
+   
 //    socketPath: '/cloudsql/cogenicintel:us-west4:reason'
-    socketPath: '127.0.0.1:3306'
+    
+    
+
 })
 
 connection.connect()

@@ -1,1 +1,2 @@
 export GOOGLE_APPLICATION_CREDENTIALS="./cogenic-sql.json"
+$env:GOOGLE_APPLICATION_CREDENTIALS="cogenic-sql.json"
