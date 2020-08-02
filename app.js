@@ -40,6 +40,13 @@ const {format} = require('util');
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+var options = {
+    host:"localhost",
+    user: "Kirubel",
+    password: "aiAdvantage",
+    database : "login_info"
+};
+
 
 var sessionStore = new MySQLStore(options);
 
