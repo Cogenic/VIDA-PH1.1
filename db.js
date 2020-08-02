@@ -1,10 +1,10 @@
 var mysql = require('mysql')
 var connection = mysql.createConnection({
-//    host: 'localhost',
+    host: 'localhost',
     user: 'Kirubel',
     password: 'aiAdvantage',
     database : 'login_info',
-    socketPath: '/cloudsql/cogenicintel:us-west4:reason'
+//    socketPath: '/cloudsql/cogenicintel:us-west4:reason'
 })
 connection.connect()
 
