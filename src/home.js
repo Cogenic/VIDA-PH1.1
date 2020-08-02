@@ -1,6 +1,8 @@
 require('./scss/style.scss');
+require('./scss/login.scss');
+require('./scss/hello-screen.scss');
 require('./scss/opening-screen.scss');
-require('./scss/home-screen.scss');
+require('./scss/options-screen.scss');
 require('./scss/training.scss');
 require('./images/Cogenic.png');
 require('./images/welcome-screen.png');

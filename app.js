@@ -41,10 +41,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 var options = {
-    host:"localhost",
     user: "Kirubel",
     password: "aiAdvantage",
-    database : "login_info"
+    database : "login_info",
+    socketPath: '/cloudsql/cogenicintel:us-west4:reason'
 };
 
 

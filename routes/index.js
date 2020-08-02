@@ -15,27 +15,24 @@ router.get('/',authenticationMiddleware(), function(req, res){
     res.render('home', {title: 'Home'});
 });
 //do the authencitcation middleware
-router.get('/profile', authenticationMiddleware(),function(req, res) {
-  res.render('profile', { title: 'Profile' });
-});
 
-router.get('/welcome-screen', authenticationMiddleware(),function(req, res) {
-  res.render('welcome-screen', { title: 'Welcome' });
+router.get('/hello-screen', authenticationMiddleware(),function(req, res) {
+  res.render('hello-screen', { title: 'Welcome' });
 });
 
 
-router.post('/welcome-screen',function(req, res, next) {
+router.post('/hello-screen',function(req, res, next) {
     res.redirect('/opening-screen');
 });
 
 
-router.post('/home-screen',function(req, res, next) {
-    res.redirect('/home-screen');
+router.post('/options-screen',function(req, res, next) {
+    res.redirect('/options-screen');
 });
 
 
-router.get('/home-screen', authenticationMiddleware(),function(req, res) {
-    res.render('home-screen', { title: 'home' });
+router.get('/options-screen', authenticationMiddleware(),function(req, res) {
+    res.render('options-screen', { title: 'home' });
 });
 
 
@@ -86,7 +83,7 @@ router.get('/login', function(req, res, next) {
 
 
 router.post('/login', passport.authenticate('local', {
-    successRedirect: '/welcome-screen',
+    successRedirect: '/hello-screen',
     failureRedirect: '/login',
     failureFlash: 'true'
     }),

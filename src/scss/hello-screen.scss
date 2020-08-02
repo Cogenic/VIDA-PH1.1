@@ -1,0 +1,45 @@
+.welcome {
+    background-color: black;
+
+}
+
+.welcome-hello {
+    position:absolute;
+    top:0 ;
+    font-size:relative;
+    font-size:6vw;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin-top:30px;
+    margin-bottom:10px;
+    color:white;
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+
+.highlight input:hover{
+    opacity: .5;
+}
+
+.highlight {
+    position: absolute;
+    margin-left:30%;
+    bottom:25%;
+}
+.Begin{
+
+    position:absolute;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 15px solid blue;
+    bottom:20%;
+    margin-left:37%;
+    text-align: center;
+    font-style: italic;
+    font-size: 40px;
+    cursor: pointer
+
+}

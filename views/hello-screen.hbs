@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<title>{{title}}</title>
+    <head>
+        <meta charset="UTF-g">
+        <!--title>CogenicIntel</title-->
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <form method="POST" action="/hello-screen">
+    <body class="welcome">
+        <header>
+            <h1 class="welcome-hello">H e l l o</h1>
+       </header>
+       
+        <div class="highlight">
+           <input type="image" src="/images/vida.gif" name="saveForm" id="center" id="saveForm" >
+        </div>
+        <p class="Begin" type="button">Say "hello vida" to begin...</p>
+
+    </body>
+    </form>
+    <script src="http://localhost:5000/socket.io/socket.io.js"></script>
+    <script>
+      socket = io('http://localhost:5000');
+      socket.on('news',function(data){
+                console.info(`Client connected [id=${socket.id}]`);
+                replace(data);
+      });
+        function replace(data){
+            if(data ==="hello")
+                window.location.replace('/opening-screen');
+        }
+</script>
+
+</html>
