@@ -82,7 +82,7 @@ function infiniteStream() {
             if (err.code === 11) {
     //           restartStream();
             } else {
-              console.error('API request error ' + err);
+//              console.error('API request error ' + err);
             }
             })
                 .on('data',speechCallback);

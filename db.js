@@ -4,7 +4,7 @@ var connection = mysql.createConnection({
     user: 'Kirubel',
     password: 'aiAdvantage',
     database : 'login_info'
-//    socketPath: '/cloudsql/cogenicintel:us-west4:reason'   
+//    socketPath: '/cloudsql/cogenicintel:us-west4:reason'
 })
 connection.connect()
 
