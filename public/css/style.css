@@ -67,7 +67,8 @@
   display: inline-block; }
 
 .vida-design {
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
 
 .vida-outer {
   stroke: white;
