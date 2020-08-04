@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html>
 <title>{{title}}</title>
-    <head>
-        <meta charset="UTF-g">
-        <!--title>CogenicIntel</title-->
-        <link rel="stylesheet" href="/css/style.css">
-    </head>
-    <form method="POST" action="/hello-screen">
-    <body class="welcome">
-        <header>
-            <h1 class="welcome-hello">H e l l o</h1>
-       </header>
-       
-        <div class="highlight">
-           <input type="image" src="/images/vida.gif" name="saveForm" id="center" id="saveForm" >
-        </div>
-        <p class="Begin" type="button">Say "hello vida" to begin...</p>
 
+<head>
+    <meta charset="UTF-g">
+    <!--title>CogenicIntel</title-->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<form method="POST" action="/hello-screen">
+
+    <body class="welcome">
+        <div class="hello-content">
+            <header>
+                <h1 class="hello-title">Hello<span id="hello-dot"></span></h1>
+            </header>
+
+            <div class="vida-design" onclick="document.forms[0].submit()">
+                <svg width="560" height="560">
+                    <circle class="vida-outer" cx="280" cy="280" r="273" />
+                    <circle class="vida-middle" cx="280" cy="280" r="212" />
+                    <circle class="vida-inner" cx="280" cy="280" r="137" />
+                </svg>
+            </div>
+        </div>
+
+        {{!-- <div class="highlight">
+            <input type="image" src="/images/vida.gif" name="saveForm" id="center" id="saveForm">
+        </div>
+        <p class="Begin" type="button">Say "hello vida" to begin...</p> --}}
     </body>
-    </form>
-    <script src="http://localhost:5000/socket.io/socket.io.js"></script>
-    <script>
-      socket = io('http://localhost:5000');
-      socket.on('news',function(data){
-                console.info(`Client connected [id=${socket.id}]`);
-                replace(data);
-      });
-        function replace(data){
-            if(data ==="hello")
-                window.location.replace('/opening-screen');
-        }
+</form>
+
+<script src="http://localhost:5000/socket.io/socket.io.js"></script>
+<script>
+    socket = io('http://localhost:5000');
+    socket.on('news', function (data) {
+        console.info(`Client connected [id=${socket.id}]`);
+        replace(data);
+    });
+    function replace(data) {
+        if (data === "hello")
+            window.location.replace('/opening-screen');
+    }
 </script>
 
 </html>
