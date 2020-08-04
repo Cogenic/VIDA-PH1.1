@@ -43,21 +43,46 @@
   margin: 4% 0%;
   font-size: 20px; }
 .welcome {
-  background-color: black; }
+  background-color: #14171B; }
 
-.welcome-hello {
-  position: absolute;
-  top: 0;
-  font-size: relative;
-  font-size: 6vw;
+.hello-content {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.hello-title {
   margin: auto;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  color: white;
-  font-family: "Lucida Console", Courier, monospace; }
+  margin-bottom: 35px;
+  color: #FFFFFF;
+  font: 155px Arial;
+  letter-spacing: 9.3px; }
+
+#hello-dot {
+  width: 13px;
+  height: 13px;
+  background-color: #FF926A;
+  border-radius: 50%;
+  display: inline-block; }
+
+.vida-design {
+  position: relative;
+  cursor: pointer; }
+
+.vida-outer {
+  stroke: white;
+  stroke-width: 10;
+  fill: none; }
+
+.vida-middle {
+  stroke: #1DE6D9;
+  stroke-width: 21;
+  fill: none;
+  stroke-dasharray: 4 25; }
+
+.vida-inner {
+  fill: #FF926A; }
 
 .highlight input:hover {
   opacity: .5; }
