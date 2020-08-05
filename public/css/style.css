@@ -104,6 +104,8 @@
   font-style: italic;
   font-size: 40px;
   cursor: pointer; }
+.trainingM {
+  font-size: 30px; }
 .opening-screen {
   position: relative;
   background-color: black;
@@ -292,7 +294,5 @@ input[type='image']:focus {
 
 .vida-highlight input:hover {
   opacity: .5; }
-.trainingM {
-  font-size: 30px; }
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9jc3Mvc3R5bGUuY3NzIiwic291cmNlUm9vdCI6IiJ9*/

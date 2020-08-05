@@ -45,6 +45,7 @@ var options = {
     user: "Kirubel",
     password: "aiAdvantage",
     database : "login_info",
+    port: '3305'
 //    socketPath: '/cloudsql/cogenicintel:us-west4:reason'
 };
 
@@ -71,24 +72,13 @@ app.use(function(req, res, next){
 
 });
 
-
+//To create routs to allow for different pages
 app.use('/', index); //creating a route
 app.use('/training',trainer); //creating a route
 app.use('/users', users);
 
 //app.use(express.cookieParser('keyboard cat'));
 //app.use(express.session({ cookie: { maxAge: 60000 }}));
-
-/*
-if(navigator.userAgent.indexOf("Chrome") != -1){
-
-
-}
-*/
-
-
-
-
 
 
 passport.use(new LocalStrategy({
@@ -99,7 +89,6 @@ passport.use(new LocalStrategy({
         console.log(password);
         const db = require('./db');
         db.query('SELECT password FROM entries WHERE username = ?', [username], function(err, results, fields){
-//                if(err) throw err;//Check to see if error on sql;
                 if(err) {done(err)}
                 if(results.length===0){
                   return done(null, false, req.flash('message', 'Invalid username or password!'));
@@ -156,12 +145,6 @@ filenames.forEach(function (filename) {
 hbs.registerHelper('json', function(context) {
     return JSON.stringify(context, null, 2);
 });
-
-
-
-
-
-
 
 
 
