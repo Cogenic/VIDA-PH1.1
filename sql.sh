@@ -14,3 +14,4 @@ $env:GOOGLE_APPLICATION_CREDENTIALS="cogenic-sql.json"
 
 #./cloud_sql_proxy -instances=cogenicintel:us-west4-a:reason=tcp:3306
 
+./cloud_sql_proxy -instances=cogenicintel:us-west4-a:reason=tcp:3305 -credential_file=cogenic-sql.json

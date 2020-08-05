@@ -1,8 +1,9 @@
 //const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const DotenvPlugin = require('webpack-dotenv-plugin');
-var path = require('path');
-var SRC = path.resolve(__dirname, 'src/main/js');
+const path = require('path');
+const SRC = path.resolve(__dirname, 'src/main/js');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
@@ -63,7 +64,6 @@ module.exports = {
         ]
     },
 	plugins: [
-//        extractPlugin
         new ExtractTextPlugin("../css/style.css"),
         new DotenvPlugin({
             sample: './.env.default',
@@ -75,13 +75,9 @@ module.exports = {
             proxy: 'http://localhost:3000/',
             files: ['./views/*.hbs']
         }),
-        /*
-        new MiniCssExtractPlugin({
-          filename: "[name].css",
-          chunkFilename: "[name].css"
-        })
-        */
+        new HardSourceWebpackPlugin()
 	],
+
 	watch: true,
 	devtool: 'source-map'
 };
