@@ -246,18 +246,15 @@ input[type='image']:focus {
 .logo {
   width: 124px; }
 
-.vida-highlight {
+.vida-light {
   width: 124px;
   height: 124px;
   background-color: white;
   border-radius: 50%;
   margin-left: 10px; }
 
-.vida-highlight input:hover {
+.vida-light input:hover {
   opacity: .8; }
-
-.images input:hover {
-  opacity: .5; }
 
 .line {
   margin-top: 25px;
@@ -301,16 +298,6 @@ h2 {
 hr.divider {
   border: 1px solid #05818A; }
 
-.menu-button {
-  position: absolute;
-  top: 0%;
-  background-color: white;
-  width: 120px;
-  height: 90px; }
-
-.menu-button input:hover {
-  opacity: .5; }
-
 .card_image {
   height: auto;
   max-width: 100%;
@@ -342,6 +329,16 @@ hr.divider {
   display: flex;
   flex-direction: column;
   overflow: hidden; }
+
+.images-highlight {
+  background-color: white;
+  overflow: hidden; }
+
+.images-highlight img {
+  transition: transform .5s ease; }
+
+.images-highlight:hover img {
+  transform: scale(1.5); }
 
 .card_title {
   color: #E9E4E4;

@@ -29,7 +29,7 @@ input[type='image']:focus{
     width:124px;
 }
 
-.vida-highlight{
+.vida-light{
     width:124px;
     height:124px;
     background-color:white;
@@ -37,12 +37,8 @@ input[type='image']:focus{
     margin-left: 10px;
 }
 
-.vida-highlight input:hover{
+.vida-light input:hover{
     opacity: .8;
-}
-
-.images input:hover{
-    opacity: .5;
 }
 
 .line {
@@ -97,46 +93,6 @@ hr.divider {
 }
 
 
-.menu-button{
-    position:absolute;
-    top:0%;
-    background-color:white;
-    width:120px;
-    height:90px;
-}
-
-.menu-button input:hover{
-    opacity: .5;
-}
-
-
-
-// .Bars{
-    
-
-// }
-// .Bars>p{
-//     font-size:50px;
-//     color:white;
-//     margin-top:0px;
-//     line-height:1.2;
-
-// }
-
-// .images::after {
-//     content: "";
-//     clear: both;
-//     display: table;
-// }
- 
-// .images-highlight{
-//     float: left;
-//     width:auto;
-//     height:500px;
-//     margin-left:200px;
-//     background-color:white;
-// }
-
 .card_image {
     height: auto;
     max-width: 100%;
@@ -176,6 +132,19 @@ hr.divider {
     flex-direction: column;
     overflow: hidden;
   }
+
+  .images-highlight {
+      background-color: white;
+      overflow: hidden;
+  }
+
+.images-highlight img{
+    transition: transform .5s ease;
+}
+.images-highlight:hover img {
+    transform: scale(1.5);
+  }
+
 
   .card_title {
     // padding: 1rem;

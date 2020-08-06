@@ -7,18 +7,13 @@
     <title>Opening Screen</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
-{{!-- <form method="POST" action="/options-screen">
-    <div class="menu-button">
-        <input type="image" src="/images/homebutton.png" name="saveForm" class="vida" id="saveForm">
-    </div>
-</form> --}}
 
 <body class="options-screen">
     <form method="POST" action="/opening-screen">
         <div class="row">
 
             <div class="vida-indicator col-6">
-                <div class="vida-highlight" onclick="document.forms[0].submit()">
+                <div class="vida-light" onclick="document.forms[0].submit()">
                     <input type="image" src="/images/vida-circle.png" class="logo">
                 </div>
                 <div class="line">
@@ -28,7 +23,6 @@
                 </div>
             </div>
 
-            {{!-- <div id="datetime"></div> --}}
             <div class="date-time col-6">
                 <p id="date">Wednesday June 29</p>
                 <p id="time">10:12 AM</p>
@@ -47,7 +41,7 @@
             <li class="cards_item col-4">
                 <div class="card">
                     <div class="images-highlight">
-                        <input class="card_image" type="image" src="/images/option_restroom.png" name="saveForm">
+                        <img class="card_image" src="/images/option_restroom.png">
                     </div>
                     <h3 class="card_title">Restrooms</h2>
                         <hr class="underline">
@@ -56,7 +50,7 @@
             <li class="cards_item col-4">
                 <div class="card">
                     <div class="images-highlight">
-                        <input class="card_image" type="image" src="/images/option_room.png" name="saveForm">
+                        <img class="card_image" src="/images/option_room.png">
                     </div>
                     <h3 class="card_title">Rooms</h2>
                         <hr class="underline">
@@ -65,7 +59,7 @@
             <li class="cards_item col-4">
                 <div class="card">
                     <div class="images-highlight">
-                        <input class="card_image" type="image" src="/images/option_amenities.png" name="saveForm">
+                        <img class="card_image" src="/images/option_amenities.png">
                     </div>
                     <h3 class="card_title">Amenities</h2>
                         <hr class="underline">
@@ -103,6 +97,6 @@
     getDate();
 </script>
 {{!-- <script src="..\src\date-time.js"></script> --}}
-<script src="js/home.bundle.js"></script>
+{{!-- <script src="js/home.bundle.js"></script> --}}
 
 </html>
