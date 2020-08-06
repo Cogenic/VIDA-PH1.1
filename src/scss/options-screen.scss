@@ -1,3 +1,10 @@
+/* Design */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 input[type='image']:focus{
     outline:0;
 }
@@ -5,17 +12,89 @@ input[type='image']:focus{
 
 .options-screen{
     background-color: #18191D; 
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 35px 40px ;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
-.home-time{
-    margin-left:80%;
-    font-size:20px;
+
+.vida-indicator {
+    // overflow:auto;
+    display: flex;
+}
+
+.logo{
+    width:124px;
+}
+
+.vida-highlight{
+    width:124px;
+    height:124px;
+    background-color:white;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.vida-highlight input:hover{
+    opacity: .8;
+}
+
+.images input:hover{
+    opacity: .5;
+}
+
+.line {
+    margin-top: 25px;
+    margin-left: 25px;
+    width: 250px;
+}
+
+#vida-action {
+    color:#ABABAB;
+    font-size:14px;
+    letter-spacing: 0.84px;
+}
+
+#vida-wave {
     color:white;
-    padding: 10px;
-    font-family: "Lucida Console", Courier, monospace;
-
+    width: 100%;
 }
 
+p {
+    margin: auto;
+    clear: both;
+}
+
+#date {
+    font-size: 26px;
+    color: #ABABAB;
+    letter-spacing: 1.56px;
+    margin-top: 25px;
+    float: right;
+}
+
+#time {
+    font-size: 53px;
+    font-weight: bold;
+    color: #F1F1F1;
+    letter-spacing: 3.18px;
+    float: right;
+}
+
+
+h2 {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #F1F1F1;
+    margin: 25px 0;
+}
+
+hr.divider {
+    border: 1px solid #05818A;
+}
 
 
 .menu-button{
@@ -32,72 +111,127 @@ input[type='image']:focus{
 
 
 
-
-.Bars{
+// .Bars{
     
 
-}
-.Bars>p{
-    font-size:50px;
-    color:white;
-    margin-top:0px;
-    line-height:1.2;
+// }
+// .Bars>p{
+//     font-size:50px;
+//     color:white;
+//     margin-top:0px;
+//     line-height:1.2;
 
-}
-.images::after {
-    content: "";
-    clear: both;
-    display: table;
-}
+// }
+
+// .images::after {
+//     content: "";
+//     clear: both;
+//     display: table;
+// }
  
-.images-highlight{
+// .images-highlight{
+//     float: left;
+//     width:auto;
+//     height:500px;
+//     margin-left:200px;
+//     background-color:white;
+// }
+
+.card_image {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cards_item {
+    display: flex;
+    padding: 1rem;
+  }
+  
+  @media (min-width: 40rem) {
+    .cards_item {
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: 56rem) {
+    .cards_item {
+      width: 33.3333%;
+    }
+  }
+  
+  .card {
+    /* background-color: white; */
+    border-radius: 0.25rem;
+    /* box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25); */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .card_title {
+    // padding: 1rem;
+    color: #E9E4E4;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2.7px;
+    text-transform: capitalize;
+    margin: 15px 0 0;
+  }
+
+  hr.underline {
+      border: 1px solid #05818A;
+      width: 70px;
+      margin-left: 0;
+  }
+
+  .logout-btn {
+    border: 2px solid white;
+    background-color: #18191D;
+    color: #FFFFFF;
+    width: 173px;
+    height: 50px;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin: 15px;
+  }
+
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }  
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
     float: left;
-    width:auto;
-    height:500px;
-    margin-left:200px;
-    background-color:white;
-}
-
-
-
-.images input:hover{
-    opacity: .5;
-}
-
-
-.line {
-    margin-left:60%;
-
-}
-
-.line > p1{
-    color:white;
-    font-size:40px;
-    right:40px;
-
-}
-.line > p2{
-    color:white;
-    font-size:40px;
-    margin-top:100px;
-
-}
-
-.logo{
-    width:150px;
-}
-
-
-.vida-highlight{
-    width:150px;
-    margin-top:10px;
-    margin-left:90%;
-    height:124px;
-    background-color:white;
-}
-
-.vida-highlight input:hover{
-    opacity: .5;
-}
-
-
+  }
+  
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
