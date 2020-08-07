@@ -334,10 +334,10 @@ hr.divider {
   overflow: hidden;
   cursor: pointer; }
 
-.images-highlight img {
+.card_image {
   transition: transform .5s ease; }
 
-.images-highlight:hover img {
+.card_image:hover {
   transform: scale(1.5); }
 
 .card_title {

@@ -45,7 +45,17 @@ router.post('/opening-screen', function (req, res, next) {
     res.redirect('/opening-screen');
 });
 
+router.get('/option-restrooms', authenticationMiddleware(), function (req, res) {
+    res.render('option-restrooms');
+});
 
+router.get('/option-rooms', authenticationMiddleware(), function (req, res) {
+    res.render('option-rooms');
+});
+
+router.get('/option-amenities', authenticationMiddleware(), function (req, res) {
+    res.render('option-amenities');
+});
 
 
 /*
