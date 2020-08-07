@@ -16,6 +16,10 @@ require('./images/vida2.gif');
 require('./images/J4o.gif');
 require('./images/AIbac.gif');
 require('./audio/hello.mp3');
+require('./images/option_amenities.png');
+require('./images/option_restroom.png');
+require('./images/option_room.png');
+require('./images/vida-circle.png');
 const moment = require('moment');
 
 import App from './App';
@@ -23,13 +27,13 @@ import App from './App';
 const vida = require('./ai.js');
 const React = require('react');
 import Music from './Music.js';
-const {Howl, Howler} = require('howler');
+const { Howl, Howler } = require('howler');
 const ReactDOM = require('react-dom');
 
 var socket = new WebSocket('ws://localhost:8443/training');
 
 //requires the mp3 files inorder for VIDA to speak
-socket.addEventListener('message', (e) =>{
+socket.addEventListener('message', (e) => {
     require(`./audio/${e.data}.mp3`);
 })
 
@@ -39,4 +43,4 @@ var time_openingScreen = document.getElementById("time");
 var date = moment().format('LLLL');
 time_openingScreen.innerHTML = date;
 
-ReactDOM.render(<Music url="hello"/>, document.getElementById('music'));
+ReactDOM.render(<Music url="hello" />, document.getElementById('music'));

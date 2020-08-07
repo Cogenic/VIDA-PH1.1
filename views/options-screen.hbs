@@ -1,49 +1,109 @@
 <!DOCTYPE html>
 <html>
-    <title>{{title}}</title>
-    <head>
-        <meta charset="UTF-g">
-        <title>Opening Screen</title>
-        <link rel="stylesheet" href="/css/style.css">
-    </head>
-    <header class="home-time">
-        <h1>Wednesday Aug 7</h1>
-        <h2>2:13 PM</h2>
-   </header>
-    <form method="POST" action="/options-screen">
-     <div class="menu-button">
-           <input type="image" src="/images/homebutton.png" name="saveForm" class="vida" id="saveForm" >
-    </div>
-    </form>
-    <body class="options-screen">
+<title>{{title}}</title>
 
-        
-        <div class="Bars".>
-            <p>Did you mean?</p>
+<head>
+    <meta charset="UTF-g">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Opening Screen</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
 
-
-        <div class="images".>
-        <div class="images-highlight".>
-           <input type="image" src="/images/restrooms-logo.png" name="saveForm">
-        </div>
-        <div class="images-highlight".>
-           <input type="image" src="/images/classrooms-logo.png" name="saveForm">
-        </div>
-        <div class="images-highlight".>
-           <input type="image" src="/images/staff_info.png" name="saveForm"  class="Staff">
-        </div>
-        </div>
-        </div>
+<body class="options-screen">
     <form method="POST" action="/opening-screen">
-        <div class="vida-highlight".>
-        <input type="image" src="/images/vida-logo.png" class="logo">
+        <div class="row">
+
+            <div class="vida-indicator col-6">
+                <div class="vida-light" onclick="document.forms[0].submit()">
+                    <input type="image" src="/images/vida-circle.png" class="logo">
+                </div>
+                <div class="line">
+                    <p id="vida-action">listening</p>
+                    </br>
+                    <hr id="vida-wave">
+                </div>
+            </div>
+
+            <div class="date-time col-6">
+                <p id="date">Wednesday June 29</p>
+                <p id="time">10:12 AM</p>
+            </div>
         </div>
     </form>
- 
-    <div class="line".>
-            <p2>listening</p2>
-            </br>
-             <p1>________________________________________</p1>
-     </div>
-    </body>
+
+
+    <div class="row">
+        <h2>Did you mean?</h2>
+        <hr class="divider">
+    </div>
+
+    <div class="options">
+        <ul class="cards">
+            <li class="cards_item col-4">
+                <div class="card">
+                    <div class="images-highlight">
+                        <form method="GET" action="/option-restrooms">
+                            <input type="image" class="card_image" src="/images/option_restroom.png">
+                        </form>
+                    </div>
+                    <h3 class="card_title">Restrooms</h2>
+                        <hr class="underline">
+                </div>
+            </li>
+            <li class="cards_item col-4">
+                <div class="card">
+                    <div class="images-highlight">
+                        <form method="GET" action="/option-rooms">
+                            <input type="image" class="card_image" src="/images/option_room.png">
+                        </form>
+                    </div>
+                    <h3 class="card_title">Rooms</h2>
+                        <hr class="underline">
+                </div>
+            </li>
+            <li class="cards_item col-4">
+                <div class="card">
+                    <div class="images-highlight">
+                        <form method="GET" action="/option-amenities">
+                            <input type="image" class="card_image" src="/images/option_amenities.png">
+                        </form>
+                    </div>
+                    <h3 class="card_title">Amenities</h2>
+                        <hr class="underline">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <form method="GET" action="/logout">
+        <button type="submit" class="logout-btn">logout</button>
+    </form>
+
+</body>
+
+<script>
+    function getDate() {
+        var today = new Date();
+
+        var weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        var weekday = today.getDay();
+        var month = today.getMonth();
+        var day = today.getDate();
+
+        document.getElementById('date').innerHTML = `${weekdays[weekday]} ${months[month]} ${day}`;
+
+
+        var time = today.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        document.getElementById('time').innerHTML = time;
+
+        var t = setTimeout(getDate, 1000);
+    }
+
+    getDate();
+</script>
+{{!-- <script src="..\src\date-time.js"></script> --}}
+{{!-- <script src="js/home.bundle.js"></script> --}}
+
 </html>
