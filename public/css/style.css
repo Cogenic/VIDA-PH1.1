@@ -236,7 +236,7 @@ input[type='image']:focus {
   background-color: #18191D;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 35px 40px;
+  padding: 35px 50px;
   max-width: 1440px;
   margin: 0 auto; }
 
@@ -250,8 +250,7 @@ input[type='image']:focus {
   width: 124px;
   height: 124px;
   background-color: white;
-  border-radius: 50%;
-  margin-left: 10px; }
+  border-radius: 50%; }
 
 .vida-light input:hover {
   opacity: .8; }
@@ -332,7 +331,8 @@ hr.divider {
 
 .images-highlight {
   background-color: white;
-  overflow: hidden; }
+  overflow: hidden;
+  cursor: pointer; }
 
 .images-highlight img {
   transition: transform .5s ease; }
@@ -402,9 +402,21 @@ hr.underline {
     width: 91.66%; }
   .col-12 {
     width: 100%; } }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .options-screen {
+    padding: 1.5rem 1.5rem; }
+  /* Reduce the container width */
+  #date {
+    font-size: 20px;
+    margin-top: 16px; }
+  #time {
+    font-size: 30px; }
+  h2 {
+    font-size: 40px;
+    margin: 16px 0; } }
 .trainingM {
   font-size: 30px; }
-.vida-highlight input:hover {
-  opacity: .5; }
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9jc3Mvc3R5bGUuY3NzIiwic291cmNlUm9vdCI6IiJ9*/
