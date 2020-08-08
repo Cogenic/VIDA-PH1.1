@@ -4,11 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Amenities Screen</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
-    <h1>Amenities Screen</h1>
+<body class="option-amenities">
+    <form method="POST" action="/options-screen">
+        <div class="row amenities-header">
+            <div class="vida-indicator col-6">
+                <div class="vida-light" onclick="document.forms[0].submit()">
+                    <input type="image" src="/images/vida-circle.png" class="logo">
+                </div>
+                <div class="line">
+                    <p id="vida-action">listening</p>
+                    </br>
+                    <hr id="vida-wave">
+                </div>
+            </div>
+
+            <div class="date-time col-6">
+                <p id="date">Wednesday June 29</p>
+                <p class="large-time" id="time">10:12 AM</p>
+            </div>
+        </div>
+    </form>
+
+    <div class="row amenities-title">
+        <h2 class="title-caps">AMENITIES</h2>
+        <hr class="divider">
+    </div>
+
+    <div class="row amenities-body">
+        <div class="body-empty"></div>
+        <div class="body-content">
+            <ul class="indulge col-6">
+                <h3 class="amenities-subtitle">INDULGE</h3>
+                <li>RESTAURANT COLLECTION</li>
+                <li>BARS &#38; LOUNGES</li>
+                <li>ROOM SERVICE</li>
+                <li>GROUP DINING</li>
+            </ul>
+            <ul class="attractions col-6">
+                <h3 class="amenities-subtitle">ATTRACTIONS</h3>
+                <li>BLOCK 16 URBAN FOOD HALL</li>
+                <li>OVERLOOK GRILL</li>
+                <li>POSEIDON'S AQUARIUM</li>
+            </ul>
+        </div>
+
+    </div>
 </body>
+<script>
+    function getDate() {
+        var today = new Date();
+
+        var weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        var weekday = today.getDay();
+        var month = today.getMonth();
+        var day = today.getDate();
+
+        document.getElementById('date').innerHTML = `${weekdays[weekday]} ${months[month]} ${day}`;
+
+
+        var time = today.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        document.getElementById('time').innerHTML = time;
+
+        var t = setTimeout(getDate, 1000);
+    }
+
+    getDate();
+</script>
 
 </html>
