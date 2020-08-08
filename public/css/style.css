@@ -271,7 +271,8 @@ input[type='image']:focus {
 
 p {
   margin: auto;
-  clear: both; }
+  clear: both;
+  margin-right: 16px; }
 
 #date {
   font-size: 26px;
@@ -281,21 +282,24 @@ p {
   float: right; }
 
 #time {
-  font-size: 53px;
   font-weight: bold;
   color: #F1F1F1;
-  letter-spacing: 3.18px;
   float: right; }
 
-h2 {
+.options-time {
+  font-size: 53px;
+  letter-spacing: 3.18px; }
+
+#didumean {
   font-size: 50px;
   font-weight: bold;
   letter-spacing: 3px;
   color: #F1F1F1;
-  margin: 25px 0; }
+  margin: 25px 15px; }
 
 hr.divider {
-  border: 1px solid #05818A; }
+  border: 1px solid #05818A;
+  margin: 0 16px; }
 
 .card_image {
   height: auto;
@@ -413,9 +417,9 @@ hr.underline {
     margin-top: 16px; }
   #time {
     font-size: 30px; }
-  h2 {
+  #didumean {
     font-size: 40px;
-    margin: 16px 0; } }
+    margin: 16px 15px; } }
 .trainingM {
   font-size: 30px; }
 
