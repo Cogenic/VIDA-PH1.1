@@ -32,7 +32,7 @@ import Music from './Music.js';
 const { Howl, Howler } = require('howler');
 const ReactDOM = require('react-dom');
 
-var socket = new WebSocket('ws://localhost:8443/training');
+var socket = new WebSocket('wss://localhost:8443/training');
 
 //requires the mp3 files inorder for VIDA to speak
 socket.addEventListener('message', (e) => {

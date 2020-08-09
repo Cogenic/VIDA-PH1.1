@@ -68,7 +68,7 @@ class Music extends React.Component {
 
             function newWebsocket() {
               var websocketPromise = new Promise(function(resolve, reject) {
-                var socket = new WebSocket('ws://localhost:5000/echo');
+                var socket = new WebSocket('wss://localhost:5000/echo');
                 socket.addEventListener('open', resolve);
                 socket.addEventListener('error', reject);
               });
@@ -112,7 +112,7 @@ class Music extends React.Component {
             }
 
         }
-        var socket = new WebSocket('ws://localhost:8443/training');
+        var socket = new WebSocket('wss://localhost:8443/training');
         socket.addEventListener('message', this.getData);
 
 
