@@ -271,7 +271,8 @@ input[type='image']:focus {
 
 p {
   margin: auto;
-  clear: both; }
+  clear: both;
+  margin-right: 16px; }
 
 #date {
   font-size: 26px;
@@ -281,13 +282,18 @@ p {
   float: right; }
 
 #time {
-  font-size: 53px;
   font-weight: bold;
   color: #F1F1F1;
-  letter-spacing: 3.18px;
   float: right; }
 
-h2 {
+.small-time {
+  font-size: 53px;
+  letter-spacing: 3.18px; }
+
+.options-title {
+  padding: 0 16px; }
+
+#didumean {
   font-size: 50px;
   font-weight: bold;
   letter-spacing: 3px;
@@ -296,11 +302,6 @@ h2 {
 
 hr.divider {
   border: 1px solid #05818A; }
-
-.card_image {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle; }
 
 .cards {
   display: flex;
@@ -335,6 +336,9 @@ hr.divider {
   cursor: pointer; }
 
 .card_image {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
   transition: transform .5s ease; }
 
 .card_image:hover {
@@ -413,9 +417,124 @@ hr.underline {
     margin-top: 16px; }
   #time {
     font-size: 30px; }
-  h2 {
+  #didumean {
     font-size: 40px;
     margin: 16px 0; } }
+.option-amenities {
+  background-color: #18191D;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 35px 35px;
+  max-width: 1440px;
+  margin: 0 auto; }
+
+.amenities-header {
+  padding: 0 15px; }
+
+.large-time {
+  font-size: 80px;
+  letter-spacing: 4.8px; }
+
+.title-caps {
+  font-size: 40px;
+  text-align: center;
+  margin: 0 0 2% 0; }
+
+.amenities-body {
+  background-image: url(../images/amenities-background.png);
+  display: flex;
+  margin-top: 1%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40rem; }
+
+.amenities-subtitle {
+  color: #FF926A;
+  font-size: 22px;
+  font-style: italic;
+  margin: 15% 0 10% 0; }
+
+.body-empty {
+  width: 55%; }
+
+.body-content {
+  background-color: #141414BF;
+  opacity: 90%;
+  text-align: center;
+  width: 45%; }
+
+.amenities-body ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 5%;
+  display: inline-block; }
+
+.amenities-body li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 8% 5%;
+  border-bottom: 1px solid #B5B3B3;
+  width: 90%; }
+
+.amenities-body li:hover {
+  background: #5e5e5e;
+  transition: all 400ms; }
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+  float: left; }
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%; }
+  .col-2 {
+    width: 16.66%; }
+  .col-3 {
+    width: 25%; }
+  .col-4 {
+    width: 33.33%; }
+  .col-5 {
+    width: 41.66%; }
+  .col-6 {
+    width: 50%; }
+  .col-7 {
+    width: 58.33%; }
+  .col-8 {
+    width: 66.66%; }
+  .col-9 {
+    width: 75%; }
+  .col-10 {
+    width: 83.33%; }
+  .col-11 {
+    width: 91.66%; }
+  .col-12 {
+    width: 100%; } }
+
+@media only screen and (max-width: 985px) {
+  /* For tablet: */
+  .large-time {
+    font-size: 64px; }
+  .body-empty {
+    width: 0; }
+  .body-content {
+    width: 100%; } }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .option-amenities {
+    padding: 1.5rem 1.5rem; }
+  /* Reduce the container width */
+  #date {
+    font-size: 20px;
+    margin-top: 16px; }
+  #time {
+    font-size: 30px; }
+  .amenities-body {
+    height: 850px;
+    background-position: center; } }
 .trainingM {
   font-size: 30px; }
 

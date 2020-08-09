@@ -34,7 +34,6 @@ input[type='image']:focus{
     height:124px;
     background-color:white;
     border-radius: 50%;
-    // margin-left: 10px;
 }
 
 .vida-light input:hover{
@@ -61,6 +60,7 @@ input[type='image']:focus{
 p {
     margin: auto;
     clear: both;
+    margin-right: 16px;
 }
 
 #date {
@@ -72,15 +72,21 @@ p {
 }
 
 #time {
-    font-size: 53px;
     font-weight: bold;
     color: #F1F1F1;
-    letter-spacing: 3.18px;
     float: right;
 }
 
+.small-time {
+  font-size: 53px;
+  letter-spacing: 3.18px;
+}
 
-h2 {
+.options-title {
+  padding: 0 16px;
+}
+
+#didumean {
     font-size: 50px;
     font-weight: bold;
     letter-spacing: 3px;
@@ -92,12 +98,6 @@ hr.divider {
     border: 1px solid #05818A;
 }
 
-
-.card_image {
-    height: auto;
-    max-width: 100%;
-    vertical-align: middle;
-  }
 
   .cards {
     display: flex;
@@ -139,9 +139,13 @@ hr.divider {
       cursor: pointer;
   }
 
-.card_image{
+.card_image {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
     transition: transform .5s ease;
-}
+  }
+
 .card_image:hover{
     transform: scale(1.5);
   }
@@ -211,5 +215,5 @@ hr.divider {
     .options-screen { padding: 1.5rem 1.5rem; } /* Reduce the container width */
     #date {font-size: 20px; margin-top: 16px;} 
     #time { font-size: 30px;}
-    h2 { font-size: 40px; margin: 16px 0;}
+    #didumean { font-size: 40px; margin: 16px 0;}
   }

@@ -3,6 +3,7 @@ require('./scss/login.scss');
 require('./scss/hello-screen.scss');
 require('./scss/opening-screen.scss');
 require('./scss/options-screen.scss');
+require('./scss/option-amenities.scss');
 require('./scss/training.scss');
 require('./images/Cogenic.png');
 require('./images/welcome-screen.png');
@@ -20,6 +21,7 @@ require('./images/option_amenities.png');
 require('./images/option_restroom.png');
 require('./images/option_room.png');
 require('./images/vida-circle.png');
+require('./images/amenities-background.png');
 const moment = require('moment');
 
 import App from './App';
