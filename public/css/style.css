@@ -421,7 +421,7 @@ hr.underline {
     font-size: 40px;
     margin: 16px 0; } }
 .option-amenities {
-  background-color: #18191D;
+  background-color: #14171B;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   padding: 35px 35px;
@@ -536,7 +536,7 @@ hr.underline {
     height: 850px;
     background-position: center; } }
 .option-rooms {
-  background-color: #18191D;
+  background-color: #14171B;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   padding: 35px 35px;
@@ -546,8 +546,106 @@ hr.underline {
 .rooms-divider {
   margin-left: 8%; }
 
+.rooms_stuff {
+  display: flex;
+  z-index: 0;
+  position: relative; }
+
+.rooms_menu {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 8%;
+  z-index: 1;
+  width: 100%; }
+
+.rate-box {
+  width: 420px; }
+
+.allrooms-box {
+  width: 280px; }
+
+.addcode-box {
+  width: 400px; }
+
+.select-box {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 22px;
+  background: #4d555f;
+  display: flex;
+  flex-direction: column; }
+  .select-box .rate-options-container,
+  .select-box .allrooms-options-container,
+  .select-box .addcode-options-container {
+    background: #14171B;
+    color: #f5f6fa;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    overflow: hidden;
+    order: 1; }
+  .select-box .rate-options-container.active,
+  .select-box .allrooms-options-container.active,
+  .select-box .addcode-options-container.active {
+    max-height: 100%;
+    opacity: 1; }
+    .select-box .rate-options-container.active + .rate-selected::after,
+    .select-box .allrooms-options-container.active + .rate-selected::after,
+    .select-box .addcode-options-container.active + .rate-selected::after {
+      transform: rotate(180deg);
+      top: -10px; }
+  .select-box .rate-option, .select-box .allrooms-option, .select-box .addcode-option {
+    padding: 12px 24px;
+    cursor: pointer; }
+    .select-box .rate-option:hover, .select-box .allrooms-option:hover, .select-box .addcode-option:hover {
+      background: #414b57; }
+    .select-box .rate-option .radio, .select-box .allrooms-option .radio, .select-box .addcode-option .radio {
+      display: none; }
+  .select-box label {
+    cursor: pointer; }
+
+.rate-selected, .allrooms-selected, .addcode-selected {
+  background: #14171B;
+  border-bottom: 1px solid white;
+  color: #FFF2F2;
+  position: relative;
+  order: 0;
+  padding: 12px 24px;
+  cursor: pointer;
+  position: relative; }
+  .rate-selected::after, .allrooms-selected::after, .addcode-selected::after {
+    content: '';
+    display: block;
+    background: url("/src/images/arrow-down.svg");
+    fill: white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    right: 10px;
+    top: 12px;
+    transition: all 0.2s; }
+
+.selected:focus {
+  border-top: 1px solid white; }
+
+.option-divider {
+  border-style: thin;
+  width: 85%;
+  margin-left: 24px; }
+
+.option-divider-last {
+  width: 85%;
+  margin-left: 24px;
+  margin-bottom: 15px; }
+
 .room_items {
-  padding: 0 5%; }
+  padding: 0 5%;
+  z-index: 0;
+  position: absolute;
+  top: 70px;
+  left: 0; }
 
 .room_cards {
   display: flex;
