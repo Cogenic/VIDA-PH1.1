@@ -4,6 +4,7 @@ require('./scss/hello-screen.scss');
 require('./scss/opening-screen.scss');
 require('./scss/options-screen.scss');
 require('./scss/option-amenities.scss');
+require('./scss/option-rooms.scss');
 require('./scss/training.scss');
 require('./images/Cogenic.png');
 require('./images/welcome-screen.png');
@@ -22,6 +23,9 @@ require('./images/option_restroom.png');
 require('./images/option_room.png');
 require('./images/vida-circle.png');
 require('./images/amenities-background.png');
+require('./images/city-room.png');
+require('./images/terrace-room.png');
+require('./images/skyvilla-room.png');
 const moment = require('moment');
 
 import App from './App';

@@ -5,10 +5,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
-    <h1>Rooms Screen</h1>
+<body class="option-rooms">
+    <form method="POST" action="/options-screen">
+        <div class="row amenities-header">
+            <div class="vida-indicator col-6">
+                <div class="vida-light" onclick="document.forms[0].submit()">
+                    <input type="image" src="/images/vida-circle.png" class="logo">
+                </div>
+                <div class="line">
+                    <p id="vida-action">listening</p>
+                    </br>
+                    <hr id="vida-wave">
+                </div>
+            </div>
+
+            <div class="date-time col-6">
+                <p id="date">Wednesday June 29</p>
+                <p class="large-time" id="time">10:12 AM</p>
+            </div>
+        </div>
+    </form>
+
+    <div class="row rooms-title">
+        <h2 class="title-caps">ROOMS</h2>
+        <hr class="divider rooms-divider">
+    </div>
+
+
+
+    <div class="room_items">
+        <ul class="room_cards">
+            <li class="room_cards-item">
+                <div class="room_card">
+                    <div class="room_card-image">
+                        <img src="/images/city-room.png">
+                    </div>
+                    <div class="room_card-content">
+                        <h3 class="room_card-title">CITY ROOM</h3>
+                        <div class="room_card-detail">
+                            <div class="room_price-book">
+                                <p class="room_price">$200.00</p>
+                                <button class="btn room_book">BOOK NOW</button>
+                            </div>
+                            <div class="room_card-specs">
+                                <div class="people">
+                                    <i></i>
+                                    <p>4 People</p>
+                                </div>
+                                <hr class="spec-divider">
+                                <div class="bed">
+                                    <i></i>
+                                    <p>2 Queen Bed</p>
+                                </div>
+                                <hr class="spec-divider">
+                                <div class="length">
+                                    <i></i>
+                                    <p>460 ft / 43 m2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <hr class="room-divider">
+            <li class="room_cards-item">
+                <div class="room_card">
+                    <div class="room_card-image">
+                        <img src="/images/terrace-room.png">
+                    </div>
+                    <div class="room_card-content">
+                        <h3 class="room_card-title">TERRACE ROOM</h3>
+                        <div class="room_card-detail">
+                            <div class="room_price-book">
+                                <p class="room_price">$200.00</p>
+                                <button class="btn room_book">BOOK NOW</button>
+                            </div>
+                            <div class="room_card-specs">
+                                <div class="people">
+                                    <i></i>
+                                    <p>4 People</p>
+                                </div>
+                                <hr class="spec-divider">
+                                <div class="bed">
+                                    <i></i>
+                                    <p>1 King Bed</p>
+                                </div>
+                                <hr class="spec-divider">
+                                <div class="length">
+                                    <i></i>
+                                    <p>620 ft / 58 m</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+            <hr class="room-divider">
+            <li class="room_cards-item">
+                <div class="room_card">
+                    <div class="room_card-image">
+                        <img src="/images/skyvilla-room.png">
+                    </div>
+                    <div class="room_card-content">
+                        <h3 class="room_card-title">SKY VILLA ROOM</h3>
+                        <div class="room_card-detail">
+                            <div class="room_price-book">
+                                <p class="room_price">$200.00</p>
+                                <button class="btn room_book">BOOK NOW</button>
+                            </div>
+                            <div class="room_card-specs">
+                                <div class="people">
+                                    <i></i>
+                                    <p>8 People</p>
+                                </div>
+                                <hr class="spec-divider">
+                                <div class="bed">
+                                    <i></i>
+                                    <p>3 King Bed</p>
+                                </div>
+                                <hr class="spec-divider">
+                                <div class="length">
+                                    <i></i>
+                                    <p>1040 ft / 100 m</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
 </body>
+
+<script>
+    function getDate() {
+        var today = new Date();
+
+        var weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        var weekday = today.getDay();
+        var month = today.getMonth();
+        var day = today.getDate();
+
+        document.getElementById('date').innerHTML = `${weekdays[weekday]} ${months[month]} ${day}`;
+
+
+        var time = today.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        document.getElementById('time').innerHTML = time;
+
+        var t = setTimeout(getDate, 1000);
+    }
+
+    getDate();
+</script>
 
 </html>
