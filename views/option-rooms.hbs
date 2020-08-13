@@ -105,26 +105,22 @@
             <div class="addcode">
                 <div class="select-box addcode-box">
                     <div class="addcode-options-container">
-                        <div class="addcode-option">
-                            <input type="radio" class="radio" id="automobiles" name="category" />
-                            <label for="automobiles">SAPPHIRE RATE - FROM $122.00</label>
+                        <div class="addcode-option addcode-rateaccess">
+                            <input type="radio" class="radio" id="rateaccess" name="category" />
+                            <label for="rateaccess">Rate Access/Corporate<span class="down-arrow"></span></label>
                         </div>
-                        <hr class="option-divider">
-                        <div class="addcode-option">
-                            <input type="radio" class="radio" id="film" name="category" />
-                            <label for="film">AAA RATE - FROM $130.00</label>
+                        <div class="addcode-option addcode-input">
+                            <input type="radio" class="radio" id="inputfield" name="category" />
+                            <label for="inputfield"> </label>
                         </div>
-                        <hr class="option-divider">
-                        <div class="addcode-option">
-                            <input type="radio" class="radio" id="science" name="category" />
-                            <label for="science">MILITARY RATE - FROM $110.00</label>
+                        <div class="addcode-option addcode-cancel">
+                            <input type="radio" class="radio" id="cancel" name="category" />
+                            <label for="cancel">CANCEL</label>
                         </div>
-                        <hr class="option-divider">
-                        <div class="addcode-option">
-                            <input type="radio" class="radio" id="art" name="category" />
-                            <label for="art">Art</label>
+                        <div class="addcode-option addcode-add">
+                            <input type="radio" class="radio" id="add" name="category" />
+                            <label for="add">ADD</label>
                         </div>
-                        <hr class="option-divider-last">
                     </div>
 
                     <div class="addcode-selected">
@@ -312,7 +308,7 @@
 
     addcodeOptionsList.forEach(o => {
         o.addEventListener("click", () => {
-            addcodeSelected.innerHTML = o.querySelector("label").innerHTML;
+            //addcodeSelected.innerHTML = o.querySelector("label").innerHTML;
             addcodeOptionsContainer.classList.remove("active");
         });
     });
