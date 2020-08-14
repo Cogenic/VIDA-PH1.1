@@ -887,9 +887,13 @@ hr.underline {
   .room_card-title {
     font-size: 2.2rem;
     padding-top: 3%; }
+  .room_price-book {
+    height: 60px;
+    margin-top: 5%;
+    margin-bottom: 5%; }
   .room_price {
     font-size: 1.5rem;
-    padding-top: 25px; }
+    padding-top: 17px; }
   .room_book {
     font-size: 1rem; }
   .room_card-specs {
