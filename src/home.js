@@ -15,6 +15,8 @@ require('./images/vida-logo.png');
 require('./images/homebutton.png');
 require('./images/vida.gif');
 require('./images/vida2.gif');
+require('./images/Listen.gif');
+require('./images/talk.gif');
 require('./images/J4o.gif');
 require('./images/AIbac.gif');
 require('./audio/hello.mp3');
@@ -31,6 +33,7 @@ const moment = require('moment');
 import App from './App';
 
 const vida = require('./ai.js');
+const openingScreen = require('./openingScreen');
 const React = require('react');
 import Music from './Music.js';
 const { Howl, Howler } = require('howler');
