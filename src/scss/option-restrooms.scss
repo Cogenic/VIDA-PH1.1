@@ -1,0 +1,109 @@
+.option-restrooms {
+    background-color: #18191D; 
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 35px 50px ;
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
+}
+
+.restrooms-header {
+    display: flex;
+    justify-content: space-between;
+    .restroom-headleft {
+        height: 140px;
+        flex-basis: 15%;
+    }
+    .restrooms-title {
+        display: inline-block;
+        align-self: flex-end;
+        // margin-left: 14%;
+        font-size: 3.875rem;
+        margin-top: 0;
+        #title-regular {
+            font-size: 3.875rem;
+            font-weight:normal;
+            margin: 0;
+        }
+    }
+}
+
+.restrooms-divider {
+    margin-left: 5%;
+}
+
+.floor {
+    margin-left: 5%;
+    width: 35%;
+    .choose {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    .choose-title {
+        font-size: 1.625rem;
+        font-weight:normal;
+        color: #F1F1F1;
+    }
+    .side-line { width: 25%; margin: 0; }
+    }
+    .floors {
+    display: flex;
+    justify-content: space-between;
+    height: 67px;
+    button {
+        width: 30%;
+        font-size: 1.625rem;
+        color: #F1F1F1;
+        border: 2px solid #05818A;
+        background-color: transparent;
+    }
+}
+}
+
+.restroom-map {
+    margin: 3% 0 13% 5%;
+    // margin-left: 5%;
+    img {
+        height: auto;
+        min-height: 30vh;
+        max-width: 100%;
+        vertical-align: middle;
+        object-fit: fill;
+    }
+}
+
+
+[class*="col-"] {
+    width: 100%;
+    float: left;
+  }
+
+  @media only screen and (max-width: 720px) { 
+    .choose-title { font-size: 1.625rem; }
+  }
+
+
+
+  @media only screen and (min-width: 721px) { 
+    //   For Tablet & bigger
+    .restrooms-line { position: absolute; bottom: 35px; right: 50px;
+    #vida-action { float: right;}}
+    .floor { display: flex; flex-direction: column;  position: absolute; bottom: 35px; left: 50px; }
+    .floor :nth-child(1) {order: 2; }
+    .floor :nth-child(2) {order: 1; flex-direction: row-reverse; }
+  } 
+
+@media only screen and (max-width: 720px) {
+    /* For mobile phones: */
+    .option-restrooms { padding: 1.5rem 1.5rem; } 
+    .restrooms-header { flex-direction: column; }
+    .restroom-headleft { height: auto; }
+// .restrooms-header :nth-child(1) {order: 2;}
+.restrooms-header :nth-child(2) {order: 3;}
+// .restrooms-header :nth-child(3) {order: 1;}
+    #title-regular { font-size: 2.5rem; }
+    .restrooms-title {float: bottom;}
+    .floor { width: 100%; padding-right: 24px; }
+  }

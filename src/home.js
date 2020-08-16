@@ -3,6 +3,7 @@ require('./scss/login.scss');
 require('./scss/hello-screen.scss');
 require('./scss/opening-screen.scss');
 require('./scss/options-screen.scss');
+require('./scss/option-restrooms.scss');
 require('./scss/option-amenities.scss');
 require('./scss/option-rooms.scss');
 require('./scss/training.scss');
@@ -28,6 +29,7 @@ require('./images/amenities-background.png');
 require('./images/city-room.png');
 require('./images/terrace-room.png');
 require('./images/skyvilla-room.png');
+require('./images/map.png');
 const moment = require('moment');
 
 import App from './App';
