@@ -41,14 +41,14 @@
             <hr class="side-line">
         </div>
         <div class="floors">
-            <button>casino</button>
-            <button>2nd</button>
-            <button>3rd</button>
+            <button id="casino" onclick="changeImage('casino')">casino</button>
+            <button id="second" onclick="changeImage('second')">2nd</button>
+            <button id="third" onclick="changeImage('third')">3rd</button>
         </div>
     </div>
 
     <div class="restroom-map">
-        <img src="/images/map.png" alt="">
+        <img src="/images/map.png" id="floor-map">
     </div>
 
 </body>
@@ -73,6 +73,38 @@
     }
 
     getDate();
+
+    function changeImage(floorButton) {
+        var image = document.getElementById('floor-map');
+        var button = document.getElementById(floorButton);
+
+
+        if (floorButton.match("second")) {
+            image.src = "/images/city-room.png";
+        }
+        else if (floorButton.match("third")) {
+            image.src = "/images/Cogenic.png";
+        }
+        else {
+            image.src = "/images/map.png";
+        }
+    }
+</script>
+
+<script>
+    var casinoBtn = document.getElementById("casino");
+    var secondBtn = document.getElementById("second");
+    var thirdBtn = document.getElementById("third");
+
+    document.querySelectorAll('button').forEach(function (e) {
+        e.addEventListener('click', function () {
+            casinoBtn.style.backgroundColor = "transparent";
+            secondBtn.style.backgroundColor = "transparent";
+            thirdBtn.style.backgroundColor = "transparent";
+
+            this.style.backgroundColor = "#05818A";
+        })
+    });
 </script>
 
 </html>

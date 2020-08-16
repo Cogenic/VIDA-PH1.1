@@ -473,6 +473,8 @@ hr.underline {
       color: #F1F1F1;
       border: 2px solid #05818A;
       background-color: transparent; }
+    .floor .floors #casino {
+      background-color: #05818A; }
 
 .restroom-map {
   margin: 3% 0 13% 5%; }
