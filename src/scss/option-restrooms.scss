@@ -20,7 +20,7 @@
         display: inline-block;
         align-self: flex-end;
         // margin-left: 14%;
-        font-size: 3.875rem;
+        // font-size: 3.875rem;
         margin-top: 0;
         #title-regular {
             font-size: 3.875rem;
@@ -45,6 +45,7 @@
         font-size: 1.625rem;
         font-weight:normal;
         color: #F1F1F1;
+        margin: 12px 0;
     }
     .side-line { width: 25%; margin: 0; }
     }
@@ -68,13 +69,31 @@
 .restroom-map {
     margin: 3% 0 13% 5%;
     // margin-left: 5%;
+    overflow: auto;
     img {
-        height: auto;
-        min-height: 30vh;
-        max-width: 100%;
-        vertical-align: middle;
-        object-fit: fill;
+        // height: auto;
+        // min-height: 30vh;
+        // max-width: 100%;
+        // vertical-align: middle;
+        // object-fit: fill;
+        max-height: 65vh;
+        transition: all 2s ease-in-out;
     }
+}
+
+.restroom-map::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+    // background-color: #F5F5F5; 
+}
+.restroom-map::-webkit-scrollbar {
+    width: 4px;
+    // background-color: #F5F5F5;
+}
+.restroom-map::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555555af;
 }
 
 
@@ -83,16 +102,40 @@
     float: left;
   }
 
+  @media only screen and (max-width: 1024px) {
+    .floor .choose .choose-title, .floor .floors button {font-size: 1.5rem;}
+  }
+
+  @media only screen and (max-width: 924px) {
+    .restrooms-header .restrooms-title #title-regular { font-size: 3rem;}
+  }
+
+  @media only screen and (min-width: 768px) {
+    .restroom-map { 
+        img { height: auto;
+            min-height: 30vh;
+            max-width: 100%;
+            vertical-align: middle;
+            object-fit: fill; }}
+  }
+
+  @media only screen and (max-width: 768px) {
+    .option-restrooms { padding: 1.5rem 1.5rem; } 
+    .floor { margin-left: 0; }
+    .floor .choose .choose-title, .floor .floors button {font-size: 1.3rem;}
+    .floor .floors { height: 55px;}
+  }
+
   @media only screen and (max-width: 720px) { 
-    .choose-title { font-size: 1.625rem; }
+    // .choose-title { font-size: 1.625rem; }
   }
 
 
 
   @media only screen and (min-width: 721px) { 
     //   For Tablet & bigger
-    .restrooms-line { position: absolute; bottom: 35px; right: 50px;
-    #vida-action { float: right;}}
+    .restrooms-line { position: absolute; bottom: 75px; right: 50px; width: 40%;
+        #vida-action { float: right;}}
     .floor { display: flex; flex-direction: column;  position: absolute; bottom: 35px; left: 50px; }
     .floor :nth-child(1) {order: 2; }
     .floor :nth-child(2) {order: 1; flex-direction: row-reverse; }
@@ -100,13 +143,15 @@
 
 @media only screen and (max-width: 720px) {
     /* For mobile phones: */
-    .option-restrooms { padding: 1.5rem 1.5rem; } 
-    .restrooms-header { flex-direction: column; }
-    .restroom-headleft { height: auto; }
+    .restrooms-header { flex-direction: column; 
+        .restroom-headleft { height: auto; }
+        .restrooms-title { float: bottom; 
+            #title-regular { font-size: 2.5rem; }}}
+    .restrooms-divider { margin-left: 0; }
 // .restrooms-header :nth-child(1) {order: 2;}
 .restrooms-header :nth-child(2) {order: 3;}
 // .restrooms-header :nth-child(3) {order: 1;}
-    #title-regular { font-size: 2.5rem; }
-    .restrooms-title {float: bottom;}
-    .floor { width: 100%; padding-right: 24px; }
+
+    .floor { width: 100%; }
+    .restroom-map { margin-left: 0; }
   }

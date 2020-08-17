@@ -30,6 +30,9 @@ require('./images/city-room.png');
 require('./images/terrace-room.png');
 require('./images/skyvilla-room.png');
 require('./images/map.png');
+require('./images/map-casino.png');
+require('./images/map-second.png');
+require('./images/map-third.png');
 const moment = require('moment');
 
 import App from './App';
