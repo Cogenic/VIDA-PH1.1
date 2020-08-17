@@ -13,9 +13,6 @@ require('./images/staff_info.png');
 require('./images/vida-logo.png');
 require('./images/homebutton.png');
 require('./images/vida.gif');
-require('./images/vida2.gif');
-require('./images/J4o.gif');
-require('./images/AIbac.gif');
 require('./audio/hello.mp3');
 require('./images/option_amenities.png');
 require('./images/option_restroom.png');
@@ -32,7 +29,13 @@ import Music from './Music.js';
 const { Howl, Howler } = require('howler');
 const ReactDOM = require('react-dom');
 
-var socket = new WebSocket('ws://localhost:8443/training');
+var socket = new WebSocket('wss://dev1.cogenicintel.com/training');
+//var socket = new WebSocket('ws://localhost:8443/training');
+
+socket.onopen = function(event){
+    console.log('connected');
+
+}
 
 //requires the mp3 files inorder for VIDA to speak
 socket.addEventListener('message', (e) => {

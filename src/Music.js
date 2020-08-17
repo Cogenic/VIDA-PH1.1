@@ -1,7 +1,7 @@
 require("babel-polyfill");
 import React, { Component } from 'react';
 import ReactAudioPlayer from 'react-audio-player';
-import { hot } from 'react-hot-loader/root';
+import { hot } from 'react-hot-loader';
 const ReactDOM = require('react-dom');
 
 class Music extends React.Component {
@@ -18,6 +18,7 @@ class Music extends React.Component {
 
 
     getData = (e) => {
+        console.log('getData');
         this.setState({ url: e.data });
     };
 
@@ -60,6 +61,7 @@ class Music extends React.Component {
 
               if (socket && socket.readyState === socket.OPEN){
                   socket.send(Int16Array.from(floatSamples.map(function(n) {
+//                      console.log(n* MAX_INT);
                     return n * MAX_INT;
                   })));
                 }
@@ -68,7 +70,7 @@ class Music extends React.Component {
 
             function newWebsocket() {
               var websocketPromise = new Promise(function(resolve, reject) {
-                var socket = new WebSocket('ws://localhost:5000/echo');
+                var socket = new WebSocket('wss://dev1.cogenicintel.com/echo');
                 socket.addEventListener('open', resolve);
                 socket.addEventListener('error', reject);
               });
@@ -97,6 +99,7 @@ class Music extends React.Component {
                 // it, start streaming the audio bytes to the server and listening for
                 // transcriptions.
                 socket.addEventListener('message', function(e) {
+                    console.log("hi");
                   startByteStream(e);
                 }, {once: true});
 
@@ -112,7 +115,7 @@ class Music extends React.Component {
             }
 
         }
-        var socket = new WebSocket('ws://localhost:8443/training');
+        var socket = new WebSocket('wss://dev1.cogenicintel.com/training');
         socket.addEventListener('message', this.getData);
 
 

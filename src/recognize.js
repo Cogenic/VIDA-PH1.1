@@ -2,10 +2,7 @@
 function infiniteStream() {
   // [START speech_transcribe_infinite_streaming]
 
-    const http = require('http');
     const fs = require('fs');
-    const ws = require('ws');
-    var websocket = require('websocket-stream');
 
     const chalk = require('chalk');
     const {Writable} = require('stream');
@@ -21,7 +18,7 @@ function infiniteStream() {
 
 //    const client = new speech.SpeechClient();
     let encoding = 'LINEAR16';
-    let sampleRateHertz= 44100;
+    let sampleRateHertz = 48000;
     let languageCode= 'en-US';
     let streamingLimit= 290000;
 
@@ -49,28 +46,51 @@ function infiniteStream() {
     const client = new speech.SpeechClient();
     let recognizeStream = null;
 
-
-    let server = http.createServer(function(req, res){
-      res.writeHead(200);
-    //  res.end(index);
+    const https = require('https');
+    const ws = require('ws').Server;
+    const httpsServer = https.createServer({
+      key: fs.readFileSync('/etc/nginx/ssl/server.key'),
+      cert: fs.readFileSync('/etc/nginx/ssl/bundle.crt'),
+      //ca: fs.readFileSync('intermediate.crt')
     });
-    server.addListener('upgrade', (req, res, head) => console.log('UPGRADE:', req.url));
-    server.on('error', (err) => console.error(err));
-    server.listen(5000, () => console.log('Http running on port 5000'));
 
 
-    const wss = new ws.Server({server, path: '/echo'});
+    httpsServer.listen(5000,() => console.log('Https running on port 5000'));
+
+//    httpsServer.on('error', (err) => console.error(err));
+    const wss = new ws({
+        server: httpsServer,
+        path: '/echo'
+    });
+
+    httpsServer.on('request', (req, res) => {
+      res.writeHead(200);
+      res.end('hello HTTPS from recognize\n');
+    });
+
+
     wss.on('connection', function connection(ws) {
+        console.log("connected to 5000!");
         startStream();
         ws.on('message', (data) =>{
             ws.send('Initilaized')
-            if(data!=='{"sampleRate":44100}'){
+//            console.log(data);
+            //if(data!=='{"sampleRate":48000}'){
+            if(typeof data!=='string'){
+//                console.log("lets goo");
                 var buffer = new Int16Array(data, 0, Math.floor(data.byteLength / 2));
                 if(recognizeStream !== null){
                     audioInputStreamTransform(buffer,encoding);
                 }
+            }else{
+                console.log(data);
             }
+
+
         })
+        ws.on('close', () => {
+            console.log('socket closed');
+        });
 
 
     function startStream() {
