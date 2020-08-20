@@ -1,0 +1,398 @@
+.option-rooms {
+    background-color: #14171B; 
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 35px 35px ;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.rooms-divider {
+    margin-left: 8%;
+}
+
+.rooms_stuff {
+    display: flex;
+    z-index: 0;
+    position: relative;
+}
+
+.room-header { padding-left: 15.75px;}
+
+
+ // ************ Room menus ************
+
+ .rooms_menu {
+	display: flex;
+  justify-content: space-between;
+  margin-left: 8%;
+  z-index: 1;
+  width: 100%;
+}
+
+.rate-box {width: 420px;}
+  .allrooms-box {width: 280px;}
+  .addcode-box {width: 400px;}
+  
+ .select-box {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 1.375rem;
+	background: #14171B;
+  display: flex;
+  flex-direction: column;
+
+  .rate-options-container, 
+  .allrooms-options-container, 
+  .addcode-options-container {
+		background: #14171B;
+		color: #f5f6fa;
+		max-height: 0;
+		width: 100%;
+		opacity: 0;
+		transition: all 0.4s;
+    overflow: hidden;
+    position: relative;
+		order: 1;
+  }
+
+  .rate-options-container.active, 
+  .allrooms-options-container.active, 
+  .addcode-options-container.active {
+		max-height: 100%;
+		opacity: 1;
+		+ {
+			.rate-selected, .allrooms-selected, .addcode-selected {
+				&::after {
+					transform: rotate(180deg);
+					top: 5px;
+				}
+			}
+		}
+  }
+  
+  .rate-option, .allrooms-option {
+		padding: 12px 24px;
+		cursor: pointer;
+		&:hover {
+			background: #414b57;
+		}
+		.radio {
+			display: none;
+		}
+  }
+  .addcode-option {
+    padding: 12px 24px;
+    margin: 20px;
+    cursor: pointer;
+    width: 90%;
+    border: 1px solid #707070;
+    .radio {
+      display: none;
+    }
+  }
+  .addcode-rateaccess {
+    padding-left: 30px;
+    // display: flex;
+    .down-arrow {
+      text-align: center;
+      position: absolute;
+      background-image: url(../images/icon_material_keyboard_arrow_down.png);
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      float: right;
+      top: 45px;
+      right: 45px;
+    }
+  }
+  .addcode-input {
+    height: 56px;
+  }
+  .addcode-cancel, .addcode-add {
+      text-align: center;
+      font-weight: bold;
+    }
+    .addcode-add {
+      border: none;
+      background-color: #1DE6D9;
+      color: black;
+    }
+
+	label {
+		cursor: pointer;
+	}
+ }
+ 
+
+
+ .rate-selected, .allrooms-selected, .addcode-selected {
+	background: #14171B;
+	border-bottom: 1px solid white;
+	color: #FFF2F2;
+	position: relative;
+  order: 0;
+  margin-bottom: 10px;
+	padding: 12px 24px;
+  cursor: pointer;
+  position: relative;
+	&::after {
+    content: '';
+    display: block;
+		background: url(../images/icon_material_keyboard_arrow_down.png);
+		// fill: white;
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		height: 50%;
+		width: 20px;
+		right: 10px;
+		top: 20px;
+		transition: all 0.2s;
+  }
+  // &:focus {
+  //   border: 1px solid white;
+  // }
+}
+
+.selected {
+  
+	&:focus {
+		border-top: 1px solid white;
+	}
+}
+.option-divider {
+  border-color: #707070;
+	width: 80%;
+	margin: 2px 0 2px 24px;
+}
+.option-divider-last {
+  border-color: #707070;
+	width: 80%;
+	margin: 2px 0 15px 24px;
+}
+
+
+ // ************ Room items/cards ************
+
+.room_items {
+    padding: 0 5%;
+    z-index: 0;
+    position: absolute;
+    top: 70px;
+    left: 0;
+}
+
+.room_cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .room_cards-item {
+    display: flex;
+    padding: 4% 0;
+    width: 100%;
+  }
+
+  // @media (min-width: 56rem) {
+  //   .cards_item {
+  //     width: 33.3333%;
+  //   }
+  // }
+  
+  .room_card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .room_card-image img {
+    // max-height: 65vh;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    object-fit: fill;
+    // min-width: 340px;
+  }
+
+  .room_card-content {
+    width: 100%;
+      padding-left: 14%;
+  }
+  
+  .room_card-title {
+    // padding: 1rem;
+    color: #ffffff;
+    font-size: 2.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0;
+  }
+
+  .room_card-detail {
+      margin-left: 10%;
+      width: 90%;
+      
+  }
+  
+.room_price-book {
+    width: 100%;
+    height: 76px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    max-width: 500px;
+}
+
+.room_price {
+    width: 50%;
+    background-color: black;
+    float: left;
+    margin: 0;
+    height: 100%;
+    text-align: center;
+    padding-top: 17px;
+    font-size: 2.4rem;
+    color: #FFF2F2;
+}
+
+.room_book{
+    width: 50%;
+    background-color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    height: 100%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+  
+  .btn:hover {
+    transform: scale(1.1);
+    background-color: #1DE6D9;
+  }  
+
+  .testing {
+    display: inline-block;
+    background-size: contain;
+		background-repeat: no-repeat;
+    fill: white;
+    height: 35px;
+    width: 35px;
+    vertical-align: middle;
+    object-fit: fill;
+  }
+
+  .room_card-specs {
+      width: 250px;
+      font-size: 22px;
+      color: #FFF2F2;
+      // max-width: 500px;
+  }
+
+  .bed {
+    width: 100%;
+  }
+
+ .specs-icon {
+    display: inline-block;
+      width: 35px;
+      height: 35px;
+      margin-right: 30px;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+  }
+  .person-icon {
+      background-image: url(../images/icon_material_person.png);
+  }
+
+  .bed-icon {
+      background-image: url(../images/icon_ionic_ios_bed.png);
+  }
+
+  .ruler-icon {
+      background-image: url(../images/icon_awesome_ruler_combined.png);
+  }
+
+  .spec-divider {
+    margin: 5% 0;
+    border: 1px solid #B5B3B3;
+  }
+
+  .room-divider {
+    width: 100%;
+  }
+
+
+  // ************ Responsive layouts ************
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @media only screen and (max-width: 1290px) {
+    .rate-box {width: 400px;}
+    .allrooms-box {width: 240px;}
+    .addcode-box {width: 360px;}
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .room_price { font-size: 2rem; padding-top: 21px;}
+    // .room_book {width: 100%;}
+  }
+
+  @media only screen and (max-width: 1180px) {
+    .rate-box {width: 360px;}
+    .allrooms-box {width: 200px;}
+    .addcode-box {width: 300px;}
+    .select-box { font-size: 1.25rem; 
+      .addcode-rateaccess { padding-left: 20px;
+        .down-arrow { right: 25px; }}}
+    .rate-selected, .allrooms-selected, .addcode-selected {
+      padding: 12px 14px;
+      &::after { width: 15px; }}
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .room_card-title { font-size: 2.5rem;}
+    .room_price { font-size: 2rem; padding-top: 20px;}
+    .rooms_menu { flex-wrap: wrap; align-content: center; }
+    .rate-box {width: 270px;}
+    .allrooms-box {width: 160px;}
+    .addcode-box {width: 180px;}
+    .select-box { font-size: 1rem; 
+      .rate-option, .allrooms-option {padding: 10px 10px;}
+      .addcode-option {margin: 12px;}
+      .addcode-input {height: 47px;}
+      .addcode-rateaccess { padding-left: 12px;
+        .down-arrow {width: 15px;height: 15px; top: 35px;right: 18px;background-size: contain;}}} 
+    .rate-selected, .allrooms-selected, .addcode-selected {
+      padding: 12px 10px;
+      &::after { width: 15px; }}
+    .option-divider {margin-left: 10px;}
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* For tablet: */
+    .option-rooms { padding: 1.5rem 1.5rem; margin: 0;}
+    .room-header { padding-left: 0;}
+    .room_items { top: 160px; padding-bottom: 10%;}
+    .room_card {flex-direction: column;}
+    .room_card-title { font-size: 2.2rem; padding-top: 3%;}
+    .room_price-book { height: 60px; margin-top: 5%; margin-bottom: 5%;}
+    .room_price { font-size: 1.5rem; padding-top: 17px;}
+    .room_book { font-size: 1rem;}
+    .room_card-specs { font-size: 1rem;}
+    .specs-icon { width: 25px; height: 25px; background-size: contain; }
+    .rooms_menu { flex-direction: column; }
+    .rate-box, .allrooms-box, .addcode-box {width: 270px;}
+    .select-box { .addcode-rateaccess {
+      .down-arrow { right: 30px; }}} 
+  }
