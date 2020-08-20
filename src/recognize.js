@@ -49,8 +49,8 @@ function infiniteStream() {
     const https = require('https');
     const ws = require('ws').Server;
     const httpsServer = https.createServer({
-      key: fs.readFileSync('/etc/nginx/ssl/server.key'),
-      cert: fs.readFileSync('/etc/nginx/ssl/bundle.crt'),
+      key: fs.readFileSync('server.key'),
+      cert: fs.readFileSync('bundle.crt'),
       //ca: fs.readFileSync('intermediate.crt')
     });
 
