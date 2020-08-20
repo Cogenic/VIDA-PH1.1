@@ -9,7 +9,7 @@ var slideIndex = 0;
     var cSlides= document.getElementsByClassName("cSlides");
     var vida2= document.getElementById("vida2");
     for (i = 0; i < aSlides.length; i++) {
-        aSlides[i].style.display = "none";
+        aSlides[i].style.display = "nones";
         bSlides[i].style.display = "none";
         cSlides[i].style.display = "none";
     }
