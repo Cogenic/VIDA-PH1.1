@@ -309,10 +309,29 @@ hr.divider {
   list-style: none;
   margin: 0;
   padding: 0; }
-
-.cards_item {
-  display: flex;
-  padding: 1rem; }
+  .cards .cards_item {
+    display: flex;
+    padding: 1rem; }
+    .cards .cards_item .card {
+      border-radius: 0.25rem;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden; }
+      .cards .cards_item .card .images-highlight {
+        background-color: white;
+        overflow: hidden;
+        cursor: pointer; }
+      .cards .cards_item .card .card_title {
+        color: #E9E4E4;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 2.7px;
+        text-transform: capitalize;
+        margin: 15px 0 0; }
+      .cards .cards_item .card hr.underline {
+        border: 1px solid #05818A;
+        width: 70px;
+        margin-left: 0; }
 
 @media (min-width: 40rem) {
   .cards_item {
@@ -322,19 +341,6 @@ hr.divider {
   .cards_item {
     width: 33.3333%; } }
 
-.card {
-  /* background-color: white; */
-  border-radius: 0.25rem;
-  /* box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25); */
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; }
-
-.images-highlight {
-  background-color: white;
-  overflow: hidden;
-  cursor: pointer; }
-
 .card_image {
   height: auto;
   max-width: 100%;
@@ -343,19 +349,6 @@ hr.divider {
 
 .card_image:hover {
   transform: scale(1.5); }
-
-.card_title {
-  color: #E9E4E4;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 2.7px;
-  text-transform: capitalize;
-  margin: 15px 0 0; }
-
-hr.underline {
-  border: 1px solid #05818A;
-  width: 70px;
-  margin-left: 0; }
 
 .logout-btn {
   border: 2px solid white;
@@ -418,8 +411,10 @@ hr.underline {
   #time {
     font-size: 30px; }
   #didumean {
-    font-size: 40px;
-    margin: 16px 0; } }
+    font-size: 2rem;
+    margin: 16px 0; }
+  .cards .cards_item .card .card_title {
+    font-size: 1.5rem; } }
 .option-restrooms {
   background-color: #18191D;
   color: white;
