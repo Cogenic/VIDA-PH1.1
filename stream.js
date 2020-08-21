@@ -1,17 +1,29 @@
 var respond = require('./src/respond.js');
 var error = "Unable to find trigger";
-const ws = require('ws');
-const http = require('http');
+const ws = require('ws').Server;
+const fs = require('fs');
+const https = require('https');
 const app = require('express')();
 
-let server = http.createServer(function(req, res){
-res.writeHead(200);
-//  res.end(index);
+const httpsServer = https.createServer({
+    key: fs.readFileSync('server.key'),
+    cert: fs.readFileSync('bundle.crt'),
+    requestCert: true,
+    rejectUnauthorized: false,
+
 });
-server.addListener('upgrade 2.0', (req, res, head) => console.log('TRAINING DATA 2.0', req.url));
-server.on('error', (err) => console.error(err));
-server.listen(8443, () => console.log('Https running on port 8443'));
-const wss = new ws.Server({server, path: '/training'});
+
+httpsServer.listen(8443, () => console.log('Https running on port 8443'));
+//httpsServer.on('error', (err) => console.error(err));
+const wss = new ws({
+    server: httpsServer,
+    path: '/training'
+});
+
+httpsServer.on('request', (req, res) => {
+  res.writeHead(200);
+  res.end('hello HTTPS from streaming\n');
+});
 
 
 function preception(verbal,done){
@@ -40,6 +52,7 @@ function preception(verbal,done){
                    console.log('#################');
                    respond(result[0].Utterance,trigger);
                     wss.on('connection', function connection(ws) {
+                        console.log('8443 connection');
                             ws.send(trigger);
                     })
 

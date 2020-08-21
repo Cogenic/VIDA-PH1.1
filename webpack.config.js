@@ -70,7 +70,7 @@ module.exports = {
             path: './.env'
         }),
         new BrowserSyncPlugin({
-            host: 'localhost',
+            host: 'dev1.cogenicintel.com',
             port: 3001,
             proxy: 'http://localhost:3000/',
             files: ['./views/*.hbs']
