@@ -32,9 +32,13 @@
     </body>
 </form>
 
-<script src="http://localhost:5000/socket.io/socket.io.js"></script>
 <script>
-    socket = io('http://localhost:5000');
+    socket = io('https://127.0.0.1:5000');
+    socket.on('connection', function (data) {
+        console.info(`Client connected [id=${socket.id}]`);
+//        replace(data);
+    });
+ 
     socket.on('news', function (data) {
         console.info(`Client connected [id=${socket.id}]`);
         replace(data);
