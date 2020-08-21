@@ -5,10 +5,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
-    <h1>Restrooms Screen</h1>
+<body class="option-restrooms">
+    <form method="POST" action="/options-screen">
+        <div class="row restrooms-header">
+            <div class="vida-indicator col-4 restroom-headleft">
+                <div class="vida-light" onclick="document.forms[0].submit()">
+                    <input type="image" src="/images/vida-circle.png" class="logo">
+                </div>
+                <div class="line restrooms-line">
+                    <p id="vida-action">listening</p>
+                    </br>
+                    <hr id="vida-wave">
+                </div>
+            </div>
+
+            <div class="restrooms-title col-4">
+                <h2 id="title-regular">Restrooms</h2>
+            </div>
+
+            <div class="date-time col-4">
+                <p id="date">Wednesday June 29</p>
+                <p class="small-time" id="time">10:12 AM</p>
+            </div>
+        </div>
+    </form>
+    <hr class="divider restrooms-divider">
+
+    <div class="floor">
+        <div class="choose">
+            <hr class="side-line">
+            <h3 class="choose-title">Choose Floor</h3>
+            <hr class="side-line">
+        </div>
+        <div class="floors">
+            <button id="casino" onclick="changeImage('casino')">casino</button>
+            <button id="second" onclick="changeImage('second')">2nd</button>
+            <button id="third" onclick="changeImage('third')">3rd</button>
+        </div>
+    </div>
+
+    <div class="restroom-map">
+        <img src="/images/map-casino.png" id="floor-map">
+    </div>
+
 </body>
+<script>
+    function getDate() {
+        var today = new Date();
+
+        var weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        var weekday = today.getDay();
+        var month = today.getMonth();
+        var day = today.getDate();
+
+        document.getElementById('date').innerHTML = `${weekdays[weekday]} ${months[month]} ${day}`;
+
+
+        var time = today.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        document.getElementById('time').innerHTML = time;
+
+        var t = setTimeout(getDate, 1000);
+    }
+
+    getDate();
+
+    function changeImage(floorButton) {
+        var image = document.getElementById('floor-map');
+        var button = document.getElementById(floorButton);
+
+
+        if (floorButton.match("second")) {
+            image.src = "/images/map-second.png";
+        }
+        else if (floorButton.match("third")) {
+            image.src = "/images/map-third.png";
+        }
+        else {
+            image.src = "/images/map-casino.png";
+        }
+    }
+</script>
+
+<script>
+    var casinoBtn = document.getElementById("casino");
+    var secondBtn = document.getElementById("second");
+    var thirdBtn = document.getElementById("third");
+
+    document.querySelectorAll('button').forEach(function (e) {
+        e.addEventListener('click', function () {
+            casinoBtn.style.backgroundColor = "transparent";
+            secondBtn.style.backgroundColor = "transparent";
+            thirdBtn.style.backgroundColor = "transparent";
+
+            this.style.backgroundColor = "#05818A";
+        })
+    });
+</script>
 
 </html>
