@@ -41,26 +41,36 @@ const vida = require('./ai.js');
 const openingScreen = require('./openingScreen');
 const React = require('react');
 import Music from './Music.js';
+import Play from './play.js';
 const { Howl, Howler } = require('howler');
 const ReactDOM = require('react-dom');
-
-var socket = new WebSocket('wss://dev1.cogenicintel.com/training');
-//var socket = new WebSocket('ws://localhost:8443/training');
-
-socket.onopen = function(event){
-    console.log('connected');
-
-}
-
-//requires the mp3 files inorder for VIDA to speak
-socket.addEventListener('message', (e) => {
-    require(`./audio/${e.data}.mp3`);
-})
-
 ReactDOM.render(<App />, document.getElementById('visualizer'));
+ReactDOM.render(<Play />, document.getElementById('play-sound'));
 
 var time_openingScreen = document.getElementById("time");
 var date = moment().format('LLLL');
 time_openingScreen.innerHTML = date;
+var socket = new WebSocket('wss://localhost:8443/training');
+//                  console.log(values[1].target);
+// If the socket is closed for whatever reason, pause the mic
+socket.addEventListener('close', function(e) {
+    console.log('Websocket closing..');
+});
+socket.addEventListener('error', function(e) {
+    console.log('Error from websocket', e);
+});
+socket.onopen = function (event) {
+  socket.send("Here's some text that the server is urgently awaiting!");
+};
 
-ReactDOM.render(<Music url="hello" />, document.getElementById('music'));
+socket.addEventListener('message', function(e) {
+    socket.addEventListener('message', function(e) {
+        console.log(e.data);
+    })
+})
+
+
+
+
+
+//ReactDOM.render(<Music url="hello" />, document.getElementById('music'));

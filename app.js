@@ -19,6 +19,7 @@ var index = require('./routes/index');
 var trainer = require('./routes/trainer');
 var users = require('./routes/users');
 var recognize = require('./src/recognize.js');
+//var stream = require('./stream.js');
 var app = express();
 const {Storage} = require('@google-cloud/storage');
 // Instantiate a storage client

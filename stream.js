@@ -8,8 +8,8 @@ const app = require('express')();
 const httpsServer = https.createServer({
     key: fs.readFileSync('server.key'),
     cert: fs.readFileSync('bundle.crt'),
-    requestCert: true,
-    rejectUnauthorized: false,
+//    requestCert: true,
+ //   rejectUnauthorized: false,
 
 });
 
@@ -25,14 +25,13 @@ httpsServer.on('request', (req, res) => {
   res.end('hello HTTPS from streaming\n');
 });
 
-
 function preception(verbal,done){
     const db = require('./db');
     verbal = verbal.trim();
     var trigger = "";
     db.query('SELECT Triggers FROM verbalTriggers WHERE verbalTriggers = ?',[verbal],function(err, result, fields){
         if(result.length === 0){
-        /*
+            /*
 
             if(verbal !== "I do not understand"){
                 respond("I do not understand", "unknown");
@@ -50,11 +49,15 @@ function preception(verbal,done){
                    if(result.length === 0)
                        return err;
                    console.log('#################');
-                   respond(result[0].Utterance,trigger);
-                    wss.on('connection', function connection(ws) {
-                        console.log('8443 connection');
-                            ws.send(trigger);
+                wss.on('connection', function connection(ws) {
+                    console.log("connected to 8443!");
+//                    ws.send(trigger);
+                    ws.on('message', function message(data){
+                        console.log("data");
+                        ws.send(trigger);
                     })
+                })
+
 
             });
         });
