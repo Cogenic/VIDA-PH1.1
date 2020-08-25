@@ -64,7 +64,7 @@ $animationSpeed: 40s;
 		transform: translateY(0);
 	}
 	100% {
-		transform: translateY(calc(-100px * 7));
+		transform: translateY(calc(-120px * 7));
 	}
 }
 
@@ -125,7 +125,7 @@ $animationSpeed: 40s;
     .opening-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        .option-title {
+        .opening-title {
             grid-column: 1;
             grid-row: 1;
         }
