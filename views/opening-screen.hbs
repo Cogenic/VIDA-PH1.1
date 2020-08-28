@@ -1,81 +1,164 @@
-<!DOCTYPE html
-      PUBLIC "-//W3C//DTD HTML 4.01//EN"
-      "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 <html>
-    <head>
-        <link rel="shortcut icon" href="">
-        <link rel="icon"
-      type="image/png"
-      href="images/Cogenic.png">
-    <meta http-equiv="Cache-Control" content="no-store" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0"/>
-    <link rel="shortcut icon" href="">
-    <title>{{title}}</title>
-            <meta charset="UTF-g">
-            <link rel="stylesheet" href="/css/style.css">
-        </head>
-        <header class= "opening-header">
+
+<head>
+  <link rel="shortcut icon" href="">
+  <link rel="icon" type="image/png" href="images/Cogenic.png">
+  <meta http-equiv="Cache-Control" content="no-store" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="">
+  <title>{{title}}</title>
+  <meta charset="UTF-g">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+{{!-- <header class= "opening-header">
             <h1 id="time"></h1>
        </header>
         <form method="POST" action="/options-screen">
              <div class="menu-button">
                <input type="image" src="/images/homebutton.png" name="saveForm" class="vida" id="saveForm" >
             </div>
-        </form>
-        <body class="opening-screen">
+        </form> --}}
 
-            </br>
-            </br>
-            </br>
-            </br>
-            <p>___</p>
-            
-            </br>
-            <p1>How may I help you?</p1>
-    <div class="slideshow-container">
-        <div class="aSlides fade">
-          <div class="text">Where is the conceirge worker?</div>
-        </div>
+<body class="opening-screen">
 
-          <div class="bSlides fade">
-          <div class="text">Where is the nearest bathroom?</div>
+  <form method="POST" action="/options-screen">
+    <div class="row opening-row">
+      <div class="weather-indicator opening-col6">
+        <div class="weather-description">Partly Cloudy</div>
+        <div class="weather-detail">
+          <div class="weather-temp">95&deg;F</div>
+          <div class="weather-icon"></div>
         </div>
-        <div class="cSlides fade">
-          <div class="text">I would like to reserve a room</div>
-        </div>
+      </div>
+
+      <div class="date-time opening-col6">
+        <p id="date" class="opening-date">Wednesday June 29</p>
+        <p class="large-time" id="time">10:12 AM</p>
+      </div>
     </div>
-    <p>___________________</p>
+  </form>
 
-        <form method="POST" action="/opening-screen">
-           <input type="image" id="demo" class="opening-vida">
-           </form>
 
-        <div id="visualizer">
+
+  <div class="opening-content">
+    <div class="opening-title">
+      <hr class="title-divider">
+      <h2 class="title-assist">"How may I assist you?"</h2>
+    </div>
+
+    <div class="vida-gif">
+      <form method="POST" action="/opening-screen">
+        <input type="image" id="demo" class="opening-vida">
+      </form>
+    </div>
+
+    <div class="suggestions">
+      <h3 class="suggest-title">Suggestions</h3>
+      <div class="slider">
+        <div class="slide-track">
+          <div class="slide">
+            Where are the restrooms?
+          </div>
+          <div class="slide">
+            What rooms do you have available?
+          </div>
+          <div class="slide">
+            How much is it to get a room here?
+          </div>
+          <div class="slide">
+            Where can I get a drink?
+          </div>
+          <div class="slide">
+            What's your favorite restaurant here?
+          </div>
+          <div class="slide">
+            Do you have a nightclub in this hotel?
+          </div>
+          <div class="slide">
+            What kind of massages do they offer at the spa?
+          </div>
+          <div class="slide">
+            Where are the restrooms?
+          </div>
+          <div class="slide">
+            What rooms do you have available?
+          </div>
+          <div class="slide">
+            How much is it to get a room here?
+          </div>
+          <div class="slide">
+            Where can I get a drink?
+          </div>
+          <div class="slide">
+            What's your favorite restaurant here?
+          </div>
+          <div class="slide">
+            Do you have a nightclub in this hotel?
+          </div>
+          <div class="slide">
+            What kind of massages do they offer at the spa?
+          </div>
         </div>
+      </div>
+    </div>
+
+  </div>
+
+  <form method="GET" action="/logout">
+    <button type="submit" class="logout-btn">logout</button>
+  </form>
 
 
-        <div id="music">
-        </div>
+  {{!-- <div id="visualizer">
+  </div>
 
 
-        </body>
+  <div id="music">
+  </div> --}}
 
 
-    <!--audio controls id="music">
+</body>
+
+<script>
+  function getDate() {
+    var today = new Date();
+
+    var weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    var weekday = today.getDay();
+    var month = today.getMonth();
+    var day = today.getDate();
+
+    document.getElementById('date').innerHTML = `${weekdays[weekday]} ${months[month]} ${day}`;
+
+
+    var time = today.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    document.getElementById('time').innerHTML = time;
+
+    var t = setTimeout(getDate, 1000);
+  }
+
+  getDate();
+</script>
+
+<!--audio controls id="music">
     <source src="/images/vida.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
     </audio-->
 
 
 
-    <!--button onclick="play()" type="button">Play </button-->
-    <!--button onclick="pause()" type="button">Pause</button-->
+<!--button onclick="play()" type="button">Play </button-->
+<!--button onclick="pause()" type="button">Pause</button-->
 
-    </body>
-    <!--script src="http://localhost:5000/socket.io/socket.io.js"></script-->
-    <script src="js/home.bundle.js"></script>
+</body>
+<!--script src="http://localhost:5000/socket.io/socket.io.js"></script-->
+<script src="js/home.bundle.js"></script>
 
 
 </html>
