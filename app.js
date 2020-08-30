@@ -19,8 +19,18 @@ var index = require('./routes/index');
 var trainer = require('./routes/trainer');
 var users = require('./routes/users');
 var recognize = require('./src/recognize.js');
+const fs = require('fs');
 //var stream = require('./stream.js');
 var app = express();
+var https = require('https')
+
+https.createServer({
+  key: fs.readFileSync('server.key'),
+  cert: fs.readFileSync('bundle.crt')
+}, app)
+.listen(8080, function () {
+  console.log('Example app listening on port 3000! Go to https://localhost:3000/')
+})
 const {Storage} = require('@google-cloud/storage');
 // Instantiate a storage client
 const storage = new Storage();
@@ -127,7 +137,6 @@ app.use(function(err, req, res, next) {
 });
 // Handlebars default config
 const hbs = require('hbs');
-const fs = require('fs');
 
 const partialsDir = __dirname + '/views/partials';
 

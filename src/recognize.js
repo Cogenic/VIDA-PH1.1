@@ -127,8 +127,8 @@ function speechCallback(stream){
     const correctedTime =
       resultEndTime - bridgingOffset + streamingLimit * restartCounter;
 
-    process.stdout.clearLine();
-    process.stdout.cursorTo(0);
+ //   process.stdout.clearLine();
+//    process.stdout.cursorTo(0);
     let stdoutText = '';
     if (stream.results[0] && stream.results[0].alternatives[0]) {
           stdoutText =
@@ -148,7 +148,7 @@ function speechCallback(stream){
             stdoutText =
               stdoutText.substring(0, process.stdout.columns - 4) + '...';
           }
-          process.stdout.write(chalk.red(`${stdoutText}`));
+ //         process.stdout.write(chalk.red(`${stdoutText}`));
 
           lastTranscriptWasFinal = false;
     }

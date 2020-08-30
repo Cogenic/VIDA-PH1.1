@@ -12,7 +12,7 @@ const saltRounds = 10;
 router.get('/', authenticationMiddleware(), function (req, res) {
     //   console.log(req.user);
     //    console.log(req.isAuthenticated());//Test wheter or not data is being passed through
-    res.render('home', { title: 'Home' });
+    res.render('opening-screen', { title: 'Opening-screen' });
 });
 //do the authencitcation middleware
 

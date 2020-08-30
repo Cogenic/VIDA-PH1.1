@@ -1,155 +1,160 @@
 .opening-screen{
-//    background-color: #18191D; 
-    position:relative;
-    background-color:black;
-//    border: 5px solid #3ae0e9;
-    margin: 0px 40px;
-    height: 535px;
-    width: auto;
-
+    background-color: #14171B;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 35px 55px ;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
-
-.opening-header{
-    position: absolute;
-//    border: 15px solid red;
-    margin-left: 50%;
-    width: 45%;;
-    font-size:1vw;
-    color:white;
-    padding: 10px;
-    font-family: "Lucida Console", Courier, monospace;
-
+.weather-description {
+    font-size: 26px;
+    color: #ABABAB;
+    letter-spacing: 1.56px;
+    margin: 25px 0;
 }
 
-
-.opening-screen>p{
-    position: relative;
-    font-size:50px;
-    color:white;
+.weather-temp {
     font-weight: bold;
-    width: 350px;
-    padding: 10px;
-    margin:0px 30px;
-
-
+    color: #F1F1F1;
+    font-size: 80px;
+    letter-spacing: 4.8px;
 }
 
-.opening-screen>p1{
+.opening-date { margin: 25px 16px; }
+
+.opening-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+}
+
+.title-divider { 
+    width: 70px;
+    margin: 5% 0;
+}
+
+.title-assist {
+    font-size: 53px;
+    font-weight: normal;
+}
+
+.vida-gif { text-align: center;}
+
+.opening-vida{ width: 90%; }
+
+
+// *************** Suggestions carousel ***************
+
+.suggest-title {
+    font-size: 28px;
+    color: #ABABAB;
+}   
+
+@mixin white-gradient {
+    background: rgb(20,23,27);
+    background: linear-gradient(0deg, rgba(20,23,27,1) 0%, rgba(255,255,255,0) 20%, rgba(255,255,255,0) 80%, rgba(20,23,27,1) 100%);
+}
+
+$animationSpeed: 40s;
+
+// Animation
+@keyframes scroll-vertical {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(calc(-120px * 7));
+	}
+}
+
+// Styling
+.slider {
+	height: 300px;
+	margin: auto;
+	overflow: hidden;
     position: relative;
-    color:white;
-    top:33%;
-    font-size:3vw;
-    width: 400px;
-    padding: 10px;
-    margin:10px 20px;
+    margin-left: 7%;
+
+	&::before
+	{
+		@include white-gradient;
+		content: "";
+		height: 300px;
+		position: absolute;
+		width: 100%;
+		z-index: 2;
+	}
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	.slide-track {
+		animation: scroll-vertical $animationSpeed linear infinite;
+		display: flex;
+		flex-direction: column;		
+	}
+	.slide {
+		position: relative;
+		padding: 25px 0;
+		width: auto;
+		color: white;
+		font-size: 30px;
+	}
+	.slide:after {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 50%;
+        border-bottom: 2px solid #05818A;
+	}
 }
 
-
-.example{
-    position: absolute;
-    top:42%;
-    font-size:22px;
-    color:white;
-    line-height:1.2;
-    left:5%;
-    width: 400px;
-    height:400px;
-    padding: 10px;
-    margin:10px 10px;
+@media only screen and (max-width: 1245px) {
+    // For smaller laptop
+    .title-assist { font-size: 40px; }
+    .slider .slide { font-size: 24px; }
 }
 
-.slideshow-container{
-    position:relative;
-    margin-top:2%;
-    margin-bottom:2%;
-    width:500px;
-//    border: 15px solid red;
-
-
+@media only screen and (max-width: 985px) {
+    .weather-temp { font-size: 64px; }
 }
 
-.text{
-    border-radius: 25px;
-//    background: #076167;
-    background:#076167;
-    color:white;
-    text-align:center;
-
-    font-size:27px;
-    font-weight:bold;
-    font-style:inherit;
-    margin:40px 75px;
-    padding: 5px 0px;
-    width: 80%;
-    height: 4%;
-}
-.example>p6{
-  width: 200px;
-    color:white;
-  height: 50px;
+@media only screen and (min-width: 769px) {
+    .opening-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .opening-title {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        .vida-gif {
+            grid-column: 2;
+            grid-row: 1 / span 2;
+        }
+        .suggestions {
+            grid-column: 1;
+            grid-row: 2;
+        }
+    }
 }
 
-.example>p7{
-    width: 200px;
-    color:white;
-    height: 50px;
+@media only screen and (max-width: 768px) {
+    // For tablet
+    .opening-screen{ padding: 24px; }
+    .weather-description { font-size: 20px; margin-top: 16px; }
+    .weather-temp { font-size: 30px;}
 }
 
-.active {
-  background-color: white;
+@media only screen and (min-width: 500px) {
+    .opening-row { display: flex; }
+    .opening-col6 { width: 50%; }
 }
 
-.opening-vida{
-    position: absolute;
-    top:20%;
-//    border:15px solid red;
-    left: 45%;
-    width: 40vw;
-    height:50vh;
+@media only screen and (max-width: 425px) {
+    // For mobile
+    .title-assist { font-size: 28px; }
+    .suggest-title { font-size: 20px; }
+    .slider .slide { font-size: 18px; }
 }
-
-
-.opening-screen>p3{
-    position: relative;
-    color:white;
-    font-size:34px;
-    width: 400px;
-    margin:0px 40%;
-}
-
-
-
-#visualizer{
-    position: absolute;
-    top:100%;
-    margin: 0px 50%;
-}
-
-.listening{
-    font-size:20vw;
-    width:20%;
-}
-
-
-/* return Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-#music{
- //   background-color:white;
-}
-

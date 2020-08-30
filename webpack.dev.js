@@ -7,7 +7,6 @@
     devtool: 'inline-source-map',
     devServer: {
         contentBase: './public',
-        https: true,
         https:{
             key: fs.readFileSync('server.key'),
             cert: fs.readFileSync('bundle.crt')

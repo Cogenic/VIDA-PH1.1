@@ -91,12 +91,17 @@
           if (socket && socket.readyState === socket.OPEN) socket.close();
         }
     }
-      function onTranscription(e){
-          console.log(e.data)
+    function onTranscription(e){
+        console.log(e.data)
         const sound = new Audio()
-          sound.src = `/audio/${e.data}.mp3`
-          sound.play()
-
-
-      }
-
+        sound.src = `/audio/${e.data}.mp3`
+        document.getElementById("demo").src ="/images/talk-vida.gif";
+        const delay = ms => new Promise(res => setTimeout(res, ms));
+        const answer = async () => {
+          await delay(1000);
+          sound.play();
+          await delay(2000);
+          document.getElementById("demo").src ="/images/listen-vida.gif";
+        };
+        answer();
+    }

@@ -14,13 +14,12 @@ require('./images/classrooms-logo.png')
 require('./images/staff_info.png');
 require('./images/vida-logo.png');
 require('./images/homebutton.png');
-require('./images/vida.gif');
-require('./images/vida2.gif');
-require('./images/Listen.gif');
-require('./images/talk.gif');
-require('./images/J4o.gif');
-require('./images/AIbac.gif');
+require('./images/listen-vida.gif');
+require('./images/talk-vida.gif');
+require('./images/stable-vida.gif');
 require('./audio/hello.mp3');
+require('./audio/who am i.mp3');
+require('./audio/bathroom.mp3');
 require('./images/option_amenities.png');
 require('./images/option_restroom.png');
 require('./images/option_room.png');
@@ -44,33 +43,7 @@ import Music from './Music.js';
 import Play from './play.js';
 const { Howl, Howler } = require('howler');
 const ReactDOM = require('react-dom');
-ReactDOM.render(<App />, document.getElementById('visualizer'));
-ReactDOM.render(<Play />, document.getElementById('play-sound'));
 
 var time_openingScreen = document.getElementById("time");
 var date = moment().format('LLLL');
 time_openingScreen.innerHTML = date;
-var socket = new WebSocket('wss://localhost:8443/training');
-//                  console.log(values[1].target);
-// If the socket is closed for whatever reason, pause the mic
-socket.addEventListener('close', function(e) {
-    console.log('Websocket closing..');
-});
-socket.addEventListener('error', function(e) {
-    console.log('Error from websocket', e);
-});
-socket.onopen = function (event) {
-  socket.send("Here's some text that the server is urgently awaiting!");
-};
-
-socket.addEventListener('message', function(e) {
-    socket.addEventListener('message', function(e) {
-        console.log(e.data);
-    })
-})
-
-
-
-
-
-//ReactDOM.render(<Music url="hello" />, document.getElementById('music'));

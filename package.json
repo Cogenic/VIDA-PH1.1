@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node ./bin/www",
-    "build": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.dev.js",
     "build:prod": "webpack --config webpack.prod.js"
   },
   "dependencies": {

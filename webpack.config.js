@@ -3,12 +3,11 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const DotenvPlugin = require('webpack-dotenv-plugin');
 const path = require('path');
-const SRC = path.resolve(__dirname, 'src/main/js');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
 	entry: {
-		home: './src/home.js',
+        home: './src/home.js',
 	},
 	output: {
 		path: __dirname + '/public/js/',
@@ -70,9 +69,9 @@ module.exports = {
             path: './.env'
         }),
         new BrowserSyncPlugin({
-            host: 'dev1.cogenicintel.com',
+            host: 'localhost',
             port: 3001,
-            proxy: 'http://localhost:3000/',
+            proxy: 'https://localhost:8080/',
             files: ['./views/*.hbs']
         }),
 	],
