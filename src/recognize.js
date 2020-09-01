@@ -32,6 +32,7 @@ httpsServer.on('request', (req, res) => {
 
 // Node-Record-lpcm16
 const recorder = require('node-record-lpcm16');
+const respond = require('./respond.js');
 
 // Imports the Google Cloud client library
 // Currently, only v1p1beta1 contains result-end-time
@@ -40,14 +41,14 @@ const s = require('../stream.js');
 
 //    const client = new speech.SpeechClient();
 let encoding = 'LINEAR16';
-let sampleRateHertz = 48000;
+let sampleRateHertz = 0;
 let languageCode= 'en-US';
 let streamingLimit= 290000;
 
 
 const config = {
     encoding: encoding,
-    sampleRateHertz: sampleRateHertz,
+    sampleRateHertz: 48000,
     languageCode: languageCode,
 };
 
@@ -70,7 +71,6 @@ let recognizeStream = null;
 
 wss.on('connection', function connection(ws) {
     console.log("connected to 5000!");
-    startStream();
     ws.on('message', function message(data){
 //            console.log(data);
         //if(data!=='{"sampleRate":48000}'){
@@ -80,9 +80,12 @@ wss.on('connection', function connection(ws) {
             if(recognizeStream !== null){
                 audioInputStreamTransform(buffer,encoding);
             }
+//            console.log(config.sampleRate);
         }else{
           ws.send('Initilaized')
-            console.log(data);
+            var hertz = JSON.parse(data);
+            request.config.sampleRate = hertz.sampleRate;
+            startStream();
         }
     })
     ws.on('close', () => {
@@ -93,6 +96,7 @@ wss.on('connection', function connection(ws) {
 function startStream() {
     // Clear current audioInput
     audioInput = [];
+    console.log(request.config.sampleRate);
     // Initiate (Reinitiate) a recognize stream
     recognizeStream = client.streamingRecognize(request)
         .on('error', err => {
@@ -210,6 +214,7 @@ function restartStream() {
     newStream = true;
     startStream();
 }
+    function isOpen(ws) { return ws.readyState === ws.OPEN }
     function preception(verbal,done){
         const db = require('../db');
         verbal = verbal.trim();
@@ -234,6 +239,8 @@ function restartStream() {
                        if(result.length === 0)
                            return err;
                        console.log('#################');
+//                        respond(result[0].Utterance,trigger);
+                     if(!isOpen(ws)) return;
                         ws.send(trigger);
 
                 });

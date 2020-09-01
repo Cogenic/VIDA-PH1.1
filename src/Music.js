@@ -97,11 +97,51 @@
         sound.src = `/audio/${e.data}.mp3`
         document.getElementById("demo").src ="/images/talk-vida.gif";
         const delay = ms => new Promise(res => setTimeout(res, ms));
-        const answer = async () => {
-          await delay(1000);
-          sound.play();
-          await delay(2000);
-          document.getElementById("demo").src ="/images/listen-vida.gif";
+        const openPage = (data) => {
+            switch (data){
+                case 'rooms':
+                    window.location.replace('/option-rooms');
+                    break;
+                case 'restrooms':
+                    window.location.replace('/option-restrooms');
+                    break;
+                case 'favorite restaurant':
+                    window.location.replace('/option-amenities');
+                    break;
+                case 'nighclub':
+                    window.location.replace('/option-restrooms');
+                    break;
+                case 'drink':
+                    window.location.replace('/option-amenities');
+                    break;
+                case 'price':
+                    window.location.replace('/option-rooms');
+                    break;
+                case 'where am i':
+                    window.location.replace('/option-restrooms');
+                    break;
+                case 'parking lot':
+                    window.location.replace('/option-restrooms');
+                    break;
+                case 'pools':
+                    window.location.replace('/option-restrooms');
+                    break;
+                case 'art gallery':
+                    window.location.replace('/option-restrooms');
+                    break;
+                 case 'massages':
+                    window.location.replace('/option-amenities');
+
+            }
+        }
+        const answer = async (data) => {
+            await delay(1000);
+            sound.play();
+            await delay(2000);
+            document.getElementById("demo").src ="/images/listen-vida.gif";
+            await delay(3000);
+            openPage(data);
+
         };
-        answer();
+        answer(e.data);
     }
