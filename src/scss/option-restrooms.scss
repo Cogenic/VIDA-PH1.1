@@ -87,10 +87,10 @@
 }
 
 
-[class*="col-"] {
-    width: 100%;
-    float: left;
-  }
+// [class*="col-"] {
+//     width: 100%;
+//     float: left;
+//   }
 
 @media only screen and (max-width: 1024px) {
     .floor .choose .choose-title, .floor .floors button {font-size: 1.5rem;}

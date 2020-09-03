@@ -14,6 +14,7 @@
 .large-time {
     font-size: 80px;
     letter-spacing: 4.8px;
+    margin-top: 2%;
 }
 
 .title-caps {
@@ -113,7 +114,7 @@
     /* For mobile phones: */
     .amenities-header { padding: 0; }
     .option-amenities { padding: 1.5rem 1.5rem; } /* Reduce the container width */
-    #date {font-size: 20px; margin-top: 16px;} 
-    #time { font-size: 30px;}
+    // #date {font-size: 18px; margin-top: 16px;} 
+    // #time { font-size: 26px;}
     .amenities-body { height: 850px; background-position: center;}
   }
