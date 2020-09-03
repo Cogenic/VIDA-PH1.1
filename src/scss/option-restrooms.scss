@@ -48,20 +48,20 @@
     .side-line { width: 25%; margin: 0; }
     }
     .floors {
-    display: flex;
-    justify-content: space-between;
-    height: 67px;
-    button {
-        width: 30%;
-        font-size: 1.625rem;
-        color: #F1F1F1;
-        border: 2px solid #05818A;
-        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        height: 67px;
+        button {
+            width: 30%;
+            font-size: 1.625rem;
+            color: #F1F1F1;
+            border: 2px solid #05818A;
+            background-color: transparent;
+        }
+        #casino {
+            background-color: #05818A;
+        }
     }
-    #casino {
-        background-color: #05818A;
-    }
-}
 }
 
 .restroom-map {
@@ -86,11 +86,6 @@
     background-color: #555555af;
 }
 
-
-// [class*="col-"] {
-//     width: 100%;
-//     float: left;
-//   }
 
 @media only screen and (max-width: 1024px) {
     .floor .choose .choose-title, .floor .floors button {font-size: 1.5rem;}
