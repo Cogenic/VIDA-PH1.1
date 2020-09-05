@@ -59,6 +59,4 @@ import Play from './play.js';
 const { Howl, Howler } = require('howler');
 const ReactDOM = require('react-dom');
 
-var time_openingScreen = document.getElementById("time");
-var date = moment().format('LLLL');
-time_openingScreen.innerHTML = date;
+

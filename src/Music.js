@@ -45,7 +45,7 @@
 
         function newWebsocket() {
           var websocketPromise = new Promise(function(resolve, reject) {
-            var socket = new WebSocket('wss://localhost:5000/echo');
+            var socket = new WebSocket('wss://' + location.host +'/echo');
             socket.addEventListener('open', resolve);
             socket.addEventListener('error', reject);
           });

@@ -71,7 +71,7 @@ module.exports = {
         new BrowserSyncPlugin({
             host: 'localhost',
             port: 3001,
-            proxy: 'https://localhost:8080/',
+            proxy: 'https://localhost:3000/',
             files: ['./views/*.hbs']
         }),
 	],

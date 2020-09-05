@@ -57,19 +57,19 @@ const request = {
     interimResults: true,
 };
 
-let restartCounter = 0;
-let audioInput = [];
-let lastAudioInput = [];
-let resultEndTime = 0;
-let isFinalEndTime = 0;
-let finalRequestEndTime = 0;
-let newStream = true;
-let bridgingOffset = 0;
-let lastTranscriptWasFinal = false;
-const client = new speech.SpeechClient();
-let recognizeStream = null;
-
 wss.on('connection', function connection(ws) {
+    let restartCounter = 0;
+    let audioInput = [];
+    let lastAudioInput = [];
+    let resultEndTime = 0;
+    let isFinalEndTime = 0;
+    let finalRequestEndTime = 0;
+    let newStream = true;
+    let bridgingOffset = 0;
+    let lastTranscriptWasFinal = false;
+    const client = new speech.SpeechClient();
+    let recognizeStream = null;
+
     console.log("connected to 5000!");
     ws.on('message', function message(data){
 //            console.log(data);
