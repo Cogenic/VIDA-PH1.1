@@ -25,7 +25,7 @@ require('./images/option_amenities.png');
 require('./images/option_restroom.png');
 require('./images/option_room.png');
 require('./images/vida-circle.png');
-require('./images/amenities-background.png');
+require('./images/amenities-background-min.jpg');
 require('./images/city-room.png');
 require('./images/terrace-room.png');
 require('./images/skyvilla-room.png');
