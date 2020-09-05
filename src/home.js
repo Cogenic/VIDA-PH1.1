@@ -33,6 +33,7 @@ require('./images/map.png');
 require('./images/map-casino.png');
 require('./images/map-second.png');
 require('./images/map-third.png');
+require('./images/cloud_icon.png');
 const moment = require('moment');
 
 import App from './App';
@@ -47,7 +48,7 @@ const ReactDOM = require('react-dom');
 var socket = new WebSocket('wss://dev1.cogenicintel.com/training');
 //var socket = new WebSocket('ws://localhost:8443/training');
 
-socket.onopen = function(event){
+socket.onopen = function (event) {
     console.log('connected');
 
 }

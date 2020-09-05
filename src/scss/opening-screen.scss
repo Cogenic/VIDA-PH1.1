@@ -21,6 +21,8 @@
     letter-spacing: 4.8px;
 }
 
+.weather-icon { width: 75px; }
+
 .opening-date { margin: 25px 16px; }
 
 .opening-time { 
@@ -163,6 +165,7 @@ $animationSpeed: 40s;
     .opening-screen{ padding: 24px; }
     .weather-description { font-size: 20px; margin-top: 16px; }
     .weather-temp { font-size: 30px;}
+    .weather-icon { width: 40px; vertical-align: middle; }
     .opening-content {
         display: flex;
         flex-direction: column;
