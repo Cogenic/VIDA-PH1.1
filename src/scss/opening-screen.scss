@@ -21,12 +21,13 @@
     letter-spacing: 4.8px;
 }
 
+.weather-icon { width: 75px; }
+
 .opening-date { margin: 25px 16px; }
 
-.opening-content {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2%;
+.opening-time { 
+    font-size: 80px;
+    letter-spacing: 4.8px;
 }
 
 .title-divider { 
@@ -38,8 +39,6 @@
     font-size: 53px;
     font-weight: normal;
 }
-
-.vida-gif { text-align: center;}
 
 .opening-vida{ width: 90%; }
 
@@ -111,20 +110,10 @@ $animationSpeed: 40s;
 	}
 }
 
-@media only screen and (max-width: 1245px) {
-    // For smaller laptop
-    .title-assist { font-size: 40px; }
-    .slider .slide { font-size: 24px; }
-}
-
-@media only screen and (max-width: 985px) {
-    .weather-temp { font-size: 64px; }
-}
-
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1246px) {
     .opening-content {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
         .opening-title {
             grid-column: 1;
             grid-row: 1;
@@ -132,6 +121,9 @@ $animationSpeed: 40s;
         .vida-gif {
             grid-column: 2;
             grid-row: 1 / span 2;
+            text-align: right; 
+            align-self: center;
+            padding-top: 5%;
         }
         .suggestions {
             grid-column: 1;
@@ -140,11 +132,46 @@ $animationSpeed: 40s;
     }
 }
 
+@media only screen and (max-width: 1245px) {
+    // For smaller laptop
+    .title-assist { font-size: 40px; }
+    .slider .slide { font-size: 24px; }
+    .opening-content {
+        display: grid;
+        grid-template-rows: 1fr 3fr;
+        .opening-title {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        .vida-gif {
+            grid-column: 2;
+            grid-row: 1 / span 2;
+            text-align: right; 
+            align-self: center;
+        }
+        .suggestions {
+            grid-column: 1;
+            grid-row: 2;
+        }
+    }
+}
+
+@media only screen and (max-width: 985px) {
+    .weather-temp { font-size: 64px; }
+}
+
 @media only screen and (max-width: 768px) {
     // For tablet
     .opening-screen{ padding: 24px; }
     .weather-description { font-size: 20px; margin-top: 16px; }
     .weather-temp { font-size: 30px;}
+    .weather-icon { width: 40px; vertical-align: middle; }
+    .opening-content {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2%;
+        .vida-gif { text-align: center; }
+    }
 }
 
 @media only screen and (min-width: 500px) {
