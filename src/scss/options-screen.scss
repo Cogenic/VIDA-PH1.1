@@ -21,38 +21,15 @@ input[type='image']:focus{
 .vida-indicator {
     // overflow:auto;
     display: flex;
+    justify-content: space-between;
 }
 
 .logo{
     width:124px;
 }
 
-.vida-light{
-    width:124px;
-    height:124px;
-    background-color:white;
-    border-radius: 50%;
-}
-
 .vida-light input:hover{
     opacity: .8;
-}
-
-.line {
-    margin-top: 25px;
-    margin-left: 25px;
-    width: 250px;
-}
-
-#vida-action {
-    color:#ABABAB;
-    font-size:14px;
-    letter-spacing: 0.84px;
-}
-
-#vida-wave {
-    color:white;
-    width: 100%;
 }
 
 p {
@@ -78,6 +55,7 @@ p {
 .small-time {
   font-size: 53px;
   letter-spacing: 3.18px;
+  margin-top: 2%;
 }
 
 .options-title {
@@ -201,8 +179,8 @@ hr.divider {
   @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .options-screen { padding: 1.5rem 1.5rem; } /* Reduce the container width */
-    #date {font-size: 20px; margin-top: 16px;} 
-    #time { font-size: 30px;}
+    #date {font-size: 18px; margin-top: 26px;} 
+    #time { font-size: 26px;}
     #didumean { font-size: 2rem; margin: 16px 0;}
     .cards .cards_item .card .card_title { font-size: 1.5rem; }
   }

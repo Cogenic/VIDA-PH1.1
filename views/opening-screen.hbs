@@ -30,14 +30,16 @@
       <div class="weather-indicator opening-col6">
         <div class="weather-description">Partly Cloudy</div>
         <div class="weather-detail">
-          <div class="weather-temp">95&deg;F</div>
-          <div class="weather-icon"></div>
+          <div class="weather-temp" onclick="document.forms[0].submit()">
+            95&deg;F
+            <img class="weather-icon" src="/images/cloud_icon.png" alt="">
+          </div>
         </div>
       </div>
 
       <div class="date-time opening-col6">
         <p id="date" class="opening-date">Wednesday June 29</p>
-        <p class="large-time" id="time">10:12 AM</p>
+        <p class="opening-time" id="time">10:12 AM</p>
       </div>
     </div>
   </form>
