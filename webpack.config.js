@@ -8,6 +8,7 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 module.exports = {
 	entry: {
         home: './src/home.js',
+        opening: './src/openingScreen.js',
 	},
 	output: {
 		path: __dirname + '/public/js/',

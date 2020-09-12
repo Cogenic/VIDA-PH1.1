@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>{{title}}</title>
+    <title>{{title}}</title>
 
 <head>
     <meta charset="UTF-g">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<form method="POST" action="/hello-screen">
+<form method="GET" action="/hello-screen">
 
     <body class="welcome">
         <div class="hello-content">
@@ -16,14 +16,17 @@
                 <h1 class="hello-title">Hello<span id="hello-dot"></span></h1>
             </header>
 
-            <div class="vida-design" onclick="document.forms[0].submit()">
-                <svg width="560" height="560">
-                    <circle class="vida-outer" cx="280" cy="280" r="273" />
-                    <circle class="vida-middle" cx="280" cy="280" r="212" />
-                    <circle class="vida-inner" cx="280" cy="280" r="137" />
+            <!--div class="vida-design" onclick="document.forms[0].submit()">
+                <!--svg width="560" height="560">
+                    <!--circle class="vida-outer" cx="280" cy="280" r="273" /-->
+                    <!--circle class="vida-middle" cx="280" cy="280" r="212" /-->
+                    <!--circle class="vida-inner" cx="280" cy="280" r="137" />
                 </svg>
-            </div>
+            </div-->
+                <input type="image" id="demo" src= "/images/IdleV4.gif" class="vida-hello">
+
         </div>
+
 
         {{!-- <div class="highlight">
             <input type="image" src="/images/vida.gif" name="saveForm" id="center" id="saveForm">
@@ -32,21 +35,7 @@
     </body>
 </form>
 
-<script>
-    socket = io('https://127.0.0.1:5000');
-    socket.on('connection', function (data) {
-        console.info(`Client connected [id=${socket.id}]`);
-//        replace(data);
-    });
- 
-    socket.on('news', function (data) {
-        console.info(`Client connected [id=${socket.id}]`);
-        replace(data);
-    });
-    function replace(data) {
-        if (data === "hello")
-            window.location.replace('/opening-screen');
-    }
-</script>
 
+
+<script src="js/home.bundle.js"></script>
 </html>

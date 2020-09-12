@@ -134,6 +134,10 @@
                     break;
                  case 'nightclub':
                     window.location.replace('/option-amenities');
+                    break;
+                case 'hello':
+                    window.location.replace('/opening-screen');
+
 
             }
         }

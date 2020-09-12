@@ -17,6 +17,7 @@ require('./images/homebutton.png');
 require('./images/listen-vida.gif');
 require('./images/talk-vida.gif');
 require('./images/stable-vida.gif');
+require('./images/IdleV4.gif');
 require('./audio/hello.mp3');
 require('./audio/art gallery.mp3');
 require('./audio/afternoon.mp3');
@@ -53,7 +54,6 @@ const moment = require('moment');
 import App from './App';
 
 const vida = require('./ai.js');
-const openingScreen = require('./openingScreen');
 const React = require('react');
 import Music from './Music.js';
 import Play from './play.js';
@@ -61,3 +61,6 @@ const { Howl, Howler } = require('howler');
 const ReactDOM = require('react-dom');
 
 
+//document.getElementsByClassName("opening-vida")[0].src="/images/IdleV4.gif";
+
+//document.getElementById("demo").src ="/images/listen-vida.gif";
