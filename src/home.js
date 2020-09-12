@@ -14,13 +14,27 @@ require('./images/classrooms-logo.png')
 require('./images/staff_info.png');
 require('./images/vida-logo.png');
 require('./images/homebutton.png');
-require('./images/vida.gif');
-require('./images/vida2.gif');
-require('./images/Listen.gif');
-require('./images/talk.gif');
-require('./images/J4o.gif');
-require('./images/AIbac.gif');
+require('./images/listen-vida.gif');
+require('./images/talk-vida.gif');
+require('./images/stable-vida.gif');
 require('./audio/hello.mp3');
+require('./audio/art gallery.mp3');
+require('./audio/afternoon.mp3');
+require('./audio/dresscode.mp3');
+require('./audio/drink.mp3');
+require('./audio/favorite restaurant.mp3');
+require('./audio/how i work.mp3');
+require('./audio/massages.mp3');
+require('./audio/restrooms.mp3');
+require('./audio/rooms.mp3');
+require('./audio/morning.mp3');
+require('./audio/nightclub.mp3');
+require('./audio/parking lot.mp3');
+require('./audio/pools.mp3');
+require('./audio/price.mp3');
+require('./audio/sushi.mp3');
+require('./audio/where am i.mp3');
+require('./audio/whats up.mp3');
 require('./images/option_amenities.png');
 require('./images/option_restroom.png');
 require('./images/option_room.png');
@@ -42,26 +56,8 @@ const vida = require('./ai.js');
 const openingScreen = require('./openingScreen');
 const React = require('react');
 import Music from './Music.js';
+import Play from './play.js';
 const { Howl, Howler } = require('howler');
 const ReactDOM = require('react-dom');
 
-var socket = new WebSocket('wss://dev1.cogenicintel.com/training');
-//var socket = new WebSocket('ws://localhost:8443/training');
 
-socket.onopen = function (event) {
-    console.log('connected');
-
-}
-
-//requires the mp3 files inorder for VIDA to speak
-socket.addEventListener('message', (e) => {
-    require(`./audio/${e.data}.mp3`);
-})
-
-ReactDOM.render(<App />, document.getElementById('visualizer'));
-
-var time_openingScreen = document.getElementById("time");
-var date = moment().format('LLLL');
-time_openingScreen.innerHTML = date;
-
-ReactDOM.render(<Music url="hello" />, document.getElementById('music'));
