@@ -45,7 +45,7 @@
 
         function newWebsocket() {
           var websocketPromise = new Promise(function(resolve, reject) {
-            var socket = new WebSocket('wss://' + location.host +'/echo');
+            var socket = new WebSocket('wss://'+ window.location.hostname+':5000/echo');
             socket.addEventListener('open', resolve);
             socket.addEventListener('error', reject);
           });
@@ -130,6 +130,9 @@
                     window.location.replace('/option-restrooms');
                     break;
                  case 'massages':
+                    window.location.replace('/option-amenities');
+                    break;
+                 case 'nightclub':
                     window.location.replace('/option-amenities');
 
             }

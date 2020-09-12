@@ -21,18 +21,22 @@ var users = require('./routes/users');
 var recognize = require('./src/recognize.js');
 const fs = require('fs');
 //var stream = require('./stream.js');
-var app = express();
+const app = express();
 var https = require('https')
-
-https.createServer({
+const server = https.createServer({
   key: fs.readFileSync('server.key'),
   cert: fs.readFileSync('bundle.crt')
 }, app)
 .listen(8080, function () {
   console.log('Example app listening on port 3000! Go to https://localhost:3000/')
 })
+const ws = require('ws').Server;
+
+
 const {Storage} = require('@google-cloud/storage');
+
 // Instantiate a storage client
+//
 const storage = new Storage();
 app.use(flash());
 // view engine setup
@@ -160,5 +164,4 @@ hbs.registerHelper('json', function(context) {
 
 
 
-
-  module.exports = app;
+module.exports = app;

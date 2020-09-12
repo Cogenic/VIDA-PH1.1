@@ -7,28 +7,22 @@ const chalk = require('chalk');
 const {Writable} = require('stream');
 const https = require('https');
 const ws = require('ws').Server;
+
 const httpsServer = https.createServer({
-  key: fs.readFileSync('server.key'),
-  cert: fs.readFileSync('bundle.crt'),
-  //ca: fs.readFileSync('intermediate.crt')
+    key: fs.readFileSync('server.key'),
+    cert: fs.readFileSync('bundle.crt'),
 });
 
-
-httpsServer.listen(5000,() => console.log('Https running on port 5000'));
-
-//    httpsServer.on('error', (err) => console.error(err));
 const wss = new ws({
     server: httpsServer,
     path: '/echo'
 });
-
+//httpsServer.on('request',app);
+httpsServer.listen(5000,() => console.log('Https running on port 5000'));
 httpsServer.on('request', (req, res) => {
   res.writeHead(200);
   res.end('hello HTTPS from recognize\n');
 });
-
-
-
 
 // Node-Record-lpcm16
 const recorder = require('node-record-lpcm16');
@@ -37,7 +31,6 @@ const respond = require('./respond.js');
 // Imports the Google Cloud client library
 // Currently, only v1p1beta1 contains result-end-time
 const speech = require('@google-cloud/speech').v1p1beta1;
-const s = require('../stream.js');
 
 //    const client = new speech.SpeechClient();
 let encoding = 'LINEAR16';
@@ -56,7 +49,6 @@ const request = {
     config,
     interimResults: true,
 };
-
 wss.on('connection', function connection(ws) {
     let restartCounter = 0;
     let audioInput = [];

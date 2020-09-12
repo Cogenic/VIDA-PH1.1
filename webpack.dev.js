@@ -13,7 +13,8 @@
         },
         disableHostCheck:true,
         allowedHosts:[
-        'dev1.cogenicintel.com'
+        'dev1.cogenicintel.com',
+        'localhost'
         ],
         writeToDisk: true
     },

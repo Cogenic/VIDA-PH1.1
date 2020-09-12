@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var stream = require('../stream.js');
 var flash = require('connect-flash');
 var expressValidator = require('express-validator');
 var passport = require('passport')
